@@ -18,8 +18,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const primarySignInUrl = '/sign-in';
+  const primarySignUpUrl = '/sign-up';
   return (
-    <ClerkProvider>
+    <ClerkProvider signInUrl={primarySignInUrl} signUpUrl={primarySignUpUrl}>
       <html lang='en'>
         <body>
           <header>

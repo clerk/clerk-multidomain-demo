@@ -18,8 +18,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const primarySignInUrl = 'http://localhost:3000/sign-in';
+  const primarySignUpUrl = 'http://localhost:3000/sign-up';
+  const domain = 'http://localhost:3000';
+
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      isSatellite
+      domain={domain}
+      signInUrl={primarySignInUrl}
+      signUpUrl={primarySignUpUrl}
+    >
       <html lang='en'>
         <body>
           <header>
