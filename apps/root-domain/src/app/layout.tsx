@@ -6,6 +6,7 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs';
+import Navbar from '@/components/Header';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -18,20 +19,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const primarySignInUrl = '/sign-in';
-  const primarySignUpUrl = '/sign-up';
+  // const primarySignInUrl = '/sign-in';
+  // const primarySignUpUrl = '/sign-up';
   return (
-    <ClerkProvider signInUrl={primarySignInUrl} signUpUrl={primarySignUpUrl}>
+    <ClerkProvider 
+    // signInUrl={primarySignInUrl}
+    // signUpUrl={primarySignUpUrl}
+    allowedRedirectOrigins={['http://localhost:3001']}
+    >
       <html lang='en'>
         <body>
-          <header>
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </header>
+         <Navbar/>
           <main>{children}</main>
         </body>
       </html>

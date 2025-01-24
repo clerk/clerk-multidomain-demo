@@ -1,11 +1,6 @@
 import type { Metadata } from 'next';
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/nextjs';
+import { ClerkProvider,} from '@clerk/nextjs';
+import Navbar from '@/components/Header';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -18,27 +13,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const primarySignInUrl = 'http://localhost:3000/sign-in';
-  const primarySignUpUrl = 'http://localhost:3000/sign-up';
-  const domain = 'http://localhost:3000';
+  // const primarySignInUrl = 'http://localhost:3000/sign-in';
+  // const primarySignUpUrl = 'http://localhost:3000/sign-up';
+  // const domain = 'http://localhost:3000';
 
   return (
     <ClerkProvider
-      isSatellite
-      domain={domain}
-      signInUrl={primarySignInUrl}
-      signUpUrl={primarySignUpUrl}
+    // isSatellite
+    // domain={domain}
+    // signInUrl={primarySignInUrl}
+    // signUpUrl={primarySignUpUrl}
     >
       <html lang='en'>
         <body>
-          <header>
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </header>
+          <Navbar/>
           <main>{children}</main>
         </body>
       </html>

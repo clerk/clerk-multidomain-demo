@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
-const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)', '/']);
+const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)']);
 const options = {
   isSatellite: true,
   // signInUrl: 'https://primary.dev/sign-in',
@@ -11,11 +11,11 @@ const options = {
   // Or, in development:
   domain: 'http://localhost:3000',
 };
-export default clerkMiddleware((auth, request) => {
+export default clerkMiddleware(async(auth, request) => {
   if (!isPublicRoute(request)) {
-    auth().protect();
+   await auth().protect();
   }
-}, options);
+});
 
 export const config = {
   matcher: [

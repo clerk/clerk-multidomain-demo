@@ -1,81 +1,70 @@
-# Turborepo starter
+<p align="center">
+  <a href="https://clerk.com?utm_source=github&utm_medium=clerk_docs" target="_blank" rel="noopener noreferrer">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./public/light-logo.png">
+      <img alt="Clerk Logo for light background" src="./public/dark-logo.png" height="64">
+    </picture>
+  </a>
+  <br />
+</p>
+<div align="center">
+  <h1>
+    Satellite domain example using Turborepo with Clerk and Next.js! 
+  </h1>  
+  <a href="https://www.npmjs.com/package/@clerk/clerk-js">
+    <img alt="Downloads" src="https://img.shields.io/npm/dm/@clerk/clerk-js" />
+  </a>
+  <a href="https://discord.com/invite/b5rXHjAg7A">
+    <img alt="Discord" src="https://img.shields.io/discord/856971667393609759?color=7389D8&label&logo=discord&logoColor=ffffff" />
+  </a>
+  <a href="https://twitter.com/clerkdev">
+    <img alt="Twitter" src="https://img.shields.io/twitter/url.svg?label=%40clerkdev&style=social&url=https%3A%2F%2Ftwitter.com%2Fclerkdev" />
+  </a> 
+  <br />
+  <br />
+  <img alt="Clerk Hero Image" src="./public/hero.png">
+</div>
 
-This is an official starter Turborepo.
+## Introduction
 
-## Using this example
+Clerk is a developer-first authentication and user management solution. It provides pre-built React components and hooks for sign-in, sign-up, user profile, and organization management. Clerk is designed to be easy to use and customize, and can be dropped into any React or Next.js application.
 
-Run the following command:
 
-```sh
-npx create-turbo@latest
-```
+This example can be used as a reference for how to implement Clerk authentication to persist across different domains using Turborepo, Clerk, and Next.js!
 
-## What's inside?
 
-This Turborepo includes the following packages/apps:
 
-### Apps and Packages
+## Running the example repository
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+To run the example locally, you need to:
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+1. Sign up for a Clerk account at [https://clerk.com](https://dashboard.clerk.com/sign-up?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart).
 
-### Utilities
+2. Go to the [Clerk dashboard](https://dashboard.clerk.com?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart) and create an Next.js application.
 
-This Turborepo has some additional tools already setup for you:
+3. Inside of both the `root-domain` and `satellite-domain` directories we need to install the [Clerk NextJs `@clerk/nextjs` package](https://www.npmjs.com/package/@clerk/nextjs).
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+4. This example uses Turborepo, in the root of the app we'll run `Pnpm install` to install the required developer dependencies for both the Root domain and the Satellite domain. If you'd like each app to run on a certain port, you can adjust each dev script in the `package.json` to do so, for example: setting `"dev": "next dev -p 3000",`. Ensure the `allowedRedirectOrigin` prop on the root domain's `<ClerkProvider/> matches the port your satellite domain is running on.
 
-### Build
+5. Set the required Clerk environment variables as shown in both the [Root example `env.local.example` file](/apps/root-domain/.env.example) and the [Satellite example `env.local.example` file](/apps/satellite-domain/.env.example).
 
-To build all apps and packages, run the following command:
+6. `Pnpm dev` to launch the development server.
 
-```
-cd my-turborepo
-pnpm build
-```
+## Learn more
 
-### Develop
+To learn more about our Satellite domain feature, check out the following resources:
 
-To develop all apps and packages, run the following command:
+- [Satellite domains: Authentication across different domains](https://clerk.com/docs/advanced-usage/satellite-domains#how-to-add-satellite-domains)
+- [Clerk Documentation](https://clerk.com/docs?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Turbo Repos](https://turbo.build/repo/docs)
 
-```
-cd my-turborepo
-pnpm dev
-```
+## Found an issue or want to leave feedback
 
-### Remote Caching
+Feel free to create a support thread on our [Discord](https://clerk.com/discord). Our support team will be happy to assist you in the `#support` channel.
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+## Connect with us
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+You can discuss ideas, ask questions, and meet others from the community in our [Discord](https://discord.com/invite/b5rXHjAg7A).
 
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+If you prefer, you can also find support through our [Twitter](https://twitter.com/ClerkDev), or you can [email](mailto:support@clerk.dev) us!
