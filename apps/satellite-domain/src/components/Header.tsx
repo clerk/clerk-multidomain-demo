@@ -1,11 +1,11 @@
-import { UserButton, SignInButton, SignUpButton } from '@clerk/nextjs';
+import { UserButton } from '@clerk/nextjs';
 import { auth } from '@clerk/nextjs/server';
 import Link from 'next/link';
-export default async function Navbar() {
+export default async function Header() {
   const { userId } = await auth();
   if (!userId)
     return (
-      <nav className='flex items-center justify-between text-white p-2'>
+      <header className='flex items-center justify-between text-white p-2'>
         <Link href='/'>
           <h1 className='font-bold'>Clerk</h1>
         </Link>
@@ -19,11 +19,11 @@ export default async function Navbar() {
          <h1 className='font-bold'>Sign Up</h1>
          </Link>
         </div>
-      </nav>
+      </header>
     );
   else {
     return (
-      <nav className='flex items-center justify-between text-white p-1'>
+      <header className='flex items-center justify-between text-white p-1'>
         <div>
           <UserButton
             appearance={{
@@ -44,7 +44,7 @@ export default async function Navbar() {
             Dashboard
           </Link>
         </div>
-      </nav>
+      </header>
     );
   }
 }
