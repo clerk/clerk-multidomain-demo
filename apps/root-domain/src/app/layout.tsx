@@ -21,7 +21,7 @@ export default function RootLayout({
   const primarySignInUrl = '/sign-in';
   const primarySignUpUrl = '/sign-up';
   return (
-    <ClerkProvider signInUrl={primarySignInUrl} signUpUrl={primarySignUpUrl}>
+    <ClerkProvider signInUrl={primarySignInUrl} signUpUrl={primarySignUpUrl} allowedRedirectOrigins={['https://clerk-multidomain-satellite.com/']}>
       <html lang='en'>
         <body>
           <header>
