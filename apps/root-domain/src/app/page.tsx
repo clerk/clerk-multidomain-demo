@@ -1,13 +1,21 @@
 export default function Home() {
   return (
     <>
-      <h1 className='text-2xl flex justify-center m-2 font-bold'>
+      <h1 className='flex justify-center text-2xl m-2 font-bold'>
         Root Domain Homepage
       </h1>
-      <div className='flex flex-col mt-10'>
-        <h2 className='text-lg font-semibold'>
+      <br />
+      <a
+        target='_blank'
+        href='https://clerk.com/docs/advanced-usage/satellite-domains'
+      >
+        <h2 className='flex justify-center text-lg font-semibold'>
           Authentication across different domains
         </h2>
+      </a>
+      <div className=' flex flex-col p-4 justify-center bg-purple-200 rounded-md '>
+        <br />
+
         <p>
           Clerk supports sharing sessions across different domains by adding one
           or many satellite domains to an application. Your "Primary" domain or
@@ -27,11 +35,33 @@ export default function Home() {
         <br />
         <p>
           To see how this works in a production environment, head over to the
-          <a target='_blank'>Satellite Domain</a> and try to access the page.
-          Since the entire site is protected by clerkMiddleware you'll see that
-          you're redirected to authenticate on the{' '}
-          <a target='_blank'>Root Domain</a> and then redirected back to the
-          Satellite domain after successfully completeing the sign-in flow.
+          <a
+            target='_blank'
+            href='https://clerk-multidomain-satellite.com/'
+            className='underline hover:decoration-purple-500'
+          >
+            {' '}
+            Satellite Domain
+          </a>{' '}
+          and try to access the page. Since the entire site is protected by
+          <a
+            target='_blank'
+            href='https://clerk.com/docs/references/nextjs/clerk-middleware'
+            className='underline hover:decoration-purple-500'
+          >
+            {' '}
+            clerkMiddleware
+          </a>{' '}
+          you'll see that you're redirected to authenticate on the{' '}
+          <a
+            target='_blank'
+            href='https://clerk-multidomain-root.com/'
+            className='underline hover:decoration-purple-500'
+          >
+            Root Domain
+          </a>{' '}
+          and then redirected back to the Satellite domain after successfully
+          completeing the sign-in flow.
         </p>
       </div>
     </>
