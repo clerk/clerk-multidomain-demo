@@ -4,6 +4,7 @@ const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)']);
 const options = {
   isSatellite: true,
   // signInUrl: 'https://primary.dev/sign-in',
+  // signUpUrl: 'https://primary.dev/sign-up',
   // Or, in development:
   signInUrl: 'http://localhost:3000/sign-in',
   signUpUrl: 'http://localhost:3000/sign-up',
@@ -11,9 +12,9 @@ const options = {
   // Or, in development:
   domain: 'http://localhost:3000',
 };
-export default clerkMiddleware(async(auth, request) => {
+export default clerkMiddleware(async (auth, request) => {
   if (!isPublicRoute(request)) {
-   await auth().protect();
+    await auth().protect();
   }
 });
 
