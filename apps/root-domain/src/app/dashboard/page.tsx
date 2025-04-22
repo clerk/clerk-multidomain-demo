@@ -12,7 +12,7 @@ export default function DashboardPage() {
 
         <h3>
           {' '}
-          Users won't be able to access this page unless they have a valid
+          Users won&apos;t be able to access this page unless they have a valid
           session through Clerk first!
         </h3>
         <h3>
