@@ -23,12 +23,14 @@ export default async function RootLayout({
   //Variables used to assign SignIn and SignUp urls for the respective props on the ClerkProvider.
   // const primarySignInUrl = '/sign-in';
   // const primarySignUpUrl = '/sign-up';
+  const allowedRedirectOrigins =
+    process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGIN;
   return (
     <ClerkProvider
       //These props are only utilized if you're not using the environment variable approach. This is set to redirect users to the respective SignIn and SignUp flows.
       // signInUrl={primarySignInUrl}
       // signUpUrl={primarySignUpUrl}
-      allowedRedirectOrigins={['https://clerk-multidomain-satellite.com/']}
+      allowedRedirectOrigins={[allowedRedirectOrigins]}
     >
       <html lang='en'>
         <body className='flex flex-col items-center'>
