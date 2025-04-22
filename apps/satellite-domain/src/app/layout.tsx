@@ -20,6 +20,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { userId } = await auth();
+  // Variables that can be used for the props on the ClerkProvider.
   // const primarySignInUrl = 'http://localhost:3000/sign-in';
   // const primarySignUpUrl = 'http://localhost:3000/sign-up';
   // const domain = 'http://localhost:3000';

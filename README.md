@@ -44,7 +44,7 @@ To run the example locally, you need to:
 
 3. Inside of both the `root-domain` and `satellite-domain` directories we need to install the [Clerk NextJs `@clerk/nextjs` package](https://www.npmjs.com/package/@clerk/nextjs).
 
-4. This example uses Turborepo, in the root of the app we'll run `Pnpm install` to install the required developer dependencies for both the Root domain and the Satellite domain. If you'd like each app to run on a certain port, you can adjust each dev script in the `package.json` to do so, for example: setting `"dev": "next dev -p 3000",`. Ensure the `allowedRedirectOrigin` prop on the root domain's `<ClerkProvider/> matches the port your satellite domain is running on.
+4. This example uses Turborepo and pnpm. In the root of the app we'll run `pnpm install` to install the required dependencies for both the Root domain application and the Satellite domain application. If you'd like each app to run on a certain port, you can adjust each by editing the dev script in the `package.json` file. Ensure the `allowedRedirectOrigin` prop on the root domain's `<ClerkProvider/> matches the port your satellite domain is running on.
 
 5. Set the required Clerk environment variables as shown in both the [Root example `env.local.example` file](/apps/root-domain/.env.example) and the [Satellite example `env.local.example` file](/apps/satellite-domain/.env.example).
 
