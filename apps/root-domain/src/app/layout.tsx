@@ -28,7 +28,7 @@ export default async function RootLayout({
       //These props are only utilized if you're not using the environment variable approach. This is set to redirect users to the respective SignIn and SignUp flows.
       // signInUrl={primarySignInUrl}
       // signUpUrl={primarySignUpUrl}
-      allowedRedirectOrigins={['https://clerk-multidomain-satellite.com']}
+      allowedRedirectOrigins={['https://clerk-multidomain-satellite.com/']}
     >
       <html lang='en'>
         <body className='flex flex-col items-center'>
