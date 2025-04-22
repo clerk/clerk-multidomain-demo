@@ -24,7 +24,7 @@ export default async function RootLayout({
   // const primarySignInUrl = '/sign-in';
   // const primarySignUpUrl = '/sign-up';
   const allowedRedirectOrigins =
-    process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGIN;
+    process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGIN ?? '';
   return (
     <ClerkProvider
       //These props are only utilized if you're not using the environment variable approach. This is set to redirect users to the respective SignIn and SignUp flows.
