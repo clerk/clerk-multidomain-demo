@@ -1,10 +1,11 @@
+import Card from '@repo/ui/card';
 export default function Home() {
   return (
     <>
       <h1 className='flex justify-center text-2xl m-2 font-bold'>
         Root Domain Homepage
       </h1>
-      <br />
+
       <a
         target='_blank'
         href='https://clerk.com/docs/advanced-usage/satellite-domains'
@@ -13,26 +14,32 @@ export default function Home() {
           Authentication across different domains
         </h2>
       </a>
-      <div className=' flex flex-col p-4 justify-center bg-purple-200 rounded-md '>
-        <br />
-
-        <p>
-          Clerk supports sharing sessions across different domains by adding one
+      <Card
+        className={
+          'flex flex-col p-4 justify-center gap-4 bg-purple-200 rounded-md border-black border-2'
+        }
+        title={`Clerk supports sharing sessions across different domains by adding one
           or many satellite domains to an application. Your "Primary" domain or
           in this case "Root" domain is where the authentication state lives,
           and satellite domains are able to securely read that state from the
           primary domain, enabling a seamless authentication flow across
-          domains. This example repository was created to demonstrate just that.
-        </p>
-        <br />
+          domains. This example repository was created to demonstrate just that.`}
+      >
         <p>
           If you're trying this out locally, attempt to access the satellite
-          domain on localhost:3001 without logging in and see what happens.
-          Clerk will redirect you to the Primary domain set on localhost:3000 to
-          authenticate you and redirect back to the Satellite once the
-          authentication flow has successfully executed.
+          domain on{' '}
+          <a
+            href='http://localhost:3001/'
+            className='underline hover:decoration-purple-500'
+            target='_blank'
+          >
+            localhost:3001
+          </a>{' '}
+          without logging in and see what happens. Clerk will redirect you to
+          the Primary domain set on localhost:3000 to authenticate you and
+          redirect back to the Satellite once the authentication flow has
+          successfully executed.
         </p>
-        <br />
         <p>
           To see how this works in a production environment, head over to the
           <a
@@ -63,7 +70,7 @@ export default function Home() {
           and then redirected back to the Satellite domain after successfully
           completeing the sign-in flow.
         </p>
-      </div>
+      </Card>
     </>
   );
 }

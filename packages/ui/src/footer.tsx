@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className='container mx-auto flex flex-row justify-center mt-10'>
+    <footer className='fixed bottom-0 container flex flex-row justify-center py-4 font-bold'>
       <div>
         <p className='text-lg'>
           {new Date().getFullYear()}: Satellite Domain example using Next.js &
