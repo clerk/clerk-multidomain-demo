@@ -26,7 +26,7 @@ export default async function RootLayout({
 
   return (
     <ClerkProvider
-    // These props need to be set on the ClerkProvider
+    // These props need to be set on the ClerkProvider if you're not using environment variables.
     // isSatellite
     // domain={domain}
     // signInUrl={primarySignInUrl}

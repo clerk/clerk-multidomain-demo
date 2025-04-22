@@ -3,14 +3,14 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)']);
 const options = {
   isSatellite: true,
-  // signInUrl: 'https://primary.dev/sign-in',
-  // signUpUrl: 'https://primary.dev/sign-up',
+  signInUrl: 'https://clerk-multidomain-root.com/sign-in',
+  signUpUrl: 'https://clerk-multidomain-root.com/sign-up',
+  // // Or, in development:
+  // signInUrl: 'http://localhost:3000/sign-in',
+  // signUpUrl: 'http://localhost:3000/sign-up',
+  domain: 'https://clerk-multidomain-root.com/',
   // Or, in development:
-  signInUrl: 'http://localhost:3000/sign-in',
-  signUpUrl: 'http://localhost:3000/sign-up',
-  // domain: 'https://primary.dev',
-  // Or, in development:
-  domain: 'http://localhost:3000',
+  // domain: 'http://localhost:3000',
 };
 export default clerkMiddleware(async (auth, request) => {
   if (!isPublicRoute(request)) {
