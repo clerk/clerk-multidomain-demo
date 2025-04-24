@@ -4,17 +4,10 @@ const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)']);
 const options = {
   isSatellite:
     process.env.NEXT_PUBLIC_CLERK_IS_SATELLITE === 'true' ? true : false,
-  // Or, in development:
-  //isSatellite: true
+
   signInUrl: process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL,
   signUpUrl: process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL,
-  // Or, in development:
-  // signInUrl: 'http://localhost:3000/sign-in',
-  // signUpUrl: 'http://localhost:3000/sign-up',
   domain: process.env.NEXT_PUBLIC_CLERK_DOMAIN,
-  // Or, in development:
-
-  // domain: 'http://localhost:3000',
 };
 export default clerkMiddleware(async (auth, request) => {
   if (!isPublicRoute(request)) {

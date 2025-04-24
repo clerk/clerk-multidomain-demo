@@ -20,9 +20,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { userId } = await auth();
-  //Variables used to assign SignIn and SignUp urls for the respective props on the ClerkProvider.
-  // const primarySignInUrl = '/sign-in';
-  // const primarySignUpUrl = '/sign-up';
 
   return (
     <ClerkProvider

@@ -10,9 +10,6 @@ export default function Home() {
       </h2>
 
       <Card
-        className={
-          'flex flex-col p-4 justify-center gap-4 bg-purple-200 rounded-md border-black border-2'
-        }
         title={`Congratulations, if you're seeing
       this text then that means you've successfully authenticated across
       domains!`}

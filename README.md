@@ -32,6 +32,11 @@ Clerk is a developer-first authentication and user management solution. It provi
 
 This example can be used as a reference for how to implement Clerk authentication to persist across different domains using Turborepo, Clerk, and Next.js!
 
+## Live production examples
+
+[Root domain](https://clerk-multidomain-root.com/)
+[Satellite domain](https://clerk-multidomain-satellite.com/) 
+
 
 
 ## Running the example repository
@@ -48,7 +53,7 @@ To run the example locally, you need to:
 
 5. Set the required Clerk environment variables as shown in both the [Root example `env.local.example` file](/apps/root-domain/.env.example) and the [Satellite example `env.local.example` file](/apps/satellite-domain/.env.example).
 
-6. `Pnpm dev` to launch the development server.
+6. `pnpm dev` to launch the development server.
 
 ## Learn more
 

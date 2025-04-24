@@ -15,9 +15,6 @@ export default function Home() {
         </h2>
       </a>
       <Card
-        className={
-          'flex flex-col p-4 justify-center gap-4 bg-purple-200 rounded-md border-black border-2'
-        }
         title={`Clerk supports sharing sessions across different domains by adding one
           or many satellite domains to an application. Your "Primary" domain or
           in this case "Root" domain is where the authentication state lives,
