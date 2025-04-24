@@ -3,9 +3,6 @@ export default function DashboardPage() {
   return (
     <div className='flex min-h-screen flex-col items-center text-wrap p-24'>
       <Card
-        className={
-          'flex flex-col p-4 justify-center gap-4 bg-purple-200 rounded-md border-black border-2'
-        }
         title={` This is a protected Dashboard Page for your Satellite domain!`}
       >
         <h3>

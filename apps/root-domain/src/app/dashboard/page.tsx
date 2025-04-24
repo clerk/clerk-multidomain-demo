@@ -2,12 +2,7 @@ import Card from '@repo/ui/card';
 export default function DashboardPage() {
   return (
     <div className='flex min-h-screen flex-col items-center text-wrap p-24'>
-      <Card
-        className={
-          'flex flex-col p-4 justify-center gap-4 bg-purple-200 rounded-md border-black border-2'
-        }
-        title={` This is a protected Dashboard Page on the Root domain!`}
-      >
+      <Card title={` This is a protected Dashboard Page on the Root domain!`}>
         <h1 className='text-2xl'></h1>
 
         <h3>
