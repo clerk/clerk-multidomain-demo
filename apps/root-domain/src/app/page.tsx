@@ -20,11 +20,11 @@ export default function Home() {
         title={`Clerk supports sharing sessions across different domains. `}
       >
         <h3>
-          Your "Primary" domain or in this case "Root" domain is where the
-          authentication state lives, and satellite domains are able to securely
-          read that state from the primary domain, enabling a seamless
-          authentication flow across domains. This example repository was
-          created to demonstrate just that.
+          Your &apos;Primary&apos; domain or in this case &apos;Root&apos;
+          domain is where the authentication state lives, and satellite domains
+          are able to securely read that state from the primary domain, enabling
+          a seamless authentication flow across domains. This example repository
+          was created to demonstrate just that.
         </h3>
         <p>
           If you&apos;re trying this out locally, attempt to access the
