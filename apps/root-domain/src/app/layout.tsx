@@ -8,7 +8,6 @@ import clerkLogo from '@/assets/clerk-logo.png';
 import { auth } from '@clerk/nextjs/server';
 import Image from 'next/image';
 import Footer from '@repo/ui/footer';
-import { error } from 'console';
 
 export const metadata: Metadata = {
   title: 'Root Domain Next App',

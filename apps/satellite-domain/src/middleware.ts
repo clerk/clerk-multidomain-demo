@@ -13,7 +13,7 @@ export default clerkMiddleware(async (auth, request) => {
   if (!isPublicRoute(request)) {
     await auth.protect();
   }
-});
+}, options);
 
 export const config = {
   matcher: [

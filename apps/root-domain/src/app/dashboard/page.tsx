@@ -1,8 +1,9 @@
-import Card from '@repo/ui/card';
+// import Card from '@repo/ui/card';
 export default function DashboardPage() {
   return (
     <div className='flex min-h-screen flex-col items-center text-wrap p-24'>
-      <Card title={` This is a protected Dashboard Page on the Root domain!`}>
+      <p>Hello</p>
+      {/* <Card title={` This is a protected Dashboard Page on the Root domain!`}>
         <h1 className='text-2xl'></h1>
 
         <h3>
@@ -15,7 +16,7 @@ export default function DashboardPage() {
           user will be redirected to the sign-in page on the root since this
           route is protected by ClerkMiddleware!
         </h3>
-      </Card>
+      </Card> */}
     </div>
   );
 }
