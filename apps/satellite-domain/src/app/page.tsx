@@ -10,8 +10,7 @@ export default function Home() {
       </h2>
 
       <Card
-        title={`Congratulations, if you're seeing
-      this text then that means you've successfully authenticated across
+        title={`You've successfully authenticated across
       domains!`}
       >
         <p>

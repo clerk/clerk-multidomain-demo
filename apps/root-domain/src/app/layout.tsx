@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ClerkProvider, UserButton } from '@clerk/nextjs';
+import { ClerkProvider, UserButton, SignedIn } from '@clerk/nextjs';
 import Header from '@repo/ui/header';
 import SignedInNavbar from '@repo/ui/signedinnavbar';
 import SignedOutNavbar from '@repo/ui/signedoutnavbar';
@@ -8,6 +8,7 @@ import clerkLogo from '@/assets/clerk-logo.png';
 import { auth } from '@clerk/nextjs/server';
 import Image from 'next/image';
 import Footer from '@repo/ui/footer';
+import { error } from 'console';
 
 export const metadata: Metadata = {
   title: 'Root Domain Next App',
@@ -21,14 +22,17 @@ export default async function RootLayout({
 }>) {
   const { userId } = await auth();
 
+  if (!process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS) {
+    throw new Error(
+      'You need to set valid allowedRedirectOrigins on the ClerkProvider'
+    );
+  }
+
   return (
     <ClerkProvider
-      //These props are only utilized if you're not using the environment variable approach. This is set to redirect users to the respective SignIn and SignUp flows.
-      // signInUrl={primarySignInUrl}
-      // signUpUrl={primarySignUpUrl}
-      allowedRedirectOrigins={[
-        process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGIN ?? '',
-      ]}
+      allowedRedirectOrigins={process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS.split(
+        ','
+      )}
     >
       <html lang='en'>
         <body className='flex flex-col items-center'>
@@ -38,7 +42,9 @@ export default async function RootLayout({
             </h1>
 
             {userId ? <SignedInNavbar /> : <SignedOutNavbar />}
-            <UserButton />
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </Header>
           <main className='container'>{children}</main>
           <Footer />

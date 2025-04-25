@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ClerkProvider, UserButton } from '@clerk/nextjs';
+import { ClerkProvider, UserButton, SignedIn } from '@clerk/nextjs';
 import Header from '@repo/ui/header';
 import Footer from '@repo/ui/footer';
 import SignedInNavbar from '@repo/ui/signedinnavbar';
@@ -20,28 +20,20 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { userId } = await auth();
-  // Variables that can be used for the props on the ClerkProvider.
-  // const primarySignInUrl = 'http://localhost:3000/sign-in';
-  // const primarySignUpUrl = 'http://localhost:3000/sign-up';
-  // const domain = 'http://localhost:3000';
 
   return (
-    <ClerkProvider
-    // These props need to be set on the ClerkProvider if you're not using environment variables.
-    // isSatellite
-    // domain={domain}
-    // signInUrl={primarySignInUrl}
-    // signUpUrl={primarySignUpUrl}
-    >
+    <ClerkProvider>
       <html lang='en'>
-        <body className='flex flex-col items-center'>
+        <body className='flex flex-col items-center justify-center'>
           <Header>
             <h1>
               <Image src={clerkLogo} alt='Clerk' height={30} />
             </h1>
 
             {userId ? <SignedInNavbar /> : <SignedOutNavbar />}
-            <UserButton />
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </Header>
           <main className='container'>{children}</main>
           <Footer />
