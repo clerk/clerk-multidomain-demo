@@ -39,7 +39,7 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
 
-  apps/root-domain:
+  apps/next.js/root-domain:
     dependencies:
       '@clerk/nextjs':
         specifier: ^6.18.0
@@ -56,10 +56,10 @@ importers:
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../packages/eslint-config
+        version: link:../../../packages/eslint-config
       '@repo/ui':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../../packages/ui
       eslint:
         specifier: ^9.25.1
         version: 9.25.1(jiti@1.21.7)
@@ -67,7 +67,7 @@ importers:
         specifier: ^15.1.6
         version: 15.3.1(eslint@9.25.1(jiti@1.21.7))(typescript@5.8.3)
 
-  apps/satellite-domain:
+  apps/next.js/satellite-domain:
     dependencies:
       '@clerk/nextjs':
         specifier: ^6.18.0
@@ -84,10 +84,10 @@ importers:
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../packages/eslint-config
+        version: link:../../../packages/eslint-config
       '@repo/ui':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../../packages/ui
       eslint:
         specifier: ^9.25.1
         version: 9.25.1(jiti@1.21.7)
