@@ -50,9 +50,6 @@ importers:
       '@radix-ui/react-tabs':
         specifier: ^1.1.12
         version: 1.1.12(@types/react-dom@19.1.5(@types/react@19.1.5))(@types/react@19.1.5)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@tailwindcss/postcss':
-        specifier: ^4.1.7
-        version: 4.1.7
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -81,6 +78,9 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../../packages/eslint-config
+      '@repo/tailwind-config':
+        specifier: workspace:*
+        version: link:../../../packages/tailwind-config
       '@repo/ui':
         specifier: workspace:*
         version: link:../../../packages/ui
@@ -105,9 +105,6 @@ importers:
       '@radix-ui/react-tabs':
         specifier: ^1.1.12
         version: 1.1.12(@types/react-dom@19.1.5(@types/react@19.1.5))(@types/react@19.1.5)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@tailwindcss/postcss':
-        specifier: ^4.1.7
-        version: 4.1.7
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -136,6 +133,9 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../../packages/eslint-config
+      '@repo/tailwind-config':
+        specifier: workspace:*
+        version: link:../../../packages/tailwind-config
       '@repo/ui':
         specifier: workspace:*
         version: link:../../../packages/ui
