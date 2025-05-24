@@ -19,7 +19,7 @@ export default function HeroCard({
 }) {
   return (
     <Card className='mb-12 border-purple-100 shadow-lg'>
-      <CardHeader className='bg-gradient-to-r from-purple-50 to-purple-100 rounded-t-lg'>
+      <CardHeader className='bg-linear-to-r from-purple-50 to-purple-100 rounded-t-lg'>
         <CardTitle className='flex items-center gap-2 text-purple-800'>
           <Lock className='h-5 w-5' />
           {title}

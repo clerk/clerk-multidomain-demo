@@ -165,7 +165,7 @@ export default function HomePage() {
             </TabsList>
             <TabsContent
               value='overview'
-              className='p-6 border rounded-b-lg shadow-sm'
+              className='p-6 border rounded-b-lg shadow-xs'
             >
               <div className='grid md:grid-cols-2 gap-6'>
                 <Card>
@@ -211,7 +211,7 @@ export default function HomePage() {
             </TabsContent>
             <TabsContent
               value='setup'
-              className='p-6 border rounded-b-lg shadow-sm'
+              className='p-6 border rounded-b-lg shadow-xs'
             >
               <div className='space-y-4'>
                 <h3 className='text-lg font-medium'>
@@ -231,7 +231,7 @@ export default function HomePage() {
             </TabsContent>
             <TabsContent
               value='examples'
-              className='p-6 border rounded-b-lg shadow-sm'
+              className='p-6 border rounded-b-lg shadow-xs'
             >
               <div className='space-y-4'>
                 <h3 className='text-lg font-medium'>Example Implementations</h3>

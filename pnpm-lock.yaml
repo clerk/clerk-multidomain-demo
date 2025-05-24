@@ -50,6 +50,9 @@ importers:
       '@radix-ui/react-tabs':
         specifier: ^1.1.12
         version: 1.1.12(@types/react-dom@19.1.5(@types/react@19.1.5))(@types/react@19.1.5)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@tailwindcss/postcss':
+        specifier: ^4.1.7
+        version: 4.1.7
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -71,6 +74,9 @@ importers:
       tailwind-merge:
         specifier: ^3.3.0
         version: 3.3.0
+      tailwindcss:
+        specifier: ^4.1.7
+        version: 4.1.7
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -86,7 +92,7 @@ importers:
         version: 15.3.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.15.21)(typescript@5.8.3)))
+        version: 1.0.7(tailwindcss@4.1.7)
 
   apps/next.js/satellite-domain:
     dependencies:
@@ -5020,6 +5026,10 @@ snapshots:
   tailwindcss-animate@1.0.7(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.15.21)(typescript@5.8.3))):
     dependencies:
       tailwindcss: 3.4.17(ts-node@10.9.2(@types/node@22.15.21)(typescript@5.8.3))
+
+  tailwindcss-animate@1.0.7(tailwindcss@4.1.7):
+    dependencies:
+      tailwindcss: 4.1.7
 
   tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.15.21)(typescript@5.8.3)):
     dependencies:
