@@ -39,7 +39,6 @@ export default async function RootLayout({
             <h1>
               <Image src={clerkLogo} alt='Clerk' height={30} />
             </h1>
-            <Button variant="link">Hi Nav</Button>
             <Navbar userId={userId} />
 
             <SignedIn>
