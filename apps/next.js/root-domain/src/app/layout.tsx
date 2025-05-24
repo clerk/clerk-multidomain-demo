@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
 import { ClerkProvider, UserButton, SignedIn } from '@clerk/nextjs';
-import Header from '@repo/ui/header';
-import SignedInNavbar from '@repo/ui/signedinnavbar';
-import SignedOutNavbar from '@repo/ui/signedoutnavbar';
 import './globals.css';
-import clerkLogo from '@/assets/clerk-logo.png';
 import { auth } from '@clerk/nextjs/server';
+import clerkLogo from '@/assets/clerk-logo.png';
 import Image from 'next/image';
-import Footer from '@repo/ui/footer';
+import { Header, Navbar } from '@repo/ui/header'
+import { Button } from '@repo/ui/button'
+import Footer, { } from '@repo/ui/footer'
 
 export const metadata: Metadata = {
   title: 'Root Domain Next App',
@@ -35,12 +34,14 @@ export default async function RootLayout({
     >
       <html lang='en'>
         <body className='flex flex-col items-center'>
-          <Header>
+          <Header >
+
             <h1>
               <Image src={clerkLogo} alt='Clerk' height={30} />
             </h1>
+            <Button variant="link">Hi Nav</Button>
+            <Navbar userId={userId} />
 
-            {userId ? <SignedInNavbar /> : <SignedOutNavbar />}
             <SignedIn>
               <UserButton />
             </SignedIn>
