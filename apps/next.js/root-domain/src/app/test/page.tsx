@@ -1,16 +1,9 @@
 import Link from 'next/link';
-import { ArrowRight, Globe, Lock, Server } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { ArrowRight, Globe, Server } from 'lucide-react';
+import { Button } from '@repo/ui/button';
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import HeroCard from '@/components/ui/herocard';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, HeroCard } from '@repo/ui/card';
 
 export default function HomePage() {
   return (
@@ -20,14 +13,14 @@ export default function HomePage() {
         <div className='max-w-4xl mx-auto'>
           <div className='text-center mb-12'>
             <h1 className='text-4xl font-bold tracking-tight mb-3'>
-              Root Domain Homepage
+              Clerk Satellite Domain Demo
             </h1>
             <p className='text-xl text-muted-foreground'>
               Authentication across different domains
             </p>
           </div>
 
-          <HeroCard title='Did I make this right?' subject='Maybe'>
+          <HeroCard title='Root Domain Homepage' subject='The root domain handles authentication for all domains'>
             <p>
               Your <span className='font-semibold'>Primary</span> domain or in
               this case <span className='font-semibold'>Root</span> domain is
@@ -218,35 +211,6 @@ export default function HomePage() {
         </div>
       </main>
 
-      <footer className='border-t py-6'>
-        <div className='container mx-auto px-4'>
-          <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
-            <div className='text-sm text-muted-foreground'>
-              © 2025: Satellite Domain example using Next.js & Clerk!
-            </div>
-            <div className='flex gap-6'>
-              <Link
-                href='#'
-                className='text-sm text-muted-foreground hover:text-foreground transition-colors'
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href='#'
-                className='text-sm text-muted-foreground hover:text-foreground transition-colors'
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href='#'
-                className='text-sm text-muted-foreground hover:text-foreground transition-colors'
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
