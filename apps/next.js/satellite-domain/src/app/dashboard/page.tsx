@@ -1,4 +1,4 @@
-import Card from '@repo/ui/card';
+import { Card } from '@repo/ui/card';
 export default function DashboardPage() {
   return (
     <div className='flex min-h-screen flex-col items-center text-wrap p-24'>

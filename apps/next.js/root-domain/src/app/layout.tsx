@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { Header, Navbar } from '@repo/ui/header'
 import { Footer } from '@repo/ui/footer'
 import Link from 'next/link';
+import { NavbarLinks } from '@/components/navber-links';
 
 export const metadata: Metadata = {
   title: 'Root Domain Next App',
@@ -15,9 +16,9 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode,
+}) {
   const { userId } = await auth();
 
   if (!process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS) {
@@ -34,19 +35,24 @@ export default async function RootLayout({
     >
       <html lang='en'>
         <body className='flex flex-col items-center'>
-          <Header >
+          <Header>
             <Link href="/">
               <h1>
                 <Image src={clerkLogo} alt='Clerk' height={30} />
               </h1>
             </Link>
-            <Navbar userId={userId} />
+            <Navbar>
+              <NavbarLinks userId={userId!} />
+            </Navbar>
 
             <SignedIn>
               <UserButton />
             </SignedIn>
           </Header>
-          <main className='container'>{children}</main>
+          <main className='container'>
+            asdf
+            {children}
+          </main>
           <Footer />
         </body>
       </html>

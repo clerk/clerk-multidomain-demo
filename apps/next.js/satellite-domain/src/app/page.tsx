@@ -1,7 +1,8 @@
-import Card from '@repo/ui/card';
+import { Card } from '@repo/ui/card';
+
 export default function Home() {
   return (
-    <>
+    <div>
       <h1 className='flex justify-center text-2xl m-2 font-bold'>
         Satellite Domain Homepage
       </h1>
@@ -9,10 +10,8 @@ export default function Home() {
         Authentication across different domains
       </h2>
 
-      <Card
-        title={`You've successfully authenticated across
-      domains!`}
-      >
+      <Card >
+        <p>You've successfully authenticated across domains!</p>
         <p>
           Take a moment to look into the cookies that are applied to this site.
           You&apos;ll see multiple &apos;__client_uat&apos; &
@@ -24,6 +23,6 @@ export default function Home() {
           authenticate state persist while there is activity on the page.
         </p>
       </Card>
-    </>
+    </div>
   );
 }
