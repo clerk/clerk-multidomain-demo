@@ -31,9 +31,9 @@ export default function HomePage() {
 
             <Card variant="slate">
               <p className='text-sm'>
-                If you're trying this out locally, attempt to access the
-                satellite domain on // Dynamically render the url here from
-                environment variables
+                If you&apos;re trying this out locally, attempt to access the
+                satellite domain on
+                {/*  TODO: Dynamically render the url here from environment variables */}
                 <code className='bg-slate-100 px-1.5 py-0.5 rounded text-purple-700'>
                   localhost:3001
                 </code>{' '}
@@ -69,7 +69,7 @@ export default function HomePage() {
                   >
                     clerkMiddleware
                   </Link>{' '}
-                  you'll see that you're redirected to authenticate on the{' '}
+                  you&apos;ll see that you&apos;re redirected to authenticate on the{' '}
                   <Link
                     href='#'
                     className='text-purple-600 font-medium hover:underline'

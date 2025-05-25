@@ -50,7 +50,6 @@ export default async function RootLayout({
             </SignedIn>
           </Header>
           <main className='container'>
-            asdf
             {children}
           </main>
           <Footer />

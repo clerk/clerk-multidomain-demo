@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import { cn } from "../lib/utils"
 import { cva, VariantProps } from "class-variance-authority";
 

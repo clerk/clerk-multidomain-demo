@@ -11,7 +11,7 @@ export default function Home() {
       </h2>
 
       <Card >
-        <p>You've successfully authenticated across domains!</p>
+        <p>You&apos;ve successfully authenticated across domains!</p>
         <p>
           Take a moment to look into the cookies that are applied to this site.
           You&apos;ll see multiple &apos;__client_uat&apos; &
