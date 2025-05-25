@@ -5,8 +5,8 @@ import { auth } from '@clerk/nextjs/server';
 import clerkLogo from '@/assets/clerk-logo.png';
 import Image from 'next/image';
 import { Header, Navbar } from '@repo/ui/header'
-import { Button } from '@repo/ui/button'
-import Footer, { } from '@repo/ui/footer'
+import { Footer } from '@repo/ui/footer'
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Root Domain Next App',
@@ -35,10 +35,11 @@ export default async function RootLayout({
       <html lang='en'>
         <body className='flex flex-col items-center'>
           <Header >
-
-            <h1>
-              <Image src={clerkLogo} alt='Clerk' height={30} />
-            </h1>
+            <Link href="/">
+              <h1>
+                <Image src={clerkLogo} alt='Clerk' height={30} />
+              </h1>
+            </Link>
             <Navbar userId={userId} />
 
             <SignedIn>
