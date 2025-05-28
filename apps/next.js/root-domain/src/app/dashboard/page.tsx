@@ -1,22 +1,47 @@
-// import Card from '@repo/ui/card';
+import Link from 'next/link';
+import { Card, HeroCard } from '@repo/ui/card';
+
 export default function DashboardPage() {
   return (
-    <div className='flex min-h-screen flex-col items-center text-wrap p-24'>
-      <p>Hello</p>
-      {/* <Card title={` This is a protected Dashboard Page on the Root domain!`}>
-        <h1 className='text-2xl'></h1>
+    <div className='min-h-screen flex flex-col'>
+      <main className='flex-1 container mx-auto px-4 py-12'>
+        <div className='max-w-4xl mx-auto'>
+          <div className='text-center mb-12'>
+            <h1 className='text-4xl font-bold tracking-tight mb-3'>
+              Clerk Satellite Domain Demo
+            </h1>
+            <p className='text-xl text-muted-foreground'>
+              Authentication across different domains
+            </p>
+          </div>
 
-        <h3>
-          {' '}
-          Users won&apos;t be able to access this page unless they have a valid
-          session through Clerk first!
-        </h3>
-        <h3>
-          Note: If attempting to access this page without being signed in, a
-          user will be redirected to the sign-in page on the root since this
-          route is protected by ClerkMiddleware!
-        </h3>
-      </Card> */}
+          <HeroCard
+            title='Root Domain Dashboard'
+            subject='The Primary domain handles authentication for all domains'
+          >
+            <div className='flex flex-col sm:flex-row gap-2 items-start'>
+              <Card variant='purple'>
+                <h3 className='font-medium mb-2 text-purple-800'>
+                  Testing the Satellite domain feature:
+                </h3>
+                <p>
+                  This is a protected route on the Primary domain. If
+                  you&apos;re able to access this page that means you have a
+                  valid session! We encourage you to logout using our{' '}
+                  <Link
+                    href='https://clerk.com/docs/components/user/user-button'
+                    className='text-purple-600 font-medium hover:underline'
+                  >
+                    UserButton
+                  </Link>{' '}
+                  in the top right corner and follow the instructions on the
+                  homepage to test how this feature works!
+                </p>
+              </Card>
+            </div>
+          </HeroCard>
+        </div>
+      </main>
     </div>
   );
 }

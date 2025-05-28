@@ -4,20 +4,20 @@ import './globals.css';
 import { auth } from '@clerk/nextjs/server';
 import clerkLogo from '@/assets/clerk-logo.png';
 import Image from 'next/image';
-import { Header, Navbar } from '@repo/ui/header'
-import { Footer } from '@repo/ui/footer'
+import { Header, Navbar } from '@repo/ui/header';
+import { Footer } from '@repo/ui/footer';
 import Link from 'next/link';
 import { NavbarLinks } from '@/components/navber-links';
 
 export const metadata: Metadata = {
-  title: 'Root Domain Next App',
-  description: 'Clerk Root domain with Next JS',
+  title: 'Primary Domain Next App',
+  description: 'Clerk Primary domain with Next JS',
 };
 
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode,
+  children: React.ReactNode;
 }) {
   const { userId } = await auth();
 
@@ -36,7 +36,7 @@ export default async function RootLayout({
       <html lang='en'>
         <body className='flex flex-col items-center'>
           <Header>
-            <Link href="/">
+            <Link href='/'>
               <h1>
                 <Image src={clerkLogo} alt='Clerk' height={30} />
               </h1>
@@ -49,9 +49,7 @@ export default async function RootLayout({
               <UserButton />
             </SignedIn>
           </Header>
-          <main className='container'>
-            {children}
-          </main>
+          <main className='container'>{children}</main>
           <Footer />
         </body>
       </html>

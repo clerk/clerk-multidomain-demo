@@ -1,13 +1,19 @@
 import Link from 'next/link';
-import { ArrowRight, Globe, SatelliteDish } from 'lucide-react';
+import { ArrowRight, Globe, Server } from 'lucide-react';
 import { Button } from '@repo/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@repo/ui/tabs';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, HeroCard } from '@repo/ui/card';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  HeroCard,
+} from '@repo/ui/card';
 
 export default function HomePage() {
   return (
     <div className='min-h-screen flex flex-col'>
-
       <main className='flex-1 container mx-auto px-4 py-12'>
         <div className='max-w-4xl mx-auto'>
           <div className='text-center mb-12'>
@@ -19,23 +25,26 @@ export default function HomePage() {
             </p>
           </div>
 
-          <HeroCard title='Root Domain Homepage' subject='The root domain handles authentication for all domains'>
+          <HeroCard
+            title='Root Domain Homepage'
+            subject='The Primary domain handles authentication for all domains'
+          >
             <p>
               Your <span className='font-semibold'>Primary</span> domain or in
               this case <span className='font-semibold'>Root</span> domain is
-              where the authentication state lives, and satellite domains are
+              where the authentication state lives, and Satellite domains are
               able to securely read that state from the primary domain, enabling
               a seamless authentication flow across domains. This example
               repository was created to demonstrate just that.
             </p>
 
-            <Card variant="slate">
+            <Card variant='slate'>
               <p className='text-sm'>
-                If you&apos;re trying this out locally, attempt to access the
-                satellite domain on
+                If you&apos;re trying this out locally, attempt to access a
+                protected route on our satellite domain at
                 {/*  TODO: Dynamically render the url here from environment variables */}
                 <code className='bg-slate-100 px-1.5 py-0.5 rounded text-purple-700'>
-                  localhost:3001
+                  localhost:3001/dashboard
                 </code>{' '}
                 without logging in and see what happens. Clerk will redirect you
                 to the Primary domain set on{' '}
@@ -47,8 +56,8 @@ export default function HomePage() {
               </p>
             </Card>
 
-            <div className='flex flex-col sm:flex-row gap-4 items-start'>
-              <Card variant="purple">
+            <div className='flex flex-col sm:flex-row gap-2 items-start'>
+              <Card variant='purple'>
                 <h3 className='font-medium mb-2 text-purple-800'>
                   Production Environment
                 </h3>
@@ -69,7 +78,8 @@ export default function HomePage() {
                   >
                     clerkMiddleware
                   </Link>{' '}
-                  you&apos;ll see that you&apos;re redirected to authenticate on the{' '}
+                  you&apos;ll see that you&apos;re redirected to authenticate on
+                  the{' '}
                   <Link
                     href='#'
                     className='text-purple-600 font-medium hover:underline'
@@ -81,16 +91,20 @@ export default function HomePage() {
                 </p>
               </Card>
 
-              <Card variant="slate">
+              <Card variant='slate'>
                 <h3 className='font-medium mb-2'>How It Works</h3>
                 <ul className='text-sm space-y-2'>
                   <li className='flex gap-2'>
                     <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
-                    <span>Primary domain stores authentication state</span>
+                    <span>
+                      Primary domain initiates the authentication state
+                    </span>
                   </li>
                   <li className='flex gap-2'>
                     <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
-                    <span>Satellite domains read state securely</span>
+                    <span>
+                      Satellite domains read state securely from the Primary
+                    </span>
                   </li>
                   <li className='flex gap-2'>
                     <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
@@ -107,7 +121,7 @@ export default function HomePage() {
           <Tabs defaultValue='overview' className='mb-12'>
             <TabsList className='grid w-full grid-cols-3'>
               <TabsTrigger value='overview'>Overview</TabsTrigger>
-              <TabsTrigger value='setup'>Setup Guide</TabsTrigger>
+              <TabsTrigger value='setup'>Get Started</TabsTrigger>
               <TabsTrigger value='examples'>Examples</TabsTrigger>
             </TabsList>
             <TabsContent
@@ -115,42 +129,45 @@ export default function HomePage() {
               className='p-6 border rounded-b-lg shadow-xs'
             >
               <div className='grid md:grid-cols-2 gap-6'>
-                <Card>
-                  <CardHeader className='pb-2'>
+                <Card className='border-purple-200 shadow-sm'>
+                  <CardHeader className='pb-2 bg-purple-50 border-b border-purple-100'>
                     <CardTitle className='text-lg flex items-center gap-2'>
                       <Globe className='h-5 w-5 text-purple-600' />
                       Primary Domain
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className='text-sm text-muted-foreground'>
+                  <CardContent className='pt-4'>
+                    <p className='text-sm text-muted-foreground mb-3'>
                       The primary domain is where authentication state is stored
                       and managed. Users sign in here first.
                     </p>
                   </CardContent>
-                  <CardFooter>
-                    <Button variant='outline' size='sm' className='w-full'>
-                      Learn More
-                    </Button>
+                  <CardFooter className='bg-purple-50 border-t border-purple-100'>
+                    <div className='w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-purple-700'>
+                      <span className='inline-block w-2 h-2 rounded-full bg-green-500'></span>
+                      You are currently on this domain
+                    </div>
                   </CardFooter>
                 </Card>
 
                 <Card>
                   <CardHeader className='pb-2'>
                     <CardTitle className='text-lg flex items-center gap-2'>
-                      <SatelliteDish className='h-5 w-5 text-purple-600' />
+                      <Server className='h-5 w-5 text-purple-600' />
                       Satellite Domain
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className='text-sm text-muted-foreground'>
+                  <CardContent className='pt-4'>
+                    <p className='text-sm text-muted-foreground mb-3'>
                       Satellite domains securely read authentication state from
                       the primary domain without requiring re-authentication.
                     </p>
                   </CardContent>
                   <CardFooter>
-                    <Button variant='outline' size='sm' className='w-full'>
-                      Learn More
+                    <Button asChild className='w-full'>
+                      <Link href='https://clerk-multidomain-satellite.com/'>
+                        Visit Satellite Domain
+                      </Link>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -165,14 +182,22 @@ export default function HomePage() {
                   Setting up Multi-Domain Authentication
                 </h3>
                 <ol className='space-y-3 list-decimal list-inside'>
-                  <li>Configure your Primary domain in the Clerk Dashboard</li>
-                  <li>Add and verify your Satellite domains</li>
-                  <li>Set up cross-domain session sharing</li>
-                  <li>Implement clerkMiddleware in your application</li>
-                  <li>Test the authentication flow across domains</li>
+                  <li>
+                    Ensure you have the Enhanced Authentication add-on to
+                    incorporate Satellite domains into your production instance.
+                  </li>
+                  <li>
+                    Follow our instructions in the documentation linked below on
+                    how to set this up.
+                  </li>
                 </ol>
                 <div className='pt-4'>
-                  <Button>View Full Documentation</Button>
+                  <Link
+                    href='https://clerk.com/docs/advanced-usage/satellite-domains'
+                    target='_blank'
+                  >
+                    <Button>View Full Documentation</Button>
+                  </Link>
                 </div>
               </div>
             </TabsContent>
@@ -189,9 +214,14 @@ export default function HomePage() {
                       Complete Next.js implementation with middleware and domain
                       configuration.
                     </p>
-                    <Button variant='outline' size='sm'>
-                      View Example
-                    </Button>
+                    <Link
+                      href='https://github.com/clerk/clerk-multidomain-demo/'
+                      target='_blank'
+                    >
+                      <Button variant='default' size='sm'>
+                        View Example
+                      </Button>
+                    </Link>
                   </div>
                   <div className='border rounded-lg p-4'>
                     <h4 className='font-medium mb-2'>React Example</h4>
@@ -199,7 +229,7 @@ export default function HomePage() {
                       React implementation with React Router and Clerk context
                       providers.
                     </p>
-                    <Button variant='outline' size='sm'>
+                    <Button variant='default' size='sm'>
                       View Example
                     </Button>
                   </div>
@@ -209,7 +239,6 @@ export default function HomePage() {
           </Tabs>
         </div>
       </main>
-
     </div>
   );
 }
