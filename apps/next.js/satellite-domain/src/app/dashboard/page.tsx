@@ -1,4 +1,5 @@
 import { Card, HeroCard } from '@repo/ui/card';
+import { UserDetails } from './details';
 
 export default function HomePage() {
   return (
@@ -62,6 +63,7 @@ export default function HomePage() {
                 </p>
               </Card>
             </div>
+            <UserDetails />
           </HeroCard>
         </div>
       </main>

@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Header, Navbar } from '@repo/ui/header';
 import { Footer } from '@repo/ui/footer';
 import Link from 'next/link';
-import { NavbarLinks } from '@/components/navber-links';
+import { NavbarLinks } from '@/components/navbar-links';
 
 export const metadata: Metadata = {
   title: 'Primary Domain Next App',
@@ -24,6 +24,14 @@ export default async function RootLayout({
   if (!process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS) {
     throw new Error(
       'You need to set valid allowedRedirectOrigins on the ClerkProvider'
+    );
+  }
+  if (
+    process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL &&
+    process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL !== ''
+  ) {
+    throw new Error(
+      'Ensure to set your Sign In and Sign Up URLs inside of your .env!'
     );
   }
 

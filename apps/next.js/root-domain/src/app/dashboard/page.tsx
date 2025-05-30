@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Card, HeroCard } from '@repo/ui/card';
+import { UserDetails } from './details';
 
 export default function DashboardPage() {
   return (
@@ -27,7 +28,7 @@ export default function DashboardPage() {
                 <p>
                   This is a protected route on the Primary domain. If
                   you&apos;re able to access this page that means you have a
-                  valid session! We encourage you to logout using our{' '}
+                  valid session! We encourage you to sign out using our{' '}
                   <Link
                     href='https://clerk.com/docs/components/user/user-button'
                     className='text-purple-600 font-medium hover:underline'
@@ -39,6 +40,7 @@ export default function DashboardPage() {
                 </p>
               </Card>
             </div>
+            <UserDetails />
           </HeroCard>
         </div>
       </main>

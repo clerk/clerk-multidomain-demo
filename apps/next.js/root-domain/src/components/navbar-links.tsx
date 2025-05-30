@@ -6,17 +6,11 @@ import { usePathname } from 'next/navigation';
 
 export const NavbarLinks = ({ userId }: { userId: string }) => {
   const path = usePathname();
-  const navbarLinks = [];
 
+  const navbarLinks = [];
   if (!userId) {
-    navbarLinks.push({
-      name: 'Sign In',
-      link: process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL,
-    });
-    navbarLinks.push({
-      name: 'Sign Up',
-      link: process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL,
-    });
+    navbarLinks.push({ name: 'Sign In', link: '/sign-in' });
+    navbarLinks.push({ name: 'Sign Up', link: '/sign-up' });
   }
   if (userId && path === '/')
     navbarLinks.push({ name: 'Dashboard', link: '/dashboard' });
