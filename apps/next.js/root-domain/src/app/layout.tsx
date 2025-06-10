@@ -26,14 +26,6 @@ export default async function RootLayout({
       'You need to set valid allowedRedirectOrigins on the ClerkProvider'
     );
   }
-  if (
-    process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL &&
-    process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL !== ''
-  ) {
-    throw new Error(
-      'Ensure to set your Sign In and Sign Up URLs inside of your .env!'
-    );
-  }
 
   return (
     <ClerkProvider

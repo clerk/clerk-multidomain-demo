@@ -11,11 +11,12 @@ export const NavbarLinks = ({ userId }: { userId: string }) => {
   if (!userId) {
     navbarLinks.push({
       name: 'Sign In',
-      link: process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL,
+      // Redirect URL to be concatenized if the auth flow is initiated on a Satellites public route.
+      link: `${process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}?redirect_url=http%3A%2F%2Flocalhost%3A3001`,
     });
     navbarLinks.push({
       name: 'Sign Up',
-      link: process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL,
+      link: `${process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}?redirect_url=http%3A%2F%2Flocalhost%3A3001`,
     });
   }
   if (userId && path === '/')
