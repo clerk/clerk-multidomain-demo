@@ -10,14 +10,19 @@ export const NavbarLinks = ({ userId }: { userId: string }) => {
   const navbarLinks = [];
 
   if (!userId) {
+    const signInUrl = new URL(env.NEXT_PUBLIC_CLERK_SIGN_IN_URL);
+    const signUpUrl = new URL(env.NEXT_PUBLIC_CLERK_SIGN_UP_URL);
+    signInUrl.searchParams.set('redirect_url', env.NEXT_PUBLIC_CLERK_DOMAIN);
+    signUpUrl.searchParams.set('redirect_url', env.NEXT_PUBLIC_CLERK_DOMAIN);
+
     navbarLinks.push({
       name: 'Sign In',
       // Redirect URL to be concatenized if the auth flow is initiated on a Satellites public route.
-      link: `${env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}?redirect_url=http%3A%2F%2Flocalhost%3A3001`,
+      link: signInUrl,
     });
     navbarLinks.push({
       name: 'Sign Up',
-      link: `${env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}?redirect_url=http%3A%2F%2Flocalhost%3A3001`,
+      link: signUpUrl,
     });
   }
   if (userId && path === '/')
