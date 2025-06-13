@@ -22,7 +22,6 @@ export default async function RootLayout({
 }) {
   const { userId } = await auth();
 
-  console.log('test', env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS)
   return (
     <ClerkProvider
       signInFallbackRedirectUrl='/dashboard'
