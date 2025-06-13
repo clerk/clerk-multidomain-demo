@@ -10,6 +10,7 @@ import {
   CardTitle,
   HeroCard,
 } from '@repo/ui/card';
+import { env } from '@/env';
 
 export default function HomePage() {
   return (
@@ -18,7 +19,7 @@ export default function HomePage() {
         <div className='max-w-4xl mx-auto'>
           <div className='text-center mb-12'>
             <h1 className='text-4xl font-bold tracking-tight mb-3'>
-              Clerk Satellite Domain Demo
+              Clerk Root Domain Demo
             </h1>
             <p className='text-xl text-muted-foreground'>
               Authentication across different domains
@@ -65,7 +66,7 @@ export default function HomePage() {
                   To see how this works in a production environment, head over
                   to the{' '}
                   <Link
-                    href='#'
+                    href={env.NEXT_PUBLIC_SATELLITE_DOMAIN_URL}
                     className='text-purple-600 font-medium hover:underline'
                   >
                     Satellite Domain
@@ -73,21 +74,14 @@ export default function HomePage() {
                   and try to access the page. Since the entire site is protected
                   by{' '}
                   <Link
-                    href='#'
+                    href="https://clerk.com/docs/references/nextjs/clerk-middleware"
                     className='text-purple-600 font-medium hover:underline'
                   >
                     clerkMiddleware
                   </Link>{' '}
                   you&apos;ll see that you&apos;re redirected to authenticate on
-                  the{' '}
-                  <Link
-                    href='#'
-                    className='text-purple-600 font-medium hover:underline'
-                  >
-                    Root Domain
-                  </Link>{' '}
-                  and then redirected back to the Satellite domain after
-                  successfully completing the sign-in flow.
+                  the Root Domain and then redirected back to the Satellite domain
+                  after successfully completing the sign-in flow.
                 </p>
               </Card>
 
@@ -129,7 +123,7 @@ export default function HomePage() {
               className='p-6 border rounded-b-lg shadow-xs'
             >
               <div className='grid md:grid-cols-2 gap-6'>
-                <Card className='border-purple-200 shadow-sm'>
+                <Card className='border-purple-200 shadow-sm relative'>
                   <CardHeader className='pb-2 bg-purple-50 border-b border-purple-100'>
                     <CardTitle className='text-lg flex items-center gap-2'>
                       <Globe className='h-5 w-5 text-purple-600' />
@@ -142,7 +136,7 @@ export default function HomePage() {
                       and managed. Users sign in here first.
                     </p>
                   </CardContent>
-                  <CardFooter className='bg-purple-50 border-t border-purple-100'>
+                  <CardFooter className='bg-purple-50 border-t border-purple-100 p-0 h-14 absolute bottom-0 left-0 right-0'>
                     <div className='w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-purple-700'>
                       <span className='inline-block w-2 h-2 rounded-full bg-green-500'></span>
                       You are currently on this domain
@@ -165,7 +159,7 @@ export default function HomePage() {
                   </CardContent>
                   <CardFooter>
                     <Button asChild className='w-full'>
-                      <Link href='https://clerk-multidomain-satellite.com/'>
+                      <Link href={env.NEXT_PUBLIC_SATELLITE_DOMAIN_URL}>
                         Visit Satellite Domain
                       </Link>
                     </Button>
@@ -181,7 +175,7 @@ export default function HomePage() {
                 <h3 className='text-lg font-medium'>
                   Setting up Multi-Domain Authentication
                 </h3>
-                <ol className='space-y-3 list-decimal list-inside'>
+                <ol className='space-y-3 list-decimal list-inside text-sm text-muted-foreground '>
                   <li>
                     Ensure you have the Enhanced Authentication add-on to
                     incorporate Satellite domains into your production instance.
@@ -222,16 +216,6 @@ export default function HomePage() {
                         View Example
                       </Button>
                     </Link>
-                  </div>
-                  <div className='border rounded-lg p-4'>
-                    <h4 className='font-medium mb-2'>React Example</h4>
-                    <p className='text-sm text-muted-foreground mb-4'>
-                      React implementation with React Router and Clerk context
-                      providers.
-                    </p>
-                    <Button variant='default' size='sm'>
-                      View Example
-                    </Button>
                   </div>
                 </div>
               </div>

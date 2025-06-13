@@ -8,9 +8,10 @@ import { Header, Navbar } from '@repo/ui/header';
 import { Footer } from '@repo/ui/footer';
 import Link from 'next/link';
 import { NavbarLinks } from '@/components/navbar-links';
+import { env } from '@/env';
 
 export const metadata: Metadata = {
-  title: 'Primary Domain Next App',
+  title: 'Clerk Multi Domain Root App',
   description: 'Clerk Primary domain with Next JS',
 };
 
@@ -21,15 +22,12 @@ export default async function RootLayout({
 }) {
   const { userId } = await auth();
 
-  if (!process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS) {
-    throw new Error(
-      'You need to set valid allowedRedirectOrigins on the ClerkProvider'
-    );
-  }
-
+  console.log('test', env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS)
   return (
     <ClerkProvider
-      allowedRedirectOrigins={process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS.split(
+      signInFallbackRedirectUrl='/dashboard'
+      signUpFallbackRedirectUrl='/dashboard'
+      allowedRedirectOrigins={env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS.split(
         ','
       )}
     >

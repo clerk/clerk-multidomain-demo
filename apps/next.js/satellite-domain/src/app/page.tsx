@@ -10,6 +10,7 @@ import {
   CardTitle,
   HeroCard,
 } from '@repo/ui/card';
+import { env } from '@/env';
 
 export default function HomePage() {
   return (
@@ -72,7 +73,7 @@ export default function HomePage() {
                   you&apos;ll see that you&apos;re redirected to authenticate on
                   the{' '}
                   <Link
-                    href='https://clerk-multidomain-root.com/sign-in'
+                    href={`${env.NEXT_PUBLIC_ROOT_DOMAIN_URL}/sign-in`}
                     className='text-purple-600 font-medium hover:underline'
                   >
                     Primary Domain
@@ -116,10 +117,10 @@ export default function HomePage() {
               className='p-6 border rounded-b-lg shadow-xs'
             >
               <div className='grid md:grid-cols-2 gap-6'>
-                <Card className='border-purple-200 shadow-sm'>
-                  <CardHeader className='pb-2 bg-purple-50 border-b border-purple-100'>
+                <Card>
+                  <CardHeader className='pb-2'>
                     <CardTitle className='text-lg flex items-center gap-2'>
-                      <Globe className='h-5 w-5 text-purple-600' />
+                      <Server className='h-5 w-5 text-purple-600' />
                       Primary Domain
                     </CardTitle>
                   </CardHeader>
@@ -129,19 +130,19 @@ export default function HomePage() {
                       and managed. Users sign in here first.
                     </p>
                   </CardContent>
-                  <CardFooter className='bg-purple-50 border-t border-purple-100'>
+                  <CardFooter>
                     <Button asChild className='w-full'>
-                      <Link href='https://clerk-multidomain-root.com/'>
+                      <Link href={env.NEXT_PUBLIC_ROOT_DOMAIN_URL}>
                         Visit Primary Domain
                       </Link>
                     </Button>
                   </CardFooter>
                 </Card>
 
-                <Card>
-                  <CardHeader className='pb-2'>
+                <Card className='border-purple-200 shadow-sm relative'>
+                  <CardHeader className='pb-2 bg-purple-50 border-b border-purple-100'>
                     <CardTitle className='text-lg flex items-center gap-2'>
-                      <Server className='h-5 w-5 text-purple-600' />
+                      <Globe className='h-5 w-5 text-purple-600' />
                       Satellite Domain
                     </CardTitle>
                   </CardHeader>
@@ -151,7 +152,7 @@ export default function HomePage() {
                       the primary domain without requiring re-authentication.
                     </p>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter className='bg-purple-50 border-t border-purple-100 p-0 h-14 absolute bottom-0 left-0 right-0'>
                     <div className='w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-purple-700'>
                       <span className='inline-block w-2 h-2 rounded-full bg-green-500'></span>
                       You are currently on this domain
@@ -159,6 +160,8 @@ export default function HomePage() {
                   </CardFooter>
                 </Card>
               </div>
+
+
             </TabsContent>
             <TabsContent
               value='setup'
@@ -168,7 +171,7 @@ export default function HomePage() {
                 <h3 className='text-lg font-medium'>
                   Setting up Multi-Domain Authentication
                 </h3>
-                <ol className='space-y-3 list-decimal list-inside'>
+                <ol className='space-y-3 list-decimal list-inside text-sm text-muted-foreground'>
                   <li>
                     Ensure you have the Enhanced Authentication add-on to
                     incorporate Satellite domains into your production instance.

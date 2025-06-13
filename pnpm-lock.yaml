@@ -51,6 +51,9 @@ importers:
       '@t3-oss/env-nextjs':
         specifier: ^0.13.8
         version: 0.13.8(typescript@5.8.3)(zod@3.25.63)
+      jiti:
+        specifier: ^2.4.2
+        version: 2.4.2
       lucide-react:
         specifier: ^0.510.0
         version: 0.510.0(react@19.1.0)
@@ -91,6 +94,9 @@ importers:
       '@t3-oss/env-nextjs':
         specifier: ^0.13.8
         version: 0.13.8(typescript@5.8.3)(zod@3.25.63)
+      jiti:
+        specifier: ^2.4.2
+        version: 2.4.2
       lucide-react:
         specifier: ^0.510.0
         version: 0.510.0(react@19.1.0)

@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { NavbarLinks } from '@/components/navbar-links';
 
 export const metadata: Metadata = {
-  title: 'Satellite Domain Next App',
+  title: 'Clerk Multi Domain Satellite Domain',
   description: 'Clerk Satellite domain app with Next JS',
 };
 

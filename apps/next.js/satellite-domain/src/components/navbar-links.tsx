@@ -1,5 +1,6 @@
 'use client';
 
+import { env } from '@/env';
 import { Button } from '@repo/ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -12,11 +13,11 @@ export const NavbarLinks = ({ userId }: { userId: string }) => {
     navbarLinks.push({
       name: 'Sign In',
       // Redirect URL to be concatenized if the auth flow is initiated on a Satellites public route.
-      link: `${process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}?redirect_url=http%3A%2F%2Flocalhost%3A3001`,
+      link: `${env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}?redirect_url=http%3A%2F%2Flocalhost%3A3001`,
     });
     navbarLinks.push({
       name: 'Sign Up',
-      link: `${process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}?redirect_url=http%3A%2F%2Flocalhost%3A3001`,
+      link: `${env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}?redirect_url=http%3A%2F%2Flocalhost%3A3001`,
     });
   }
   if (userId && path === '/')
