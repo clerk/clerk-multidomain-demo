@@ -11,8 +11,12 @@ import {
   HeroCard,
 } from '@repo/ui/card';
 import { env } from '@/env';
+import { auth } from '@clerk/nextjs/server';
 
-export default function HomePage() {
+export default async function HomePage() {
+  const { userId } = await auth()
+
+  console.log('USERID', userId)
   return (
     <div className='min-h-screen flex flex-col'>
       <main className='flex-1 container mx-auto px-4 py-12'>

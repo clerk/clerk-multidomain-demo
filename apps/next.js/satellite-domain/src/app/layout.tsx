@@ -20,6 +20,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { userId } = await auth();
+  console.log('USERID FROM LAYOUT', userId)
 
   return (
     <ClerkProvider>

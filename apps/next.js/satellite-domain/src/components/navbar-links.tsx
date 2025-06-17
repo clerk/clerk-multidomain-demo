@@ -1,13 +1,18 @@
 'use client';
 
 import { env } from '@/env';
+import { useUser } from '@clerk/nextjs';
 import { Button } from '@repo/ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export const NavbarLinks = ({ userId }: { userId: string }) => {
+  const { user, isLoaded } = useUser()
   const path = usePathname();
   const navbarLinks = [];
+
+  if (!isLoaded) return null
+  console.log('USERID FROM CLIENT', user?.id)
 
   if (!userId) {
     const signInUrl = new URL(env.NEXT_PUBLIC_CLERK_SIGN_IN_URL);
