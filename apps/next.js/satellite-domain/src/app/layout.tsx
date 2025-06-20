@@ -11,7 +11,7 @@ import { NavbarLinks } from '@/components/navbar-links';
 
 export const metadata: Metadata = {
   title: 'Clerk Multi Domain Satellite Domain',
-  description: 'Clerk Satellite domain app with Next JS',
+  description: 'Clerk Satellite Domain app with Next JS',
 };
 
 export default async function RootLayout({

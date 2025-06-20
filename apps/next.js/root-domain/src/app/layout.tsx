@@ -12,7 +12,7 @@ import { env } from '@/env';
 
 export const metadata: Metadata = {
   title: 'Clerk Multi Domain Root App',
-  description: 'Clerk Primary domain with Next JS',
+  description: 'Clerk Root Domain with Next JS',
 };
 
 export default async function RootLayout({

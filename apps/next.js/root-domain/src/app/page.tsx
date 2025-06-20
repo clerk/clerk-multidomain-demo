@@ -28,60 +28,46 @@ export default function HomePage() {
 
           <HeroCard
             title='Root Domain Homepage'
-            subject='The Primary domain handles authentication for all domains'
+            subject='The Root Domain handles authentication for all domains'
           >
             <p>
-              Your <span className='font-semibold'>Primary</span> domain or in
-              this case <span className='font-semibold'>Root</span> domain is
-              where the authentication state lives, and Satellite domains are
-              able to securely read that state from the primary domain, enabling
-              a seamless authentication flow across domains. This example
+              Your <span className='font-semibold'>Root</span> domain is where
+              the authentication flow will take place. Once the authentication
+              flow is completed, Satellite Domains will set a suffixed JWT to
+              share the authenticated state between the Root Domain and other
+              Satellite Domains configured in your Clerk dashboard, enabling a
+              seamless authentication flow across domains. This example
               repository was created to demonstrate just that.
             </p>
 
-            <Card variant='slate'>
-              <p className='text-sm'>
-                If you&apos;re trying this out locally, attempt to access a
-                protected route on our satellite domain at
-                {/*  TODO: Dynamically render the url here from environment variables */}
-                <code className='bg-slate-100 px-1.5 py-0.5 rounded text-purple-700'>
-                  localhost:3001/dashboard
-                </code>{' '}
-                without logging in and see what happens. Clerk will redirect you
-                to the Primary domain set on{' '}
-                <code className='bg-slate-100 px-1.5 py-0.5 rounded text-purple-700'>
-                  localhost:3000
-                </code>{' '}
-                to authenticate you and redirect back to the Satellite once the
-                authentication flow has successfully executed.
-              </p>
-            </Card>
-
-            <div className='flex flex-col sm:flex-row gap-2 items-start'>
+            <div className='flex flex-col sm:flex-row gap-4 items-start'>
               <Card variant='purple'>
-                <h3 className='font-medium mb-2 text-purple-800'>
-                  Production Environment
+                <h3 className='font-medium mb-2 text-purple-800 mt-2 underline'>
+                  Try the feature!
                 </h3>
                 <p className='text-sm'>
-                  To see how this works in a production environment, head over
-                  to the{' '}
+                  To see how this works, head over to the{' '}
                   <Link
-                    href={env.NEXT_PUBLIC_SATELLITE_DOMAIN_URL}
+                    href={`${env.NEXT_PUBLIC_SATELLITE_DOMAIN_URL}/dashboard`}
                     className='text-purple-600 font-medium hover:underline'
                   >
                     Satellite Domain
                   </Link>{' '}
-                  and try to access the page. Since the entire site is protected
-                  by{' '}
+                  . This will redirect you to a protected page on the Satellite
+                  Domain. Since the dashboard route is protected by{' '}
                   <Link
-                    href="https://clerk.com/docs/references/nextjs/clerk-middleware"
+                    href='https://clerk.com/docs/references/nextjs/clerk-middleware'
                     className='text-purple-600 font-medium hover:underline'
                   >
                     clerkMiddleware
                   </Link>{' '}
                   you&apos;ll see that you&apos;re redirected to authenticate on
-                  the Root Domain and then redirected back to the Satellite domain
-                  after successfully completing the sign-in flow.
+                  the Root Domain to authenticate. In the URL, you'll notice a{' '}
+                  <code className='bg-slate-100 px-1.5 py-0.5 rounded text-purple-700'>
+                    redirect_url
+                  </code>{' '}
+                  is set to send you back to the Satellite Domain once the flow
+                  is successfully completed.
                 </p>
               </Card>
 
@@ -90,23 +76,22 @@ export default function HomePage() {
                 <ul className='text-sm space-y-2'>
                   <li className='flex gap-2'>
                     <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
-                    <span>
-                      Primary domain initiates the authentication state
-                    </span>
+                    <span>Root Domain handles authenticating the user.</span>
                   </li>
                   <li className='flex gap-2'>
                     <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
                     <span>
-                      Satellite domains read state securely from the Primary
+                      Satellite Domains set a session JWT cookie for each valid
+                      domain.
                     </span>
                   </li>
                   <li className='flex gap-2'>
                     <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
-                    <span>Seamless redirection between domains</span>
+                    <span>Seamless redirection between domains.</span>
                   </li>
                   <li className='flex gap-2'>
                     <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
-                    <span>Protected by clerkMiddleware</span>
+                    <span>Protected by clerkMiddleware.</span>
                   </li>
                 </ul>
               </Card>
@@ -127,13 +112,14 @@ export default function HomePage() {
                   <CardHeader className='pb-2 bg-purple-50 border-b border-purple-100'>
                     <CardTitle className='text-lg flex items-center gap-2'>
                       <Globe className='h-5 w-5 text-purple-600' />
-                      Primary Domain
+                      Root Domain
                     </CardTitle>
                   </CardHeader>
                   <CardContent className='pt-4'>
                     <p className='text-sm text-muted-foreground mb-3'>
-                      The primary domain is where authentication state is stored
-                      and managed. Users sign in here first.
+                      The Root domain is where authentication flow takes place.
+                      Users will be redirected from the Satellite to sign up or
+                      sign in here.
                     </p>
                   </CardContent>
                   <CardFooter className='bg-purple-50 border-t border-purple-100 p-0 h-14 absolute bottom-0 left-0 right-0'>
@@ -153,8 +139,9 @@ export default function HomePage() {
                   </CardHeader>
                   <CardContent className='pt-4'>
                     <p className='text-sm text-muted-foreground mb-3'>
-                      Satellite domains securely read authentication state from
-                      the primary domain without requiring re-authentication.
+                      Satellite Domains will set a session JWT scoped to that
+                      specific domain once the auth flow from the Root Domain is
+                      completed.
                     </p>
                   </CardContent>
                   <CardFooter>
@@ -177,8 +164,15 @@ export default function HomePage() {
                 </h3>
                 <ol className='space-y-3 list-decimal list-inside text-sm text-muted-foreground '>
                   <li>
-                    Ensure you have the Enhanced Authentication add-on to
-                    incorporate Satellite domains into your production instance.
+                    Ensure you have the{' '}
+                    <Link
+                      href='https://clerk.com/pricing'
+                      className='text-purple-600 font-medium hover:underline'
+                    >
+                      Enhanced Authentication add-on
+                    </Link>{' '}
+                    to incorporate Satellite Domains into your production
+                    instance.
                   </li>
                   <li>
                     Follow our instructions in the documentation linked below on
