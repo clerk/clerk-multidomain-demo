@@ -20,10 +20,6 @@ export const NavbarLinks = ({ userId }: { userId: string }) => {
       // Redirect URL to be concatenized if the auth flow is initiated on a Satellites public route.
       link: signInUrl,
     });
-    navbarLinks.push({
-      name: 'Sign Up',
-      link: signUpUrl,
-    });
   }
   if (userId && path === '/')
     navbarLinks.push({ name: 'Dashboard', link: '/dashboard' });

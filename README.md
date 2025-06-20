@@ -9,7 +9,7 @@
 </p>
 <div align="center">
   <h1>
-    Satellite domain example using Turborepo with Clerk and Next.js! 
+    Satellite Domain example using Turborepo with Clerk and Next.js! 
   </h1>  
   <a href="https://www.npmjs.com/package/@clerk/clerk-js">
     <img alt="Downloads" src="https://img.shields.io/npm/dm/@clerk/clerk-js" />
@@ -29,15 +29,12 @@
 
 Clerk is a developer-first authentication and user management solution. It provides pre-built React components and hooks for sign-in, sign-up, user profile, and organization management. Clerk is designed to be easy to use and customize, and can be dropped into any React or Next.js application.
 
-
 This example can be used as a reference for how to implement Clerk authentication to persist across different domains using Turborepo, Clerk, and Next.js!
 
 ## Live production examples
 
-[Root domain](https://clerk-multidomain-root.com/)
-[Satellite domain](https://clerk-multidomain-satellite.com/) 
-
-
+[Root Domain](https://clerk-multidomain-root.com/)
+[Satellite Domain](https://clerk-multidomain-satellite.com/)
 
 ## Running the example repository
 
@@ -57,7 +54,7 @@ To run the example locally, you need to:
 
 ## Learn more
 
-To learn more about our Satellite domain feature, check out the following resources:
+To learn more about our Satellite Domain feature, check out the following resources:
 
 - [Satellite domains: Authentication across different domains](https://clerk.com/docs/advanced-usage/satellite-domains#how-to-add-satellite-domains)
 - [Clerk Documentation](https://clerk.com/docs?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart)
