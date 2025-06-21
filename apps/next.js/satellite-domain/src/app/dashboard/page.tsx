@@ -19,8 +19,8 @@ export default function HomePage() {
             title='Satellite Domain Dashboard'
             subject='A protected route on your Satellite Domain'
           >
-            <Card variant='slate'>
-              <h3 className='font-medium mb-2'>
+            <Card variant='gray'>
+              <h3 className='font-medium mb-2 underline'>
                 Congratulations, you&apos;ve successfully authenticated across
                 domains!
               </h3>
@@ -45,8 +45,8 @@ export default function HomePage() {
             </Card>
 
             <div className='flex flex-col sm:flex-row gap-2 items-start'>
-              <Card variant='purple'>
-                <h3 className='font-medium mb-2 text-purple-800'>
+              <Card variant='gray'>
+                <h3 className='font-medium mb-2 text-black underline'>
                   This is a protected dashboard page for your Satellite Domain!
                 </h3>
                 <p>

@@ -21,8 +21,8 @@ export default function DashboardPage() {
             subject='The Root Domain handles authentication for all domains'
           >
             <div className='flex flex-col sm:flex-row gap-2 items-start'>
-              <Card variant='purple'>
-                <h3 className='font-medium mb-2 text-purple-800'>
+              <Card variant='gray'>
+                <h3 className='font-medium mb-2 text-black-800'>
                   Testing the Satellite Domain feature:
                 </h3>
                 <p>
