@@ -1,7 +1,7 @@
-import * as React from "react"
+import * as React from 'react';
 import { ShieldCheck } from 'lucide-react';
-import { cn } from "../lib/utils"
-import { cva, VariantProps } from "class-variance-authority";
+import { cn } from '../lib/utils';
+import { cva, VariantProps } from 'class-variance-authority';
 
 const cardVariants = cva(
   'rounded-lg border bg-card text-card-foreground shadow-xs',
@@ -9,33 +9,32 @@ const cardVariants = cva(
     variants: {
       variant: {
         slate: ['bg-slate-50 border-slate-100 p-4'],
-        purple: ['bg-purple-50 p-4 border-purple-100']
-
-      }
-    }
+        purple: ['bg-purple-50 p-4 border-purple-100'],
+        gray: ['bg-gray-50 p-4 border-gray-100'],
+      },
+    },
   }
-)
+);
 
 export interface CardProps
   extends React.HTMLAttributes<HTMLDivElement>,
-  VariantProps<typeof cardVariants> { }
+    VariantProps<typeof cardVariants> {}
 
-const Card = React.forwardRef<
-  HTMLDivElement,
-  CardProps
->(({ className, variant, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      cardVariants({
-        variant,
-        className
-      })
-    )}
-    {...props}
-  />
-))
-Card.displayName = "Card"
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  ({ className, variant, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(
+        cardVariants({
+          variant,
+          className,
+        })
+      )}
+      {...props}
+    />
+  )
+);
+Card.displayName = 'Card';
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
@@ -43,11 +42,11 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn('flex flex-col space-y-1.5 p-6', className)}
     {...props}
   />
-))
-CardHeader.displayName = "CardHeader"
+));
+CardHeader.displayName = 'CardHeader';
 
 const CardTitle = React.forwardRef<
   HTMLDivElement,
@@ -56,13 +55,13 @@ const CardTitle = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
+      'text-2xl font-semibold leading-none tracking-tight',
       className
     )}
     {...props}
   />
-))
-CardTitle.displayName = "CardTitle"
+));
+CardTitle.displayName = 'CardTitle';
 
 const CardDescription = React.forwardRef<
   HTMLDivElement,
@@ -70,19 +69,19 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn('text-sm text-muted-foreground', className)}
     {...props}
   />
-))
-CardDescription.displayName = "CardDescription"
+));
+CardDescription.displayName = 'CardDescription';
 
 const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
-CardContent.displayName = "CardContent"
+  <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />
+));
+CardContent.displayName = 'CardContent';
 
 const CardFooter = React.forwardRef<
   HTMLDivElement,
@@ -90,12 +89,11 @@ const CardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex items-center justify-center p-6 pt-0", className)}
+    className={cn('flex items-center justify-center p-6 pt-0', className)}
     {...props}
   />
-))
-CardFooter.displayName = "CardFooter"
-
+));
+CardFooter.displayName = 'CardFooter';
 
 export function HeroCard({
   title,
@@ -107,9 +105,9 @@ export function HeroCard({
   children: React.ReactNode;
 }) {
   return (
-    <Card className='mb-12 border-purple-100 shadow-lg'>
-      <CardHeader className='bg-linear-to-r from-purple-50 to-purple-100 rounded-t-lg'>
-        <CardTitle className='flex items-center gap-2 text-purple-800'>
+    <Card className='mb-12 border-gray-200 shadow-lg'>
+      <CardHeader className='bg-linear-to-r from-gray-100 to-gray-200 rounded-t-lg'>
+        <CardTitle className='flex items-center gap-2 text-black-800'>
           <ShieldCheck className='h-5 w-5' />
           {title}
         </CardTitle>
@@ -120,5 +118,11 @@ export function HeroCard({
   );
 }
 
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+};

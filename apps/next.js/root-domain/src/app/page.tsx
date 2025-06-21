@@ -41,7 +41,7 @@ export default function HomePage() {
             </p>
 
             <div className='flex flex-col sm:flex-row gap-4 items-start'>
-              <Card variant='purple'>
+              <Card variant='gray'>
                 <h3 className='font-medium mb-2 text-purple-800 mt-2 underline'>
                   Try the feature!
                 </h3>
@@ -71,7 +71,7 @@ export default function HomePage() {
                 </p>
               </Card>
 
-              <Card variant='slate'>
+              <Card variant='gray'>
                 <h3 className='font-medium mb-2'>How It Works</h3>
                 <ul className='text-sm space-y-2'>
                   <li className='flex gap-2'>
@@ -108,8 +108,11 @@ export default function HomePage() {
               className='p-6 border rounded-b-lg shadow-xs'
             >
               <div className='grid md:grid-cols-2 gap-6'>
-                <Card className='border-purple-200 shadow-sm relative'>
-                  <CardHeader className='pb-2 bg-purple-50 border-b border-purple-100'>
+                <Card
+                  className='border-purple-200 shadow-sm relative'
+                  variant='gray'
+                >
+                  <CardHeader className='pb-2 bg-gray-50 border-b border-gray-100'>
                     <CardTitle className='text-lg flex items-center gap-2'>
                       <Globe className='h-5 w-5 text-purple-600' />
                       Root Domain
@@ -122,7 +125,7 @@ export default function HomePage() {
                       sign in here.
                     </p>
                   </CardContent>
-                  <CardFooter className='bg-purple-50 border-t border-purple-100 p-0 h-14 absolute bottom-0 left-0 right-0'>
+                  <CardFooter className='bg-gray-100 border-t border-gray-200 p-0 h-14 absolute bottom-0 left-0 right-0'>
                     <div className='w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-purple-700'>
                       <span className='inline-block w-2 h-2 rounded-full bg-green-500'></span>
                       You are currently on this domain
