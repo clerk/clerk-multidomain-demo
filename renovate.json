@@ -44,6 +44,23 @@
       "matchCurrentVersion": "!/^0/",
       "automerge": true,
       "semanticCommitScope": "nextjs"
+    },
+    {
+      "groupName": "Minor and Patch Dependency Update",
+      "groupSlug": "repo-minor-and-patch",
+      "matchFileNames": ["package.json", "pnpm-workspace.yaml"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "semanticCommitScope": "repo"
+    },
+    {
+      "groupName": "Major Dependency Update",
+      "groupSlug": "repo-major",
+      "matchFileNames": ["package.json", "pnpm-workspace.yaml"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "semanticCommitScope": "repo"
     }
   ]
 }
