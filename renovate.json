@@ -42,7 +42,7 @@
       ],
       "matchUpdateTypes": ["major"],
       "matchCurrentVersion": "!/^0/",
-      "automerge": true,
+      "automerge": false,
       "semanticCommitScope": "nextjs"
     },
     {
@@ -60,7 +60,7 @@
       "matchFileNames": ["packages/**/package.json"],
       "matchUpdateTypes": ["major"],
       "matchCurrentVersion": "!/^0/",
-      "automerge": true,
+      "automerge": false,
       "semanticCommitScope": "packages"
     },
     {
