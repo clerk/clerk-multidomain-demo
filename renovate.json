@@ -1,6 +1,49 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    ":dependencyDashboard",
+    ":ignoreUnstable",
+    ":prConcurrentLimit10",
+    ":prNotPending",
+    ":combinePatchMinorReleases",
+    ":separateMultipleMajorReleases",
+    ":enableVulnerabilityAlerts",
+    ":semanticPrefixChore"
+  ],
+  "minimumReleaseAge": "3 days",
+  "timezone": "America/Montreal",
+  "schedule": ["after 5pm every wednesday", "before 9am every thursday"],
+  "prHeader": "Repo Dependency Update",
+  "reviewers": ["nme22"],
+  "labels": ["deps"],
+  "branchPrefix": "deps/",
+  "commitMessageLowerCase": "never",
+  "rebaseLabel": "Rebase",
+  "packageRules": [
+    {
+      "groupName": "Minor and Patch Dependency Update",
+      "groupSlug": "nextjs-minor-and-patch",
+      "matchFileNames": [
+        "apps/next.js/root-domain/package.json",
+        "apps/next.js/satellite-domain/package.json"
+      ],
+      "matchUpdateTypes": ["patch", "minor"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "semanticCommitScope": "nextjs"
+    },
+    {
+      "groupName": "Major Dependency Update",
+      "groupSlug": "nextjs-major",
+      "matchFileNames": [
+        "apps/next.js/root-domain/package.json",
+        "apps/next.js/satellite-domain/package.json"
+      ],
+      "matchUpdateTypes": ["major"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "semanticCommitScope": "nextjs"
+    }
   ]
 }
