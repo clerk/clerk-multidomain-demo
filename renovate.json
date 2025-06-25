@@ -47,6 +47,24 @@
     },
     {
       "groupName": "Minor and Patch Dependency Update",
+      "groupSlug": "packages-minor-and-patch",
+      "matchFileNames": ["packages/**/package.json"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "semanticCommitScope": "packages"
+    },
+    {
+      "groupName": "Major Dependency Update",
+      "groupSlug": "packages-major",
+      "matchFileNames": ["packages/**/package.json"],
+      "matchUpdateTypes": ["major"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "semanticCommitScope": "packages"
+    },
+    {
+      "groupName": "Minor and Patch Dependency Update",
       "groupSlug": "repo-minor-and-patch",
       "matchFileNames": ["package.json", "pnpm-workspace.yaml"],
       "matchUpdateTypes": ["patch", "minor"],
