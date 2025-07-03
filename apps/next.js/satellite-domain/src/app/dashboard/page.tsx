@@ -1,7 +1,7 @@
 import { Card, HeroCard } from '@repo/ui/card';
 import { UserDetails } from './details';
 
-export default function HomePage() {
+export default function DashboardPage() {
   return (
     <div className='min-h-screen flex flex-col'>
       <main className='flex-1 container mx-auto px-4 py-12'>
