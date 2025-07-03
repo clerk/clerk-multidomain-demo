@@ -44,12 +44,12 @@ export default function HomePage() {
                 protected route on our satellite domain at
                 {/*  TODO: Dynamically render the url here from environment variables */}
                 <code className="bg-slate-100 px-1.5 py-0.5 rounded text-purple-700">
-                  localhost:3001/dashboard
+                  localhost:3003/dashboard
                 </code>{" "}
                 without logging in and see what happens. Clerk will redirect you
                 to the Primary domain set on{" "}
                 <code className="bg-slate-100 px-1.5 py-0.5 rounded text-purple-700">
-                  localhost:3000
+                  localhost:3002
                 </code>{" "}
                 to authenticate you and redirect back to the Satellite once the
                 authentication flow has successfully executed.
