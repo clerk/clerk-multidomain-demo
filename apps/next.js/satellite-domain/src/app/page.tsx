@@ -42,14 +42,14 @@ export default function HomePage() {
 
             <div className='flex flex-col sm:flex-row gap-4 items-start'>
               <Card variant='gray'>
-                <h3 className='font-medium mb-2 text-purple-800 mt-2 underline'>
+                <h3 className='font-medium mb-2 text-gray-800 mt-2 underline'>
                   Try the feature!
                 </h3>
                 <p className='text-sm'>
                   To see how this works, head over to the{' '}
                   <Link
                     href={`${env.NEXT_PUBLIC_CLERK_DOMAIN}/dashboard`}
-                    className='text-purple-600 font-medium hover:underline'
+                    className='text-gray-600 font-medium hover:underline  hover:text-purple-600'
                   >
                     Satellite Domain
                   </Link>{' '}
@@ -57,13 +57,13 @@ export default function HomePage() {
                   Domain. Since the dashboard route is protected by{' '}
                   <Link
                     href='https://clerk.com/docs/references/nextjs/clerk-middleware'
-                    className='text-purple-600 font-medium hover:underline'
+                    className='text-gray-600 font-medium hover:underline  hover:text-purple-600'
                   >
                     clerkMiddleware
                   </Link>{' '}
                   you&apos;ll see that you&apos;re redirected to authenticate on
                   the Root Domain to authenticate. In the URL, you'll notice a{' '}
-                  <code className='bg-slate-100 px-1.5 py-0.5 rounded text-purple-700'>
+                  <code className='bg-slate-100 px-1.5 py-0.5 rounded text-gray-700'>
                     redirect_url
                   </code>{' '}
                   is set to send you back to the Satellite Domain once the flow
@@ -75,22 +75,22 @@ export default function HomePage() {
                 <h3 className='font-medium mb-2'>How It Works</h3>
                 <ul className='text-sm space-y-2'>
                   <li className='flex gap-2'>
-                    <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
+                    <ArrowRight className='h-4 w-4 text-gray-600 shrink-0 mt-0.5' />
                     <span>Root Domain handles authenticating the user</span>
                   </li>
                   <li className='flex gap-2'>
-                    <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
+                    <ArrowRight className='h-4 w-4 text-gray-600 shrink-0 mt-0.5' />
                     <span>
                       Satellite Domains set a session JWT cookie for each valid
                       domain the user visits inside of their Clerk app
                     </span>
                   </li>
                   <li className='flex gap-2'>
-                    <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
+                    <ArrowRight className='h-4 w-4 text-gray-600 shrink-0 mt-0.5' />
                     <span>Seamless redirection between domains</span>
                   </li>
                   <li className='flex gap-2'>
-                    <ArrowRight className='h-4 w-4 text-purple-600 shrink-0 mt-0.5' />
+                    <ArrowRight className='h-4 w-4 text-gray-600 shrink-0 mt-0.5' />
                     <span>Protected by clerkMiddleware</span>
                   </li>
                 </ul>
@@ -111,7 +111,7 @@ export default function HomePage() {
                 <Card>
                   <CardHeader className='pb-2'>
                     <CardTitle className='text-lg flex items-center gap-2'>
-                      <Server className='h-5 w-5 text-purple-600' />
+                      <Server className='h-5 w-5 text-gray-600' />
                       Root Domain
                     </CardTitle>
                   </CardHeader>
@@ -131,13 +131,10 @@ export default function HomePage() {
                   </CardFooter>
                 </Card>
 
-                <Card
-                  className='border-purple-200 shadow-sm relative'
-                  variant='gray'
-                >
-                  <CardHeader className='pb-2 bg-gray-50 border-b border-gray-100'>
+                <Card className='border-gray-200 shadow-sm relative'>
+                  <CardHeader className='pb-2 border-b border-gray-100'>
                     <CardTitle className='text-lg flex items-center gap-2'>
-                      <Globe className='h-5 w-5 text-purple-600' />
+                      <Globe className='h-5 w-5 text-gray-600' />
                       Satellite Domain
                     </CardTitle>
                   </CardHeader>
@@ -149,7 +146,7 @@ export default function HomePage() {
                     </p>
                   </CardContent>
                   <CardFooter className='bg-gray-100 border-t border-gray-200 p-0 h-14 absolute bottom-0 left-0 right-0'>
-                    <div className='w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-purple-700'>
+                    <div className='w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-gray-700'>
                       <span className='inline-block w-2 h-2 rounded-full bg-green-500'></span>
                       You are currently on this domain
                     </div>
@@ -170,7 +167,7 @@ export default function HomePage() {
                     Ensure you have the{' '}
                     <Link
                       href='https://clerk.com/pricing'
-                      className='text-purple-600 font-medium hover:underline'
+                      className='text-gray-600 font-medium hover:underline hover:text-purple-600'
                     >
                       Enhanced Authentication add-on
                     </Link>{' '}

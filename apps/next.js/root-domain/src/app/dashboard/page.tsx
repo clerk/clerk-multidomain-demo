@@ -31,7 +31,7 @@ export default function DashboardPage() {
                   We encourage you to sign out using our{' '}
                   <Link
                     href='https://clerk.com/docs/components/user/user-button'
-                    className='text-purple-600 font-medium hover:underline'
+                    className='text-gray-600 font-medium hover:underline hover:text-purple-600 '
                   >
                     UserButton
                   </Link>{' '}
