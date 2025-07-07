@@ -62,7 +62,8 @@ export default function HomePage() {
                     clerkMiddleware
                   </Link>{' '}
                   you&apos;ll see that you&apos;re redirected to authenticate on
-                  the Root Domain to authenticate. In the URL, you'll notice a{' '}
+                  the Root Domain to authenticate. In the URL, you&apos;ll
+                  notice a{' '}
                   <code className='bg-slate-100 px-1.5 py-0.5 rounded text-gray-700'>
                     redirect_url
                   </code>{' '}
