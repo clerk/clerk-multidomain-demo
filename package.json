@@ -6,7 +6,9 @@
     "dev": "turbo dev",
     "lint": "turbo lint --continue",
     "check-types": "turbo run check-types",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev:nextjs": "turbo dev --filter=./apps/next.js/*",
+    "dev:react": "turbo dev --filter=./apps/react/*"
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
