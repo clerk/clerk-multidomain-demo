@@ -6,7 +6,9 @@
     "dev": "turbo dev",
     "lint": "turbo lint --continue",
     "check-types": "turbo run check-types",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev:nextjs": "turbo dev --filter=./apps/next.js/*",
+    "dev:react": "turbo dev --filter=./apps/react/*"
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
@@ -16,7 +18,7 @@
     "eslint-config-next": "15.3.4",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^4.1.7",
     "turbo": "^2.5.3",
     "typescript": "^5.8.3"
   },
