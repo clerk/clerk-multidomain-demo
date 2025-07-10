@@ -7,8 +7,6 @@ import App from "./App.tsx";
 import { env } from "./env";
 
 const publishableKey = env.VITE_CLERK_PUBLISHABLE_KEY;
-const signInUrl = env.VITE_CLERK_SIGN_IN_URL;
-const signUpUrl = env.VITE_CLERK_SIGN_UP_URL;
 
 if (!publishableKey) {
   throw new Error("Missing Publishable Key");
@@ -18,8 +16,10 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ClerkProvider
       publishableKey={publishableKey}
-      signInUrl={signInUrl}
-      signUpUrl={signUpUrl}
+      signInUrl={env.VITE_CLERK_SIGN_IN_URL}
+      signUpUrl={env.VITE_CLERK_SIGN_UP_URL}
+      domain={env.VITE_CLERK_DOMAIN}
+      isSatellite={env.VITE_CLERK_IS_SATELLITE}
     >
       <BrowserRouter>
         <App />
