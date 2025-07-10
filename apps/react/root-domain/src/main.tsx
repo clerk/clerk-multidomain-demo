@@ -19,6 +19,8 @@ createRoot(document.getElementById('root')!).render(
       signInFallbackRedirectUrl='/dashboard'
       signUpFallbackRedirectUrl='/dashboard'
       allowedRedirectOrigins={env.VITE_ALLOWED_REDIRECT_ORIGINS.split(',')}
+      signInUrl={env.VITE_CLERK_SIGN_IN_URL}
+      signUpUrl={env.VITE_CLERK_SIGN_UP_URL}
     >
       <BrowserRouter>
     <App />
