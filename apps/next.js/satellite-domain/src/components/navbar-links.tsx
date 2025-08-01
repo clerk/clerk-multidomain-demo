@@ -11,12 +11,12 @@ export const NavbarLinks = () => {
   return (
     <>
       <SignedOut>
-        <SignInButton mode="modal">
+        <SignInButton mode="redirect">
           <Button variant="link" size="sm" className="mr-4">
             <h1 className="font-bold">Sign In</h1>
           </Button>
         </SignInButton>
-        <SignUpButton mode="modal">
+        <SignUpButton mode="redirect">
           <Button variant="link" size="sm" className="mr-4">
             <h1 className="font-bold">Sign Up</h1>
           </Button>
