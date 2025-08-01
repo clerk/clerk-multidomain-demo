@@ -1,30 +1,43 @@
 "use client";
 
+import { SignInButton, SignUpButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import { Button } from "@repo/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export const NavbarLinks = ({ userId }: { userId: string }) => {
+export const NavbarLinks = () => {
   const path = usePathname();
-
-  const navbarLinks = [];
-  if (!userId) {
-    navbarLinks.push({ name: "Sign In", link: "/sign-in" });
-    navbarLinks.push({ name: "Sign Up", link: "/sign-up" });
-  }
-  if (userId && path === "/")
-    navbarLinks.push({ name: "Dashboard", link: "/dashboard" });
-  if (userId && path !== "/") navbarLinks.push({ name: "Home", link: "/" });
 
   return (
     <>
-      {navbarLinks.map((item, index) => (
-        <Link key={index} href={item.link}>
+      <SignedOut>
+        <SignInButton mode="modal">
           <Button variant="link" size="sm" className="mr-4">
-            <h1 className="font-bold">{item.name}</h1>
+            <h1 className="font-bold">Sign In</h1>
           </Button>
-        </Link>
-      ))}
+        </SignInButton>
+        <SignUpButton mode="modal">
+          <Button variant="link" size="sm" className="mr-4">
+            <h1 className="font-bold">Sign Up</h1>
+          </Button>
+        </SignUpButton>
+      </SignedOut>
+      <SignedIn>
+        {path === "/" && (
+          <Link href="/dashboard">
+            <Button variant="link" size="sm" className="mr-4">
+              <h1 className="font-bold">Dashboard</h1>
+            </Button>
+          </Link>
+        )}
+        {path !== "/" && (
+          <Link href="/">
+            <Button variant="link" size="sm" className="mr-4">
+              <h1 className="font-bold">Home</h1>
+            </Button>
+          </Link>
+        )}
+      </SignedIn>
     </>
   );
 };

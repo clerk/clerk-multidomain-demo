@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ClerkProvider, UserButton, SignedIn } from "@clerk/nextjs";
 import "./globals.css";
-import { auth } from "@clerk/nextjs/server";
 import clerkLogo from "@/assets/clerk-logo.png";
 import Image from "next/image";
 import { Header, Navbar } from "@repo/ui/header";
@@ -19,8 +18,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { userId } = await auth();
-
   return (
     <ClerkProvider>
       <html lang="en">
@@ -32,7 +29,7 @@ export default async function RootLayout({
               </h1>
             </Link>
             <Navbar>
-              <NavbarLinks userId={userId!} />
+              <NavbarLinks />
             </Navbar>
 
             <SignedIn>

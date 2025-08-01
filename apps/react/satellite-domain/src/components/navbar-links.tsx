@@ -11,8 +11,12 @@ export const NavbarLinks = ({ userId }: { userId: string }) => {
   if (!userId) {
     const signInUrl = new URL(env.VITE_CLERK_SIGN_IN_URL);
     const signUpUrl = new URL(env.VITE_CLERK_SIGN_UP_URL);
-    signInUrl.searchParams.set("redirect_url", env.VITE_CLERK_DOMAIN);
-    signUpUrl.searchParams.set("redirect_url", env.VITE_CLERK_DOMAIN);
+    const protocol =
+      import.meta.env.MODE === "development" ? "http://" : "https://";
+    const redirectUrl = `${protocol}${env.VITE_CLERK_DOMAIN}`;
+
+    signInUrl.searchParams.set("redirect_url", redirectUrl);
+    signUpUrl.searchParams.set("redirect_url", redirectUrl);
 
     navbarLinks.push({
       name: "Sign In",
