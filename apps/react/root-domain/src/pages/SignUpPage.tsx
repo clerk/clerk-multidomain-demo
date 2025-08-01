@@ -1,4 +1,4 @@
-import { SignUp } from '@clerk/clerk-react';
+import { SignUp } from "@clerk/clerk-react";
 
 export default function SignUpPage() {
   return (
@@ -6,4 +6,4 @@ export default function SignUpPage() {
       <SignUp routing="path" path="/sign-up" />
     </div>
   );
-} 
+}
