@@ -1,1 +1,1 @@
-declare module '@repo/eslint-config/react-internal';
+declare module "@repo/eslint-config/react-internal";

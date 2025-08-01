@@ -47,8 +47,9 @@ To run the example locally, you need to:
 1. Inside of both the `root-domain` and `satellite-domain` directories, install the [`@clerk/nextjs`](https://www.npmjs.com/package/@clerk/nextjs) package.
 
 1. This example uses Turborepo and pnpm. In the root of the app, run `pnpm install` to install the required dependencies for both the root and satellite domain applications.
-    > [!NOTE]
-    > If you'd like each app to run on a certain port, you can specify the port in the dev script in the `package.json` file like: `"dev": "turbo dev -p 5000"`.
+
+   > [!NOTE]
+   > If you'd like each app to run on a certain port, you can specify the port in the dev script in the `package.json` file like: `"dev": "turbo dev -p 5000"`.
 
 1. Ensure the `allowedRedirectOrigin` prop on the root domain's `<ClerkProvider/>` matches the port your satellite domain is running on.
 
