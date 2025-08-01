@@ -5,7 +5,7 @@ packages:
 
 catalog:
   "@clerk/clerk-react": 5.32.3
-  "@clerk/nextjs": 6.24.0
+  "@clerk/nextjs": 6.28.1
   "@types/react": 19.1.8
   "@types/react-dom": 19.1.6
   eslint: 9.32.0
