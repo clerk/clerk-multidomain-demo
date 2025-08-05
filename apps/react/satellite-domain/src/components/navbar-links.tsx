@@ -4,6 +4,7 @@ import { env } from "../env";
 
 export const NavbarLinks = ({ userId }: { userId: string }) => {
   const location = useLocation();
+  console.log("🚀 ~ NavbarLinks ~ location:", location);
 
   const navbarLinks = [];
 
