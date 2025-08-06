@@ -9,7 +9,7 @@
 </p>
 <div align="center">
   <h1>
-    Satellite domain demo using Turborepo with Clerk and Next.js
+    Satellite domain demo using Turborepo with Clerk, Next.js, and React
   </h1>
   <a href="https://www.npmjs.com/package/@clerk/clerk-js">
     <img alt="Downloads" src="https://img.shields.io/npm/dm/@clerk/clerk-js" />
@@ -29,12 +29,19 @@
 
 Clerk is a developer-first authentication and user management solution. It provides pre-built React components and hooks for sign-in, sign-up, user profile, and organization management. Clerk is designed to be easy to use and customize, and can be dropped into any React or Next.js application.
 
-This demo can be used as a reference for how to implement Clerk authentication to persist across different domains using Turborepo, Clerk, and Next.js.
+This demo can be used as a reference for how to implement Clerk authentication to persist across different domains using Turborepo, Clerk, Next.js, and React.
 
 ## Live production examples
 
+### Next.js apps
+
 - [Root domain](https://clerk-multidomain-root.com/)
 - [Satellite domain](https://clerk-multidomain-satellite.com/)
+
+### React apps
+
+- [Root domain](https://react.clerk-multidomain-root.com/)
+- [Satellite domain](https://react.clerk-multidomain-satellite.com/)
 
 ## Running the example repository
 
@@ -42,20 +49,28 @@ To run the example locally, you need to:
 
 1. Sign up for a Clerk account at [https://clerk.com](https://dashboard.clerk.com/sign-up?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart).
 
-1. Go to the [Clerk Dashboard](https://dashboard.clerk.com?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart) and create an Next.js application.
+1. Go to the [Clerk Dashboard](https://dashboard.clerk.com?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart) and create an application.
 
-1. Inside of both the `root-domain` and `satellite-domain` directories, install the [`@clerk/nextjs`](https://www.npmjs.com/package/@clerk/nextjs) package.
-
-1. This example uses Turborepo and pnpm. In the root of the app, run `pnpm install` to install the required dependencies for both the root and satellite domain applications.
-
-   > [!NOTE]
-   > If you'd like each app to run on a certain port, you can specify the port in the dev script in the `package.json` file like: `"dev": "turbo dev -p 5000"`.
+1. This example uses Turborepo and pnpm. In the root of the app, run `pnpm install` to install the required dependencies for all applications.
 
 1. Ensure the `allowedRedirectOrigin` prop on the root domain's `<ClerkProvider/>` matches the port your satellite domain is running on.
 
-1. Set the required Clerk environment variables as shown in both the [root `env.example`](/apps/root-domain/.env.example) and [satellite `env.example`](/apps/satellite-domain/.env.example) files.
+1. Set the required Clerk environment variables as shown in the `.env.example` files:
+   - **Next.js apps**: [root-domain/.env.example](/apps/next.js/root-domain/.env.example) and [satellite-domain/.env.example](/apps/next.js/satellite-domain/.env.example)
+   - **React apps**: [root-domain/.env.example](/apps/react/root-domain/.env.example) and [satellite-domain/.env.example](/apps/react/satellite-domain/.env.example)
 
-1. Run `pnpm dev` to launch the development server.
+1. **Running the applications**: You can run the applications using the following commands from the root directory:
+   - `pnpm dev:nextjs` - Runs only the Next.js applications (ports 3000 and 3001)
+   - `pnpm dev:react` - Runs only the React applications (ports 3002 and 3003)
+   - `pnpm dev` - Runs all applications (Next.js and React apps) simultaneously
+
+   > [!NOTE]
+   > **Default ports:**
+   >
+   > - Next.js root domain: `http://localhost:3000`
+   > - Next.js satellite domain: `http://localhost:3001`
+   > - React root domain: `http://localhost:3002`
+   > - React satellite domain: `http://localhost:3003`
 
 ## Learn more
 
