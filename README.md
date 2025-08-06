@@ -34,12 +34,14 @@ This demo can be used as a reference for how to implement Clerk authentication t
 ## Live production examples
 
 ### Next.js apps
+
 - [Root domain](https://clerk-multidomain-root.com/)
 - [Satellite domain](https://clerk-multidomain-satellite.com/)
 
 ### React apps
-- [Root domain](https://react-root.clerk-multidomain-root.com/)
-- [Satellite domain](https://react-satellite.clerk-multidomain-satellite.com/)
+
+- [Root domain](https://react.clerk-multidomain-root.com/)
+- [Satellite domain](https://react.clerk-multidomain-satellite.com/)
 
 ## Running the example repository
 
@@ -47,25 +49,9 @@ To run the example locally, you need to:
 
 1. Sign up for a Clerk account at [https://clerk.com](https://dashboard.clerk.com/sign-up?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart).
 
-1. Go to the [Clerk Dashboard](https://dashboard.clerk.com?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart) and create an Next.js application.
-
-1. Install the required Clerk packages:
-   - For Next.js apps: Install the [`@clerk/nextjs`](https://www.npmjs.com/package/@clerk/nextjs) package in both `apps/next.js/root-domain` and `apps/next.js/satellite-domain` directories.
-   - For React apps: Install the [`@clerk/clerk-react`](https://www.npmjs.com/package/@clerk/clerk-react) package in both `apps/react/root-domain` and `apps/react/satellite-domain` directories.
+1. Go to the [Clerk Dashboard](https://dashboard.clerk.com?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart) and create an application.
 
 1. This example uses Turborepo and pnpm. In the root of the app, run `pnpm install` to install the required dependencies for all applications.
-
-1. **Running the applications**: You can run the applications using the following commands from the root directory:
-   - `pnpm dev` - Runs all applications (Next.js and React apps) simultaneously
-   - `pnpm dev:nextjs` - Runs only the Next.js applications (ports 3000 and 3001)
-   - `pnpm dev:react` - Runs only the React applications (ports 3002 and 3003)
-
-   > [!NOTE]
-   > **Default ports:**
-   > - Next.js root domain: `http://localhost:3000`
-   > - Next.js satellite domain: `http://localhost:3001`
-   > - React root domain: `http://localhost:3002`
-   > - React satellite domain: `http://localhost:3003`
 
 1. Ensure the `allowedRedirectOrigin` prop on the root domain's `<ClerkProvider/>` matches the port your satellite domain is running on.
 
@@ -73,10 +59,18 @@ To run the example locally, you need to:
    - **Next.js apps**: [root-domain/.env.example](/apps/next.js/root-domain/.env.example) and [satellite-domain/.env.example](/apps/next.js/satellite-domain/.env.example)
    - **React apps**: [root-domain/.env.example](/apps/react/root-domain/.env.example) and [satellite-domain/.env.example](/apps/react/satellite-domain/.env.example)
 
-1. Run one of the following commands to launch the development server(s):
-   - `pnpm dev` to run all applications
-   - `pnpm dev:nextjs` to run only Next.js applications  
-   - `pnpm dev:react` to run only React applications
+1. **Running the applications**: You can run the applications using the following commands from the root directory:
+   - `pnpm dev:nextjs` - Runs only the Next.js applications (ports 3000 and 3001)
+   - `pnpm dev:react` - Runs only the React applications (ports 3002 and 3003)
+   - `pnpm dev` - Runs all applications (Next.js and React apps) simultaneously
+
+   > [!NOTE]
+   > **Default ports:**
+   >
+   > - Next.js root domain: `http://localhost:3000`
+   > - Next.js satellite domain: `http://localhost:3001`
+   > - React root domain: `http://localhost:3002`
+   > - React satellite domain: `http://localhost:3003`
 
 ## Learn more
 
