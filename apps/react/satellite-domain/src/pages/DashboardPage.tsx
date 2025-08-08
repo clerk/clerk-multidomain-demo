@@ -19,7 +19,7 @@ export default function DashboardPage() {
             title="Satellite Domain Dashboard"
             subject="A protected route on your Satellite domain"
           >
-            <Card variant="slate">
+            <Card variant="gray">
               <h3 className="font-medium mb-2">
                 Congratulations, you&apos;ve successfully authenticated across
                 domains!
@@ -45,8 +45,8 @@ export default function DashboardPage() {
             </Card>
 
             <div className="flex flex-col sm:flex-row gap-2 items-start">
-              <Card variant="purple">
-                <h3 className="font-medium mb-2 text-purple-800">
+              <Card variant="gray">
+                <h3 className="font-medium mb-2  text-black-800">
                   This is a protected dashboard page for your Satellite domain!
                 </h3>
                 <p>
@@ -57,7 +57,7 @@ export default function DashboardPage() {
                 <p>
                   <span className="font-semibold">Note:</span> If attempting to
                   access this page without being signed in, a user will be
-                  redirected to the sign-in page on the Primary domain then get
+                  redirected to the sign-in page on the Root Domain then get
                   redirected back since this route is protected by
                   ClerkMiddleware!
                 </p>

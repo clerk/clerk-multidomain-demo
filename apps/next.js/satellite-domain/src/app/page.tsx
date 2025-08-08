@@ -27,19 +27,19 @@ export default function HomePage() {
 
           <HeroCard
             title="Satellite Domain Homepage"
-            subject="The authentication flow will always initiate from the Primary domain"
+            subject="The authentication flow will always initiate from the Root Domain"
           >
             {process.env.NODE_ENV === "development" && (
-              <Card variant="slate">
+              <Card variant="gray">
                 <p className="text-sm">
                   Test the authentication flow by accessing the protected
                   dashboard route at{" "}
-                  <code className="bg-slate-100 px-1.5 py-0.5 rounded text-purple-700">
+                  <code className="bg-slate-100 px-1.5 py-0.5 rounded text-gray-700">
                     {process.env.NEXT_PUBLIC_CLERK_DOMAIN}/dashboard
                   </code>{" "}
                   without logging in. You&apos;ll be redirected to the Primary
                   domain&apos;s sign-in page at{" "}
-                  <code className="bg-slate-100 px-1.5 py-0.5 rounded text-purple-700">
+                  <code className="bg-slate-100 px-1.5 py-0.5 rounded text-gray-700">
                     {process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}
                   </code>{" "}
                   and then back to the Satellite domain after successful
@@ -50,8 +50,8 @@ export default function HomePage() {
 
             {process.env.NODE_ENV !== "development" && (
               <div className="flex flex-col sm:flex-row gap-2 items-start">
-                <Card variant="purple">
-                  <h3 className="font-medium mb-2 text-purple-800">
+                <Card variant="gray">
+                  <h3 className="font-medium mb-2  text-black-800">
                     Production Environment
                   </h3>
                   <p className="text-sm">
@@ -59,7 +59,7 @@ export default function HomePage() {
                     to the{" "}
                     <Link
                       href="https://clerk-multidomain-satellite.com/"
-                      className="text-purple-600 font-medium hover:underline"
+                      className="text-gray-600 font-medium hover:text-purple-600"
                     >
                       Satellite Domain
                     </Link>{" "}
@@ -67,7 +67,7 @@ export default function HomePage() {
                     protected route defined in{" "}
                     <Link
                       href="https://clerk.com/docs/references/nextjs/clerk-middleware"
-                      className="text-purple-600 font-medium hover:underline"
+                      className="text-gray-600 font-medium hover:text-purple-600"
                     >
                       clerkMiddleware
                     </Link>{" "}
@@ -75,9 +75,9 @@ export default function HomePage() {
                     on the{" "}
                     <Link
                       href={`${process.env.NEXT_PUBLIC_ROOT_DOMAIN_URL}/sign-in`}
-                      className="text-purple-600 font-medium hover:underline"
+                      className="text-gray-600 font-medium hover:text-purple-600"
                     >
-                      Primary Domain
+                      Root Domain
                     </Link>{" "}
                     and then redirected back to the Satellite domain after
                     successfully completing the sign-in flow.
@@ -87,23 +87,23 @@ export default function HomePage() {
             )}
 
             <div className="flex flex-col sm:flex-row gap-2 items-start">
-              <Card variant="slate">
+              <Card variant="gray">
                 <h3 className="font-medium mb-2">How It Works</h3>
                 <ul className="text-sm space-y-2">
                   <li className="flex gap-2">
-                    <ArrowRight className="h-4 w-4 text-purple-600 shrink-0 mt-0.5" />
-                    <span>Primary domain stores authentication state</span>
+                    <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
+                    <span>Root Domain stores authentication state</span>
                   </li>
                   <li className="flex gap-2">
-                    <ArrowRight className="h-4 w-4 text-purple-600 shrink-0 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
                     <span>Satellite domains read state securely</span>
                   </li>
                   <li className="flex gap-2">
-                    <ArrowRight className="h-4 w-4 text-purple-600 shrink-0 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
                     <span>Seamless redirection between domains</span>
                   </li>
                   <li className="flex gap-2">
-                    <ArrowRight className="h-4 w-4 text-purple-600 shrink-0 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
                     <span>Protected by clerkMiddleware</span>
                   </li>
                 </ul>
@@ -124,13 +124,13 @@ export default function HomePage() {
                 <Card>
                   <CardHeader className="pb-2">
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <Server className="h-5 w-5 text-purple-600" />
-                      Primary Domain
+                      <Server className="h-5 w-5 text-gray-600" />
+                      Root Domain
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-4">
                     <p className="text-sm text-muted-foreground mb-3">
-                      The primary domain is where authentication state is stored
+                      The Root Domain is where authentication state is stored
                       and managed. Users sign in here first.
                     </p>
                   </CardContent>
@@ -142,27 +142,27 @@ export default function HomePage() {
                           "/next-public-root-domain-url-missing"
                         }
                       >
-                        Visit Primary Domain
+                        Visit Root Domain
                       </Link>
                     </Button>
                   </CardFooter>
                 </Card>
 
                 <Card className="border-purple-200 shadow-sm relative">
-                  <CardHeader className="pb-2 bg-purple-50 border-b border-purple-100">
+                  <CardHeader className="pb-2 bg-gray-100 border-b border-purple-100">
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <Globe className="h-5 w-5 text-purple-600" />
+                      <Globe className="h-5 w-5 text-gray-600" />
                       Satellite Domain
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-4">
                     <p className="text-sm text-muted-foreground mb-3">
                       Satellite domains securely read authentication state from
-                      the primary domain without requiring re-authentication.
+                      the Root Domain without requiring re-authentication.
                     </p>
                   </CardContent>
-                  <CardFooter className="bg-purple-50 border-t border-purple-100 p-0 h-14 absolute bottom-0 left-0 right-0">
-                    <div className="w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-purple-700">
+                  <CardFooter className="bg-gray-100 border-t border-purple-100 p-0 h-14 absolute bottom-0 left-0 right-0">
+                    <div className="w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-gray-700">
                       <span className="inline-block w-2 h-2 rounded-full bg-green-500"></span>
                       You are currently on this domain
                     </div>

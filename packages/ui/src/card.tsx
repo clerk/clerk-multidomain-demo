@@ -10,9 +10,10 @@ const cardVariants = cva(
       variant: {
         slate: ["bg-slate-50 border-slate-100 p-4"],
         purple: ["bg-purple-50 p-4 border-purple-100"],
+        gray: ["bg-gray-50 p-4 border-gray-100"],
       },
     },
-  },
+  }
 );
 
 export interface CardProps
@@ -27,11 +28,11 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
         cardVariants({
           variant,
           className,
-        }),
+        })
       )}
       {...props}
     />
-  ),
+  )
 );
 Card.displayName = "Card";
 
@@ -55,7 +56,7 @@ const CardTitle = React.forwardRef<
     ref={ref}
     className={cn(
       "text-2xl font-semibold leading-none tracking-tight",
-      className,
+      className
     )}
     {...props}
   />
@@ -104,9 +105,9 @@ export function HeroCard({
   children: React.ReactNode;
 }) {
   return (
-    <Card className="mb-12 border-purple-100 shadow-lg">
-      <CardHeader className="bg-linear-to-r from-purple-50 to-purple-100 rounded-t-lg">
-        <CardTitle className="flex items-center gap-2 text-purple-800">
+    <Card className="mb-12 border-gray-200 shadow-lg">
+      <CardHeader className="bg-linear-to-r from-gray-100 to-gray-200 rounded-t-lg">
+        <CardTitle className="flex items-center gap-2 text-black-800">
           <ShieldCheck className="h-5 w-5" />
           {title}
         </CardTitle>

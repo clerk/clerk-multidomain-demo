@@ -8,11 +8,11 @@ export function UserDetails() {
 
   return (
     <div
-      className="bg-purple-50 overflow-hidden rounded-lg border-purple-100 shadow-lg"
+      className="bg-gray-100 overflow-hidden rounded-lg border-purple-100 shadow-lg"
       style={{ boxShadow: `0px 20px 24px -4px rgba(16, 24, 40, 0.08)` }}
     >
       <div className="flex justify-between items-center p-8">
-        <h3 className="text-xl font-semibold text-purple-800 underline">
+        <h3 className="text-xl font-semibold  text-black-800 underline">
           User & Session Details
         </h3>
       </div>
