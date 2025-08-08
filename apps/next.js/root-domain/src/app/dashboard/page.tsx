@@ -26,9 +26,9 @@ export default function DashboardPage() {
                   Testing the Satellite domain feature:
                 </h3>
                 <p>
-                  This is a protected route on the Root Domain. If
-                  you&apos;re able to access this page that means you have a
-                  valid session! We encourage you to sign out using our{" "}
+                  This is a protected route on the Root Domain. If you&apos;re
+                  able to access this page that means you have a valid session!
+                  We encourage you to sign out using our{" "}
                   <Link
                     href="https://clerk.com/docs/components/user/user-button"
                     className="text-gray-600 font-medium hover:text-purple-600"

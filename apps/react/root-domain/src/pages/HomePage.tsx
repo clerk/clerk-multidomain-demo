@@ -34,8 +34,8 @@ export default function HomePage() {
               Your <span className="font-semibold">Primary</span> domain or in
               this case <span className="font-semibold">Root</span> domain is
               where the authentication state lives, and Satellite domains are
-              able to securely read that state from the Root Domain, enabling
-              a seamless authentication flow across domains. This example
+              able to securely read that state from the Root Domain, enabling a
+              seamless authentication flow across domains. This example
               repository was created to demonstrate just that.
             </p>
 
@@ -94,9 +94,7 @@ export default function HomePage() {
                 <ul className="text-sm space-y-2">
                   <li className="flex gap-2">
                     <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
-                    <span>
-                      Root Domain initiates the authentication state
-                    </span>
+                    <span>Root Domain initiates the authentication state</span>
                   </li>
                   <li className="flex gap-2">
                     <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
