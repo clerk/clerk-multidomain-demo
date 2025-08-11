@@ -188,9 +188,9 @@ export default function HomePage() {
                       href="https://clerk.com/docs/pricing"
                       className="text-gray-600 font-medium hover:text-purple-600 underline"
                     >
-                      Enhanced Authentication
+                      Enhanced Authentication Add-on
                     </Link>{" "}
-                    add-on to incorporate Satellite domains into your production
+                    to incorporate Satellite domains into your production
                     instance.
                   </li>
                   <li>
