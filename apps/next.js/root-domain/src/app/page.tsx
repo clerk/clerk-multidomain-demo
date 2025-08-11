@@ -68,7 +68,7 @@ export default function HomePage() {
                     to the{" "}
                     <Link
                       href={process.env.NEXT_PUBLIC_SATELLITE_DOMAIN_URL ?? ""}
-                      className="text-gray-600 font-medium hover:text-purple-600"
+                      className="text-gray-600 font-medium hover:text-purple-600 underline"
                     >
                       Satellite Domain
                     </Link>{" "}
@@ -76,7 +76,7 @@ export default function HomePage() {
                     protected by{" "}
                     <Link
                       href="https://clerk.com/docs/references/nextjs/clerk-middleware"
-                      className="text-gray-600 font-medium hover:text-purple-600"
+                      className="text-gray-600 font-medium hover:text-purple-600 underline"
                     >
                       clerkMiddleware
                     </Link>{" "}
@@ -125,7 +125,7 @@ export default function HomePage() {
               className="p-6 border rounded-b-lg shadow-xs"
             >
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="border-purple-200 shadow-sm relative">
+                <Card className="shadow-sm relative">
                   <CardHeader className="pb-2 bg-gray-100 border-b border-purple-100">
                     <CardTitle className="text-lg flex items-center gap-2">
                       <Globe className="h-5 w-5 text-gray-600" />
@@ -183,8 +183,15 @@ export default function HomePage() {
                 </h3>
                 <ol className="space-y-3 list-decimal list-inside text-sm text-muted-foreground ">
                   <li>
-                    Ensure you have the Enhanced Authentication add-on to
-                    incorporate Satellite domains into your production instance.
+                    Ensure you have the{" "}
+                    <Link
+                      href="https://clerk.com/docs/pricing"
+                      className="text-gray-600 font-medium hover:text-purple-600 underline"
+                    >
+                      Enhanced Authentication
+                    </Link>{" "}
+                    add-on to incorporate Satellite domains into your production
+                    instance.
                   </li>
                   <li>
                     Follow our instructions in the documentation linked below on

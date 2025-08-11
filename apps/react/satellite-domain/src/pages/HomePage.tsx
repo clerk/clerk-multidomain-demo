@@ -58,7 +58,7 @@ export default function HomePage() {
                   to the{" "}
                   <Link
                     to={env.VITE_CLERK_DOMAIN}
-                    className="text-gray-600 font-medium hover:text-purple-600"
+                    className="text-gray-600 font-medium hover:text-purple-600 underline"
                   >
                     Satellite Domain
                   </Link>{" "}
@@ -66,7 +66,7 @@ export default function HomePage() {
                   protected route defined in{" "}
                   <Link
                     to="https://clerk.com/docs/references/nextjs/clerk-middleware"
-                    className="text-gray-600 font-medium hover:text-purple-600"
+                    className="text-gray-600 font-medium hover:text-purple-600 underline"
                   >
                     clerkMiddleware
                   </Link>{" "}
@@ -74,7 +74,7 @@ export default function HomePage() {
                   the{" "}
                   <Link
                     to={`${env.VITE_ROOT_DOMAIN_URL}/sign-in`}
-                    className="text-gray-600 font-medium hover:text-purple-600"
+                    className="text-gray-600 font-medium hover:text-purple-600 underline"
                   >
                     Root Domain
                   </Link>{" "}
@@ -139,7 +139,7 @@ export default function HomePage() {
                   </CardFooter>
                 </Card>
 
-                <Card className="border-purple-200 shadow-sm relative">
+                <Card className="shadow-sm relative">
                   <CardHeader className="pb-2 bg-gray-100 border-b border-purple-100">
                     <CardTitle className="text-lg flex items-center gap-2">
                       <Globe className="h-5 w-5 text-gray-600" />
@@ -171,8 +171,15 @@ export default function HomePage() {
                 </h3>
                 <ol className="space-y-3 list-decimal list-inside text-sm text-muted-foreground">
                   <li>
-                    Ensure you have the Enhanced Authentication add-on to
-                    incorporate Satellite domains into your production instance.
+                    Ensure you have the{" "}
+                    <Link
+                      to="https://clerk.com/docs/pricing"
+                      className="text-gray-600 font-medium hover:text-purple-600 underline"
+                    >
+                      Enhanced Authentication Add-on
+                    </Link>{" "}
+                    to incorporate Satellite domains into your production
+                    instance.
                   </li>
                   <li>
                     Follow our instructions in the documentation linked below on
