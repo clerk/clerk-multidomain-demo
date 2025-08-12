@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "e2e": "playwright test"
   },
   "dependencies": {
     "@clerk/nextjs": "catalog:",
@@ -23,6 +24,8 @@
     "@repo/tailwind-config": "workspace:*",
     "@repo/ui": "workspace:*",
     "eslint": "catalog:",
-    "eslint-config-next": "^15.1.8"
+    "eslint-config-next": "^15.1.8",
+    "@playwright/test": "^1.51.1",
+    "@clerk/testing": "^1.4.29"
   }
 }
