@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "e2e": "playwright test"
   },
   "dependencies": {
     "@clerk/clerk-react": "catalog:",
@@ -35,6 +36,8 @@
     "globals": "^16.2.0",
     "typescript": "catalog:",
     "typescript-eslint": "^8.34.1",
-    "vite": "^7.0.0"
+    "vite": "^7.0.0",
+    "@playwright/test": "^1.54.2",
+    "@clerk/testing": "^1.10.12"
   }
 }
