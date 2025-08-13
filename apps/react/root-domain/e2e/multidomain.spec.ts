@@ -30,7 +30,7 @@ test.describe("React multi-domain behavior (signed-out)", () => {
 
     // Navigate to satellite protected route — should redirect to Root /sign-in
     await page.goto(`${satelliteUrl}/dashboard`);
-    await page.waitForURL(/\/sign-in/, { timeout: 15000 });
+    await page.waitForURL(new RegExp(`${rootUrl}/sign-in`), { timeout: 15000 });
     await expect(page.locator(".cl-signIn-root").first()).toBeVisible();
     // make sure we're on root domain sign-in page
     const currentUrl = new URL(page.url());
