@@ -1,5 +1,4 @@
 import { RedirectToSignIn, useAuth } from "@clerk/clerk-react";
-// import { env } from "../env";
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
