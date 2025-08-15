@@ -28,28 +28,28 @@ export default function HomePage() {
 
           <HeroCard
             title="Root Domain Homepage"
-            subject="The Primary domain handles authentication for all domains"
+            subject="The Root Domain handles authentication for all domains"
           >
             <p>
               Your <span className="font-semibold">Primary</span> domain or in
               this case <span className="font-semibold">Root</span> domain is
               where the authentication state lives, and Satellite domains are
-              able to securely read that state from the primary domain, enabling
-              a seamless authentication flow across domains. This example
+              able to securely read that state from the Root Domain, enabling a
+              seamless authentication flow across domains. This example
               repository was created to demonstrate just that.
             </p>
 
-            <Card variant="slate">
+            <Card variant="gray">
               <p className="text-sm">
                 If you&apos;re trying this out locally, attempt to access a
                 protected route on our satellite domain at
                 {/*  TODO: Dynamically render the url here from environment variables */}
-                <code className="bg-slate-100 px-1.5 py-0.5 rounded text-purple-700">
+                <code className="bg-slate-100 px-1.5 py-0.5 rounded text-gray-700">
                   localhost:3003/dashboard
                 </code>{" "}
                 without logging in and see what happens. Clerk will redirect you
-                to the Primary domain set on{" "}
-                <code className="bg-slate-100 px-1.5 py-0.5 rounded text-purple-700">
+                to the Root Domain set on{" "}
+                <code className="bg-slate-100 px-1.5 py-0.5 rounded text-gray-700">
                   localhost:3002
                 </code>{" "}
                 to authenticate you and redirect back to the Satellite once the
@@ -58,8 +58,8 @@ export default function HomePage() {
             </Card>
 
             <div className="flex flex-col sm:flex-row gap-2 items-start">
-              <Card variant="purple">
-                <h3 className="font-medium mb-2 text-purple-800">
+              <Card variant="gray">
+                <h3 className="font-medium mb-2  text-black-800">
                   Production Environment
                 </h3>
                 <p className="text-sm">
@@ -67,7 +67,7 @@ export default function HomePage() {
                   to the{" "}
                   <a
                     href={env.VITE_SATELLITE_DOMAIN_URL}
-                    className="text-purple-600 font-medium hover:underline"
+                    className="text-gray-600 font-medium hover:text-purple-600 underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -77,7 +77,7 @@ export default function HomePage() {
                   by{" "}
                   <a
                     href="https://clerk.com/docs/references/nextjs/clerk-middleware"
-                    className="text-purple-600 font-medium hover:underline"
+                    className="text-gray-600 font-medium hover:text-purple-600 underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -89,27 +89,25 @@ export default function HomePage() {
                 </p>
               </Card>
 
-              <Card variant="slate">
+              <Card variant="gray">
                 <h3 className="font-medium mb-2">How It Works</h3>
                 <ul className="text-sm space-y-2">
                   <li className="flex gap-2">
-                    <ArrowRight className="h-4 w-4 text-purple-600 shrink-0 mt-0.5" />
-                    <span>
-                      Primary domain initiates the authentication state
-                    </span>
+                    <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
+                    <span>Root Domain initiates the authentication state</span>
                   </li>
                   <li className="flex gap-2">
-                    <ArrowRight className="h-4 w-4 text-purple-600 shrink-0 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
                     <span>
                       Satellite domains read state securely from the Primary
                     </span>
                   </li>
                   <li className="flex gap-2">
-                    <ArrowRight className="h-4 w-4 text-purple-600 shrink-0 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
                     <span>Seamless redirection between domains</span>
                   </li>
                   <li className="flex gap-2">
-                    <ArrowRight className="h-4 w-4 text-purple-600 shrink-0 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
                     <span>Protected by clerkMiddleware</span>
                   </li>
                 </ul>
@@ -127,21 +125,21 @@ export default function HomePage() {
               className="p-6 border rounded-b-lg shadow-xs"
             >
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="border-purple-200 shadow-sm relative">
-                  <CardHeader className="pb-2 bg-purple-50 border-b border-purple-100">
+                <Card className="shadow-sm relative">
+                  <CardHeader className="pb-2 bg-gray-100 border-b border-purple-100">
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <Globe className="h-5 w-5 text-purple-600" />
-                      Primary Domain
+                      <Globe className="h-5 w-5 text-gray-600" />
+                      Root Domain
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-4">
                     <p className="text-sm text-muted-foreground mb-3">
-                      The primary domain is where authentication state is stored
+                      The Root Domain is where authentication state is stored
                       and managed. Users sign in here first.
                     </p>
                   </CardContent>
-                  <CardFooter className="bg-purple-50 border-t border-purple-100 p-0 h-14 absolute bottom-0 left-0 right-0">
-                    <div className="w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-purple-700">
+                  <CardFooter className="bg-gray-100 border-t border-purple-100 p-0 h-14 absolute bottom-0 left-0 right-0">
+                    <div className="w-full flex items-center justify-center gap-2 py-1 text-sm font-medium text-gray-700">
                       <span className="inline-block w-2 h-2 rounded-full bg-green-500"></span>
                       You are currently on this domain
                     </div>
@@ -151,14 +149,14 @@ export default function HomePage() {
                 <Card>
                   <CardHeader className="pb-2">
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <Server className="h-5 w-5 text-purple-600" />
+                      <Server className="h-5 w-5 text-gray-600" />
                       Satellite Domain
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-4">
                     <p className="text-sm text-muted-foreground mb-3">
                       Satellite domains securely read authentication state from
-                      the primary domain without requiring re-authentication.
+                      the Root Domain without requiring re-authentication.
                     </p>
                   </CardContent>
                   <CardFooter>
@@ -181,8 +179,15 @@ export default function HomePage() {
                 </h3>
                 <ol className="space-y-3 list-decimal list-inside text-sm text-muted-foreground ">
                   <li>
-                    Ensure you have the Enhanced Authentication add-on to
-                    incorporate Satellite domains into your production instance.
+                    Ensure you have the{" "}
+                    <Link
+                      to="https://clerk.com/docs/pricing"
+                      className="text-gray-600 font-medium hover:text-purple-600 underline"
+                    >
+                      Enhanced Authentication Add-on
+                    </Link>{" "}
+                    to incorporate Satellite domains into your production
+                    instance.
                   </li>
                   <li>
                     Follow our instructions in the documentation linked below on

@@ -18,20 +18,20 @@ export default function DashboardPage() {
 
           <HeroCard
             title="Root Domain Dashboard"
-            subject="The Primary domain handles authentication for all domains"
+            subject="The Root Domain handles authentication for all domains"
           >
             <div className="flex flex-col sm:flex-row gap-2 items-start">
-              <Card variant="purple">
-                <h3 className="font-medium mb-2 text-purple-800">
+              <Card variant="gray">
+                <h3 className="font-medium mb-2  text-black-800">
                   Testing the Satellite domain feature:
                 </h3>
                 <p>
-                  This is a protected route on the Primary domain. If
-                  you&apos;re able to access this page that means you have a
-                  valid session! We encourage you to sign out using our{" "}
+                  This is a protected route on the Root Domain. If you&apos;re
+                  able to access this page that means you have a valid session!
+                  We encourage you to sign out using our{" "}
                   <Link
                     href="https://clerk.com/docs/components/user/user-button"
-                    className="text-purple-600 font-medium hover:underline"
+                    className="text-gray-600 font-medium hover:text-purple-600 underline"
                   >
                     UserButton
                   </Link>{" "}
