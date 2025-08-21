@@ -17,13 +17,13 @@ export default defineConfig({
   webServer: [
     {
       // Root domain app
-      command: "npm run dev",
+      command: "pnpm dev",
       url: ROOT_URL,
       reuseExistingServer: !process.env.CI,
     },
     {
       // Satellite domain app
-      command: "npm run dev",
+      command: "pnpm dev",
       url: SATELLITE_URL,
       reuseExistingServer: !process.env.CI,
       cwd: path.join(__dirname, "../satellite-domain"),
