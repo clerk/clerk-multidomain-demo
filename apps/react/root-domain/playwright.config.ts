@@ -5,7 +5,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const ROOT_URL = process.env.VITE_ROOT_DOMAIN_URL || "http://localhost:3002";
-const SATELLITE_URL = process.env.VITE_SATELLITE_DOMAIN_URL || "http://localhost:3003";
+const SATELLITE_URL =
+  process.env.VITE_SATELLITE_DOMAIN_URL || "http://localhost:3003";
 
 export default defineConfig({
   testDir: path.join(__dirname, "e2e"),
@@ -52,5 +53,3 @@ export default defineConfig({
     },
   ],
 });
-
-

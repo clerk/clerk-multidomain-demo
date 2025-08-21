@@ -71,10 +71,23 @@ test.describe("React multi-domain behavior", () => {
         page.getByRole("heading", { name: /Clerk Satellite Domain Demo/i })
       ).toBeVisible();
     });
+
+    test(`sign in on Root and navigate to Satellite root should be signed in`, async ({
+      page,
+    }) => {
+      await page.goto(`${rootUrl}/sign-in`);
+      // extra example with Clerk testing sign in helper
+      await completeSignIn({ page });
+      await page.goto(satelliteUrl);
+      // dashboard link only renders when signed in
+      await page.waitForSelector("h1:has-text('Dashboard')");
+      // make sure we're still on satellite root / weren't redirected
+      await page.waitForURL(new RegExp(`${satelliteUrl}/`));
+    });
   });
 });
 
-// Complete sign-in with <SignIn />
+// Complete sign-in with Clerk components
 const completeSignIn = async ({ page }: { page: Page }) => {
   await page
     .locator("input[name=identifier]")
