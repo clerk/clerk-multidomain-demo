@@ -117,6 +117,23 @@ The tests will automatically:
 > [!NOTE]
 > The e2e tests use the `@clerk/testing` package for reliable authentication testing and will create test user sessions as needed. [Learn more here.](https://clerk.com/docs/testing/playwright/overview)
 
+### Troubleshooting
+
+**Issue: "Executable doesn't exist" error when running e2e tests**
+
+If you encounter an error like:
+```
+Error: browserType.launch: Executable doesn't exist at /path/to/playwright/chromium
+```
+
+This means Playwright browser binaries are not installed. Run:
+```bash
+# Install browsers for all e2e test suites
+pnpm e2e:install:browsers
+```
+
+This typically happens on fresh installations or after updating Playwright versions.
+
 ## Learn more
 
 Check out the following resources:
