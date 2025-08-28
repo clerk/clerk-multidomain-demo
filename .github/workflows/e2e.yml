@@ -67,8 +67,8 @@ jobs:
           E2E_CLERK_USER_EMAIL: ${{ secrets.REACT_E2E_CLERK_USER_EMAIL }}
           E2E_CLERK_USER_PASSWORD: ${{ secrets.REACT_E2E_CLERK_USER_PASSWORD }}
           # React root domain environment variables (from env.ts requirements)
-          VITE_CLERK_SIGN_IN_URL: /sign-in
-          VITE_CLERK_SIGN_UP_URL: /sign-up
+          VITE_CLERK_SIGN_IN_URL: http://localhost:3002/sign-in
+          VITE_CLERK_SIGN_UP_URL: http://localhost:3002/sign-up
           VITE_ALLOWED_REDIRECT_ORIGINS: "http://localhost:3003"
           VITE_SATELLITE_DOMAIN_URL: http://localhost:3003
           # React satellite domain environment variables (needed for tests)
@@ -89,8 +89,8 @@ jobs:
           E2E_CLERK_USER_EMAIL: ${{ secrets.NEXTJS_E2E_CLERK_USER_EMAIL }}
           E2E_CLERK_USER_PASSWORD: ${{ secrets.NEXTJS_E2E_CLERK_USER_PASSWORD }}
           # Next.js root domain environment variables
-          NEXT_PUBLIC_CLERK_SIGN_IN_URL: /sign-in
-          NEXT_PUBLIC_CLERK_SIGN_UP_URL: /sign-up
+          NEXT_PUBLIC_CLERK_SIGN_IN_URL: http://localhost:3000/sign-in
+          NEXT_PUBLIC_CLERK_SIGN_UP_URL: http://localhost:3000/sign-up
           NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS: "http://localhost:3001,http://localhost:3002"
           NEXT_PUBLIC_SATELLITE_DOMAIN_URL: http://localhost:3001
           # Next.js satellite domain environment variables (needed for tests)

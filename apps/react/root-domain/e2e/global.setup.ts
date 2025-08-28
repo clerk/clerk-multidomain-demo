@@ -17,6 +17,11 @@ setup("global setup", async () => {
       "Please provide E2E_CLERK_USER_USERNAME and E2E_CLERK_USER_PASSWORD environment variables."
     );
   }
+  if (!process.env.VITE_CLERK_PUBLISHABLE_KEY) {
+    throw new Error(
+      "Please provide VITE_CLERK_SIGN_IN_URL environment variable."
+    );
+  }
 });
 
 const authFile = path.join(__dirname, "../playwright/.clerk/user.json");
