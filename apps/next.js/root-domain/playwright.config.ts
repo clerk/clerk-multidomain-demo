@@ -1,12 +1,9 @@
 import { defineConfig, devices } from "@playwright/test";
 import path from "path";
 
-// Use process.env.PORT by default and fallback to port 3000
-const PORT = process.env.PORT || 3000;
-
 // Root and satellite URLs can be overridden via env for CI
 const ROOT_URL =
-  process.env.NEXT_PUBLIC_ROOT_DOMAIN_URL || `http://localhost:${PORT}`;
+  process.env.NEXT_PUBLIC_ROOT_DOMAIN_URL || "http://localhost:3000";
 const SATELLITE_URL =
   process.env.NEXT_PUBLIC_SATELLITE_DOMAIN_URL || "http://localhost:3001";
 

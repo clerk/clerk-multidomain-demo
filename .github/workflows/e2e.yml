@@ -13,7 +13,7 @@ jobs:
       matrix:
         framework: [react, nextjs]
       fail-fast: false
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -47,27 +47,36 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: pnpm e2e:install:browsers
 
+      - name: Build monorepo packages
+        run: pnpm build
+
       - name: Run E2E Tests - React
         if: matrix.framework == 'react'
         run: pnpm e2e:react
         timeout-minutes: 5
         env:
-          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.REACT_CLERK_PUBLISHABLE_KEY }}
+          VITE_CLERK_PUBLISHABLE_KEY: ${{ vars.VITE_CLERK_PUBLISHABLE_KEY }}
           CLERK_SECRET_KEY: ${{ secrets.REACT_CLERK_SECRET_KEY }}
           E2E_CLERK_USER_USERNAME: ${{ secrets.REACT_E2E_CLERK_USER_USERNAME }}
           E2E_CLERK_USER_EMAIL: ${{ secrets.REACT_E2E_CLERK_USER_EMAIL }}
           E2E_CLERK_USER_PASSWORD: ${{ secrets.REACT_E2E_CLERK_USER_PASSWORD }}
+          VITE_ROOT_DOMAIN_URL: http://localhost:3002
+          VITE_SATELLITE_DOMAIN_URL: http://localhost:3003
+          CI: true
 
       - name: Run E2E Tests - Next.js
         if: matrix.framework == 'nextjs'
         run: pnpm e2e:nextjs
         timeout-minutes: 5
         env:
-          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
+          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
           CLERK_SECRET_KEY: ${{ secrets.NEXTJS_CLERK_SECRET_KEY }}
           E2E_CLERK_USER_USERNAME: ${{ secrets.NEXTJS_E2E_CLERK_USER_USERNAME }}
           E2E_CLERK_USER_EMAIL: ${{ secrets.NEXTJS_E2E_CLERK_USER_EMAIL }}
           E2E_CLERK_USER_PASSWORD: ${{ secrets.NEXTJS_E2E_CLERK_USER_PASSWORD }}
+          NEXT_PUBLIC_ROOT_DOMAIN_URL: http://localhost:3000
+          NEXT_PUBLIC_SATELLITE_DOMAIN_URL: http://localhost:3001
+          CI: true
 
       # - name: Upload test results
       #   uses: actions/upload-artifact@v4
