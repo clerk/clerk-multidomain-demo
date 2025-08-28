@@ -49,6 +49,11 @@ jobs:
 
       - name: Build monorepo packages
         run: pnpm build
+        env:
+          # Next.js build-time environment variables
+          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
+          # Vite build-time environment variables  
+          VITE_CLERK_PUBLISHABLE_KEY: ${{ vars.VITE_CLERK_PUBLISHABLE_KEY }}
 
       - name: Run E2E Tests - React
         if: matrix.framework == 'react'
