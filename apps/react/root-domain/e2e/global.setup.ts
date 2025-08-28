@@ -22,7 +22,16 @@ setup("global setup", async () => {
 const authFile = path.join(__dirname, "../playwright/.clerk/user.json");
 
 setup("authenticate", async ({ page }) => {
+  page.setDefaultTimeout(60000); // Increase timeout for CI
+
+  // Debug: Check if the app is responding
+  console.log("Attempting to navigate to root domain...");
   await page.goto("/");
+
+  // Check if page loaded properly
+  console.log("Page title:", await page.title());
+  console.log("Page URL:", page.url());
+
   await clerk.signIn({
     page,
     signInParams: {
