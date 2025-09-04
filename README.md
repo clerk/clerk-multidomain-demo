@@ -95,7 +95,7 @@ Before running e2e tests, ensure you have:
 1. **Environment variables set** for test authentication:
    ```bash
    E2E_CLERK_USER_USERNAME=your-test-user-username
-   E2E_CLERK_USER_EMAIL=your-test-user-username
+   E2E_CLERK_USER_EMAIL=your-test-user-email
    E2E_CLERK_USER_PASSWORD=your-test-user-password
    ```
 
