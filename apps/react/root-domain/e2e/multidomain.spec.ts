@@ -91,7 +91,7 @@ test.describe("React multi-domain behavior", () => {
 const completeSignIn = async ({ page }: { page: Page }) => {
   await page
     .locator("input[name=identifier]")
-    .fill(process.env.E2E_CLERK_USER_USERNAME!);
+    .fill(process.env.E2E_CLERK_USER_EMAIL!);
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page
     .locator("input[name=password]")

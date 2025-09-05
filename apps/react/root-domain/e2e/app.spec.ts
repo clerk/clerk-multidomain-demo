@@ -12,7 +12,7 @@ test.describe("main tests", () => {
     await page.waitForSelector(".cl-signIn-root", { state: "attached" });
     await page
       .locator("input[name=identifier]")
-      .fill(process.env.E2E_CLERK_USER_USERNAME!);
+      .fill(process.env.E2E_CLERK_USER_EMAIL!);
     await page.getByRole("button", { name: "Continue", exact: true }).click();
     await page
       .locator("input[name=password]")
@@ -27,7 +27,7 @@ test.describe("main tests", () => {
       page,
       signInParams: {
         strategy: "password",
-        identifier: process.env.E2E_CLERK_USER_USERNAME!,
+        identifier: process.env.E2E_CLERK_USER_EMAIL!,
         password: process.env.E2E_CLERK_USER_PASSWORD!,
       },
     });
@@ -41,7 +41,7 @@ test.describe("main tests", () => {
       page,
       signInParams: {
         strategy: "password",
-        identifier: process.env.E2E_CLERK_USER_USERNAME!,
+        identifier: process.env.E2E_CLERK_USER_EMAIL!,
         password: process.env.E2E_CLERK_USER_PASSWORD!,
       },
     });

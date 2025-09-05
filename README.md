@@ -90,6 +90,9 @@ Each test suite includes:
 
 ### Running Tests
 
+You'll need a test user with username or email and password, and have `username` or `email` and `password` authentication enabled in the Clerk Dashboard. With minor changes you can use either email
+or password. This example uses email.  
+
 Before running e2e tests, ensure you have:
 
 1. **Environment variables set** for test authentication:

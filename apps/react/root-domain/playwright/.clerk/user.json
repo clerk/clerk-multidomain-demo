@@ -2,17 +2,17 @@
   "cookies": [
     {
       "name": "__cf_bm",
-      "value": ".7aHTuF7WlbtbfpXpkEI__ObKGtder9FVJfZuRRGadQ-1757020568-1.0.1.1-ikH0bsJfY5Lyp2kJVD3wsCudz7CMNzDdyt1Mvt5uR9xqaRa7tcmQ.RHJ7XuZQQ3CDLWCLaSGc6E5JSW0CbmVMSCQxrULGchutuCdInWn_9w",
+      "value": "ko0RHyeTiT6GBZeGfbCtTDIcdnPCQrQUHWq54I3QlnY-1757084285-1.0.1.1-hwvfEHBwmepIGAA3OaSizAiwl2Znjj19.jwLR.dzluj0.gt9W45_Z1rqYZXw6fU15pjFXQBDe6.eSAH8DhteaVbmHbT3OOw9S8CKo.rKu2U",
       "domain": ".adapting-mastiff-74.clerk.accounts.dev",
       "path": "/",
-      "expires": 1757022368,
+      "expires": 1757086085,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "_cfuvid",
-      "value": "7k8mMlfeAwscvH0SWw_rBYLmiXdbW0_N8FwDqtTNyPI-1757020568822-0.0.1.1-604800000",
+      "value": "kKhaoG3A0Ts_CB09FiZskPV_h42L.Aa84HJ4EHASvz0-1757084285776-0.0.1.1-604800000",
       "domain": ".adapting-mastiff-74.clerk.accounts.dev",
       "path": "/",
       "expires": -1,
@@ -22,27 +22,27 @@
     },
     {
       "name": "__clerk_db_jwt_UT9HTPZe",
-      "value": "dvb_32Fe629gPlZF42TaT4Z4Yp44nDg",
+      "value": "dvb_32HjFB8vxofQ3mofHmw6MxKMJhv",
       "domain": "localhost",
       "path": "/",
-      "expires": 1788556570,
+      "expires": 1788620287,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "__clerk_db_jwt",
-      "value": "dvb_32Fe629gPlZF42TaT4Z4Yp44nDg",
+      "value": "dvb_32HjFB8vxofQ3mofHmw6MxKMJhv",
       "domain": "localhost",
       "path": "/",
-      "expires": 1788556570,
+      "expires": 1788620287,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "clerk_active_context",
-      "value": "sess_32Fe66mlgdg3EcJF41DwQHSEvXv:",
+      "value": "sess_32HjFM7rQpm64Ze533l16TMZv1Q:",
       "domain": "localhost",
       "path": "/",
       "expires": -1,
@@ -52,40 +52,40 @@
     },
     {
       "name": "__session",
-      "value": "eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18yelloM1IxSmJJQ1BmS2ZteUtva0M2U3VhbW4iLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJodHRwOi8vbG9jYWxob3N0OjMwMDIiLCJleHAiOjE3NTcwMjA2MzAsImZ2YSI6WzAsLTFdLCJpYXQiOjE3NTcwMjA1NzAsImlzcyI6Imh0dHBzOi8vYWRhcHRpbmctbWFzdGlmZi03NC5jbGVyay5hY2NvdW50cy5kZXYiLCJuYmYiOjE3NTcwMjA1NjAsInNpZCI6InNlc3NfMzJGZTY2bWxnZGczRWNKRjQxRHdRSFNFdlh2Iiwic3RzIjoiYWN0aXZlIiwic3ViIjoidXNlcl8zMUlPRUFRRm9FeFlpQjA0WnhBTmg5OTF5cHYiLCJ2IjoyfQ.ey7GsuRcyrmUKVixzh9WIKvC1CL-StlwtbduoWzLc3fABmx9YUyByY3PnpXQ2HkFtkQuh11UuarqkEobgrDEn7u1zJSAlXiwFpg0HsWcYP9vYI4_4zCA4FCVjXYkhaFsdt1R65_AXvKqGgNk6l6fHIq_6Kdzwoilax08gF6iZbN4EET0YaVZCFkT8fEPlgKa9fplpk-HASDbpeRJ8lJhKgz4I1W2wetqP8al_CkJ9NEtDk3HbhrjiXOCQqUxywUdxRm1GhFxbppb0VQTY5slc2bImqJzplASowOtg2hYvwHU1W7m4r_OgSk2bVzyUsNUH60km6R8o_kLVpiAZ0z8Sg",
+      "value": "eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18yelloM1IxSmJJQ1BmS2ZteUtva0M2U3VhbW4iLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJodHRwOi8vbG9jYWxob3N0OjMwMDIiLCJleHAiOjE3NTcwODQzNDcsImZ2YSI6WzAsLTFdLCJpYXQiOjE3NTcwODQyODcsImlzcyI6Imh0dHBzOi8vYWRhcHRpbmctbWFzdGlmZi03NC5jbGVyay5hY2NvdW50cy5kZXYiLCJuYmYiOjE3NTcwODQyNzcsInNpZCI6InNlc3NfMzJIakZNN3JRcG02NFplNTMzbDE2VE1adjFRIiwic3RzIjoiYWN0aXZlIiwic3ViIjoidXNlcl8zMUlPRUFRRm9FeFlpQjA0WnhBTmg5OTF5cHYiLCJ2IjoyfQ.OvbOAf6-veaZLuuW_qhx0jedCsnHpH-9FX1vhj74Lfx1Kbewwump7Qjp022fH381h2iGn6UV3KJhNZ7uFTJK74ShfSBULxPztEOj76JG1HAUjo4vDaz61BhT-ddjLRQErDuWba5QTXzYGI5IwdrPlVsdwZTaavUT6tRF-_sIbXlgSqUdAgzG1kldbWsOCwMTq29AXx9lDqiEldLYk8bKmYvFyzKUD4ccoWSvtPcytC_4unLOBPfMnB0jlMA4t9pWX0zBJr9d88EmeC9YSCRc1OARxWpLJvWggi5F_8fLMQteMTDKz3vQuyz4TVllxdDlGXbnkA3GT03QBp3eHRJY1Q",
       "domain": "localhost",
       "path": "/",
-      "expires": 1788556570,
+      "expires": 1788620287,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "__session_UT9HTPZe",
-      "value": "eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18yelloM1IxSmJJQ1BmS2ZteUtva0M2U3VhbW4iLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJodHRwOi8vbG9jYWxob3N0OjMwMDIiLCJleHAiOjE3NTcwMjA2MzAsImZ2YSI6WzAsLTFdLCJpYXQiOjE3NTcwMjA1NzAsImlzcyI6Imh0dHBzOi8vYWRhcHRpbmctbWFzdGlmZi03NC5jbGVyay5hY2NvdW50cy5kZXYiLCJuYmYiOjE3NTcwMjA1NjAsInNpZCI6InNlc3NfMzJGZTY2bWxnZGczRWNKRjQxRHdRSFNFdlh2Iiwic3RzIjoiYWN0aXZlIiwic3ViIjoidXNlcl8zMUlPRUFRRm9FeFlpQjA0WnhBTmg5OTF5cHYiLCJ2IjoyfQ.ey7GsuRcyrmUKVixzh9WIKvC1CL-StlwtbduoWzLc3fABmx9YUyByY3PnpXQ2HkFtkQuh11UuarqkEobgrDEn7u1zJSAlXiwFpg0HsWcYP9vYI4_4zCA4FCVjXYkhaFsdt1R65_AXvKqGgNk6l6fHIq_6Kdzwoilax08gF6iZbN4EET0YaVZCFkT8fEPlgKa9fplpk-HASDbpeRJ8lJhKgz4I1W2wetqP8al_CkJ9NEtDk3HbhrjiXOCQqUxywUdxRm1GhFxbppb0VQTY5slc2bImqJzplASowOtg2hYvwHU1W7m4r_OgSk2bVzyUsNUH60km6R8o_kLVpiAZ0z8Sg",
+      "value": "eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18yelloM1IxSmJJQ1BmS2ZteUtva0M2U3VhbW4iLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJodHRwOi8vbG9jYWxob3N0OjMwMDIiLCJleHAiOjE3NTcwODQzNDcsImZ2YSI6WzAsLTFdLCJpYXQiOjE3NTcwODQyODcsImlzcyI6Imh0dHBzOi8vYWRhcHRpbmctbWFzdGlmZi03NC5jbGVyay5hY2NvdW50cy5kZXYiLCJuYmYiOjE3NTcwODQyNzcsInNpZCI6InNlc3NfMzJIakZNN3JRcG02NFplNTMzbDE2VE1adjFRIiwic3RzIjoiYWN0aXZlIiwic3ViIjoidXNlcl8zMUlPRUFRRm9FeFlpQjA0WnhBTmg5OTF5cHYiLCJ2IjoyfQ.OvbOAf6-veaZLuuW_qhx0jedCsnHpH-9FX1vhj74Lfx1Kbewwump7Qjp022fH381h2iGn6UV3KJhNZ7uFTJK74ShfSBULxPztEOj76JG1HAUjo4vDaz61BhT-ddjLRQErDuWba5QTXzYGI5IwdrPlVsdwZTaavUT6tRF-_sIbXlgSqUdAgzG1kldbWsOCwMTq29AXx9lDqiEldLYk8bKmYvFyzKUD4ccoWSvtPcytC_4unLOBPfMnB0jlMA4t9pWX0zBJr9d88EmeC9YSCRc1OARxWpLJvWggi5F_8fLMQteMTDKz3vQuyz4TVllxdDlGXbnkA3GT03QBp3eHRJY1Q",
       "domain": "localhost",
       "path": "/",
-      "expires": 1788556570,
+      "expires": 1788620287,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "__client_uat_UT9HTPZe",
-      "value": "1757020569",
+      "value": "1757084286",
       "domain": "localhost",
       "path": "/",
-      "expires": 1788556570,
+      "expires": 1788620287,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Strict"
     },
     {
       "name": "__client_uat",
-      "value": "1757020569",
+      "value": "1757084286",
       "domain": "localhost",
       "path": "/",
-      "expires": 1788556570,
+      "expires": 1788620287,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Strict"
@@ -97,7 +97,7 @@
       "localStorage": [
         {
           "name": "__clerk_environment",
-          "value": "{\"value\":{\"object\":\"environment\",\"auth_config\":{\"claimed_at\":null,\"id\":\"\",\"object\":\"auth_config\",\"reverification\":true,\"single_session_mode\":true},\"display_config\":{\"object\":\"display_config\",\"after_create_organization_url\":\"http://localhost:3002\",\"after_join_waitlist_url\":\"http://localhost:3002\",\"after_leave_organization_url\":\"http://localhost:3002\",\"after_sign_in_url\":\"http://localhost:3002\",\"after_sign_out_all_url\":\"https://adapting-mastiff-74.accounts.dev/sign-in\",\"after_sign_out_one_url\":\"https://adapting-mastiff-74.accounts.dev/sign-in/choose\",\"after_sign_up_url\":\"http://localhost:3002\",\"after_switch_session_url\":\"http://localhost:3002\",\"application_name\":\"React Example Satellite App\",\"branded\":true,\"captcha_heartbeat\":false,\"captcha_oauth_bypass\":[],\"captcha_provider\":\"turnstile\",\"captcha_public_key_invisible\":\"0x4AAAAAAAFV93qQdS0ycilX\",\"captcha_public_key\":\"0x4AAAAAAAWXJGBD7bONzLBd\",\"captcha_widget_type\":\"smart\",\"clerk_js_version\":\"5\",\"create_organization_url\":\"https://adapting-mastiff-74.accounts.dev/create-organization\",\"favicon_image_url\":\"\",\"home_url\":\"http://localhost:3002\",\"id\":\"display_config_2zYh3MJCDLtg3eTkYzpGKUJIGB3\",\"instance_environment_type\":\"development\",\"logo_image_url\":\"\",\"organization_profile_url\":\"https://adapting-mastiff-74.accounts.dev/organization\",\"preferred_sign_in_strategy\":\"password\",\"privacy_policy_url\":\"\",\"show_devmode_warning\":true,\"sign_in_url\":\"https://adapting-mastiff-74.accounts.dev/sign-in\",\"sign_up_url\":\"https://adapting-mastiff-74.accounts.dev/sign-up\",\"support_email\":\"\",\"terms_url\":\"\",\"theme\":{\"buttons\":{\"font_color\":\"#ffffff\",\"font_family\":\"\\\"Source Sans Pro\\\", sans-serif\",\"font_weight\":\"600\"},\"general\":{\"color\":\"#6c47ff\",\"padding\":\"1em\",\"box_shadow\":\"0 2px 8px rgba(0, 0, 0, 0.2)\",\"font_color\":\"#151515\",\"font_family\":\"\\\"Source Sans Pro\\\", sans-serif\",\"border_radius\":\"0.5em\",\"background_color\":\"#ffffff\",\"label_font_weight\":\"600\"},\"accounts\":{\"background_color\":\"#ffffff\"}},\"user_profile_url\":\"https://adapting-mastiff-74.accounts.dev/user\",\"waitlist_url\":\"https://adapting-mastiff-74.accounts.dev/waitlist\"},\"id\":\"\",\"maintenance_mode\":false,\"client_debug_mode\":false,\"organization_settings\":{\"actions\":{\"admin_delete\":true},\"domains\":{\"enabled\":false,\"enrollment_modes\":[],\"default_role\":\"\"},\"enabled\":false,\"max_allowed_memberships\":5},\"user_settings\":{\"actions\":{\"delete_self\":true,\"create_organization\":true,\"create_organizations_limit\":null},\"attributes\":{\"email_address\":{\"enabled\":true,\"required\":true,\"used_for_first_factor\":true,\"first_factors\":[\"email_code\"],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[\"email_code\"],\"verify_at_sign_up\":true,\"name\":\"email_address\"},\"phone_number\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"phone_number\"},\"username\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"username\"},\"web3_wallet\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"web3_wallet\"},\"first_name\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"first_name\"},\"last_name\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"last_name\"},\"password\":{\"enabled\":true,\"required\":true,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"password\"},\"authenticator_app\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"authenticator_app\"},\"ticket\":{\"enabled\":true,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"ticket\"},\"backup_code\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"backup_code\"},\"passkey\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"passkey\"}},\"passkey_settings\":{\"allow_autofill\":true,\"show_sign_in_button\":true},\"password_settings\":{\"disable_hibp\":false,\"min_length\":8,\"max_length\":72,\"require_special_char\":false,\"require_numbers\":false,\"require_uppercase\":false,\"require_lowercase\":false,\"show_zxcvbn\":false,\"min_zxcvbn_strength\":0,\"enforce_hibp_on_sign_in\":true,\"allowed_special_characters\":\"!\\\"#$%&'()*+,-./:;<=>?@[]^_`{|}~\"},\"saml\":{\"enabled\":false},\"sign_in\":{\"second_factor\":{\"required\":false}},\"sign_up\":{\"captcha_enabled\":true,\"captcha_widget_type\":\"smart\",\"custom_action_required\":false,\"progressive\":true,\"mode\":\"public\",\"legal_consent_enabled\":false},\"social\":{\"oauth_google\":{\"enabled\":true,\"required\":false,\"authenticatable\":true,\"block_email_subaddresses\":true,\"strategy\":\"oauth_google\",\"not_selectable\":false,\"deprecated\":false,\"name\":\"Google\",\"logo_url\":\"https://img.clerk.com/static/google.png\"}}},\"commerce_settings\":{\"billing\":{\"stripe_publishable_key\":\"\",\"enabled\":false,\"has_paid_user_plans\":false,\"has_paid_org_plans\":false,\"organization\":{\"enabled\":false,\"has_paid_plans\":false},\"user\":{\"enabled\":false,\"has_paid_plans\":false}}},\"api_keys_settings\":{\"enabled\":false}},\"exp\":1757106970916}"
+          "value": "{\"value\":{\"object\":\"environment\",\"auth_config\":{\"claimed_at\":null,\"id\":\"\",\"object\":\"auth_config\",\"reverification\":true,\"single_session_mode\":true},\"display_config\":{\"object\":\"display_config\",\"after_create_organization_url\":\"http://localhost:3002\",\"after_join_waitlist_url\":\"http://localhost:3002\",\"after_leave_organization_url\":\"http://localhost:3002\",\"after_sign_in_url\":\"http://localhost:3002\",\"after_sign_out_all_url\":\"https://adapting-mastiff-74.accounts.dev/sign-in\",\"after_sign_out_one_url\":\"https://adapting-mastiff-74.accounts.dev/sign-in/choose\",\"after_sign_up_url\":\"http://localhost:3002\",\"after_switch_session_url\":\"http://localhost:3002\",\"application_name\":\"React Example Satellite App\",\"branded\":true,\"captcha_heartbeat\":false,\"captcha_oauth_bypass\":[],\"captcha_provider\":\"turnstile\",\"captcha_public_key_invisible\":\"0x4AAAAAAAFV93qQdS0ycilX\",\"captcha_public_key\":\"0x4AAAAAAAWXJGBD7bONzLBd\",\"captcha_widget_type\":\"smart\",\"clerk_js_version\":\"5\",\"create_organization_url\":\"https://adapting-mastiff-74.accounts.dev/create-organization\",\"favicon_image_url\":\"\",\"home_url\":\"http://localhost:3002\",\"id\":\"display_config_2zYh3MJCDLtg3eTkYzpGKUJIGB3\",\"instance_environment_type\":\"development\",\"logo_image_url\":\"\",\"organization_profile_url\":\"https://adapting-mastiff-74.accounts.dev/organization\",\"preferred_sign_in_strategy\":\"password\",\"privacy_policy_url\":\"\",\"show_devmode_warning\":true,\"sign_in_url\":\"https://adapting-mastiff-74.accounts.dev/sign-in\",\"sign_up_url\":\"https://adapting-mastiff-74.accounts.dev/sign-up\",\"support_email\":\"\",\"terms_url\":\"\",\"theme\":{\"buttons\":{\"font_color\":\"#ffffff\",\"font_family\":\"\\\"Source Sans Pro\\\", sans-serif\",\"font_weight\":\"600\"},\"general\":{\"color\":\"#6c47ff\",\"padding\":\"1em\",\"box_shadow\":\"0 2px 8px rgba(0, 0, 0, 0.2)\",\"font_color\":\"#151515\",\"font_family\":\"\\\"Source Sans Pro\\\", sans-serif\",\"border_radius\":\"0.5em\",\"background_color\":\"#ffffff\",\"label_font_weight\":\"600\"},\"accounts\":{\"background_color\":\"#ffffff\"}},\"user_profile_url\":\"https://adapting-mastiff-74.accounts.dev/user\",\"waitlist_url\":\"https://adapting-mastiff-74.accounts.dev/waitlist\"},\"id\":\"\",\"maintenance_mode\":false,\"client_debug_mode\":false,\"organization_settings\":{\"actions\":{\"admin_delete\":true},\"domains\":{\"enabled\":false,\"enrollment_modes\":[],\"default_role\":\"\"},\"enabled\":false,\"max_allowed_memberships\":5},\"user_settings\":{\"actions\":{\"delete_self\":true,\"create_organization\":true,\"create_organizations_limit\":null},\"attributes\":{\"email_address\":{\"enabled\":true,\"required\":true,\"used_for_first_factor\":true,\"first_factors\":[\"email_code\"],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[\"email_code\"],\"verify_at_sign_up\":true,\"name\":\"email_address\"},\"phone_number\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"phone_number\"},\"username\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"username\"},\"web3_wallet\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"web3_wallet\"},\"first_name\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"first_name\"},\"last_name\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"last_name\"},\"password\":{\"enabled\":true,\"required\":true,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"password\"},\"authenticator_app\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"authenticator_app\"},\"ticket\":{\"enabled\":true,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"ticket\"},\"backup_code\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"backup_code\"},\"passkey\":{\"enabled\":false,\"required\":false,\"used_for_first_factor\":false,\"first_factors\":[],\"used_for_second_factor\":false,\"second_factors\":[],\"verifications\":[],\"verify_at_sign_up\":false,\"name\":\"passkey\"}},\"passkey_settings\":{\"allow_autofill\":true,\"show_sign_in_button\":true},\"password_settings\":{\"disable_hibp\":false,\"min_length\":8,\"max_length\":72,\"require_special_char\":false,\"require_numbers\":false,\"require_uppercase\":false,\"require_lowercase\":false,\"show_zxcvbn\":false,\"min_zxcvbn_strength\":0,\"enforce_hibp_on_sign_in\":true,\"allowed_special_characters\":\"!\\\"#$%&'()*+,-./:;<=>?@[]^_`{|}~\"},\"saml\":{\"enabled\":false},\"sign_in\":{\"second_factor\":{\"required\":false}},\"sign_up\":{\"captcha_enabled\":true,\"captcha_widget_type\":\"smart\",\"custom_action_required\":false,\"progressive\":true,\"mode\":\"public\",\"legal_consent_enabled\":false},\"social\":{\"oauth_google\":{\"enabled\":true,\"required\":false,\"authenticatable\":true,\"block_email_subaddresses\":true,\"strategy\":\"oauth_google\",\"not_selectable\":false,\"deprecated\":false,\"name\":\"Google\",\"logo_url\":\"https://img.clerk.com/static/google.png\"}}},\"commerce_settings\":{\"billing\":{\"stripe_publishable_key\":\"\",\"enabled\":false,\"has_paid_user_plans\":false,\"has_paid_org_plans\":false,\"organization\":{\"enabled\":false,\"has_paid_plans\":false},\"user\":{\"enabled\":false,\"has_paid_plans\":false}}},\"api_keys_settings\":{\"enabled\":false}},\"exp\":1757170687476}"
         }
       ]
     }
