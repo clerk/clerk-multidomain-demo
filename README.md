@@ -72,6 +72,70 @@ To run the example locally, you need to:
    > - React root domain: `http://localhost:3002`
    > - React satellite domain: `http://localhost:3003`
 
+## End-to-End Testing
+
+This repository includes e2e tests using [Playwright](https://playwright.dev/) to verify the multi-domain authentication flows between root and satellite domains.
+
+### Test Structure
+
+The e2e tests are organized by framework and include:
+
+- **Next.js tests**: Located in `apps/next.js/root-domain/e2e/`
+- **React tests**: Located in `apps/react/root-domain/e2e/`
+
+Each test suite includes:
+- `global.setup.ts` - Global setup including Clerk authentication configuration
+- `multidomain.spec.ts` - Multi-domain authentication flow tests
+- `app.spec.ts` - Basic application functionality tests  
+
+### Running Tests
+
+You'll need a test user account and have either `username + password` or `email + password` authentication enabled in your Clerk Dashboard. This example is configured to use email and password authentication, but you can modify it to use username and password instead with minor changes to the test files.  
+
+Before running e2e tests, ensure you have:
+
+1. **Environment variables set** for test authentication:
+   ```bash
+   E2E_CLERK_USER_USERNAME=your-test-user-username
+   E2E_CLERK_USER_EMAIL=your-test-user-email
+   E2E_CLERK_USER_PASSWORD=your-test-user-password
+   ```
+
+2. **Run tests for specific frameworks**:
+   ```bash
+   # Run Next.js e2e tests only
+   pnpm e2e:nextjs
+   
+   # Run React e2e tests only  
+   pnpm e2e:react
+   ```
+
+The tests will automatically:
+- Start both root and satellite domain applications
+- Run authentication flows across domains
+- Verify proper redirection and state persistence
+- Test both public and protected routes
+
+> [!NOTE]
+> The e2e tests use the `@clerk/testing` package for reliable authentication testing and will create test user sessions as needed. [Learn more here.](https://clerk.com/docs/testing/playwright/overview)
+
+### Troubleshooting
+
+**Issue: "Executable doesn't exist" error when running e2e tests**
+
+If you encounter an error like:
+```
+Error: browserType.launch: Executable doesn't exist at /path/to/playwright/chromium
+```
+
+This means Playwright browser binaries are not installed. Run:
+```bash
+# Install browsers for all e2e test suites
+pnpm e2e:install:browsers
+```
+
+This typically happens on fresh installations or after updating Playwright versions.
+
 ## Learn more
 
 Check out the following resources:
