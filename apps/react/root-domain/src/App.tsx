@@ -9,7 +9,6 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import SignInPage from "./pages/SignInPage";
-import SignUpPage from "./pages/SignUpPage";
 
 function App() {
   const { userId } = useAuth();
@@ -42,7 +41,6 @@ function App() {
             }
           />
           <Route path="/sign-in/*" element={<SignInPage />} />
-          <Route path="/sign-up/*" element={<SignUpPage />} />
         </Routes>
       </main>
       <Footer />

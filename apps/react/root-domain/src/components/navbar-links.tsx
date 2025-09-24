@@ -7,7 +7,6 @@ export const NavbarLinks = ({ userId }: { userId: string }) => {
   const navbarLinks = [];
   if (!userId) {
     navbarLinks.push({ name: "Sign In", link: "/sign-in" });
-    navbarLinks.push({ name: "Sign Up", link: "/sign-up" });
   }
   if (userId && location.pathname === "/")
     navbarLinks.push({ name: "Dashboard", link: "/dashboard" });
