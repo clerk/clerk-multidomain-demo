@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router-dom";
-import { SignedIn, UserButton, useAuth } from "@clerk/clerk-react";
+import { Routes, Route } from "react-router";
+import { SignedIn, UserButton, useAuth } from "@clerk/react-router";
 import { Header, Navbar } from "@repo/ui/header";
 import { Footer } from "@repo/ui/footer";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import clerkLogo from "./assets/clerk-logo.png";
 import { NavbarLinks } from "./components/navbar-links";
 import { ProtectedRoute } from "./components/ProtectedRoute";

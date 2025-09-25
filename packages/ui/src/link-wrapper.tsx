@@ -9,7 +9,7 @@ export type LinkComponentType = React.ComponentType<{
 
 type LinkProps = React.ComponentProps<LinkComponentType>;
 
-// support either href or to prop, so next/link or react-router-dom/link can be used
+// support either href or to prop, so next/link or react-router/link can be used
 export function getLink(LinkComponent: LinkComponentType) {
   const WrappedLink = (props: LinkProps) => {
     const { href, to, ...restProps } = props;

@@ -1,5 +1,5 @@
 import { env } from "../env";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import {
   SatelliteHomePage,
   type LinkComponentType,

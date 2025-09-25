@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { ClerkProvider } from "@clerk/clerk-react";
+import { BrowserRouter } from "react-router";
+import { ClerkProvider } from "@clerk/react-router";
 import "./index.css";
 import App from "./App.tsx";
 import { env } from "./env";
@@ -14,17 +14,17 @@ if (!publishableKey) {
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ClerkProvider
-      publishableKey={publishableKey}
-      signInFallbackRedirectUrl="/dashboard"
-      signUpFallbackRedirectUrl="/dashboard"
-      allowedRedirectOrigins={env.VITE_ALLOWED_REDIRECT_ORIGINS.split(",")}
-      signInUrl={env.VITE_CLERK_SIGN_IN_URL}
-      signUpUrl={env.VITE_CLERK_SIGN_UP_URL}
-    >
-      <BrowserRouter>
+    <BrowserRouter>
+      <ClerkProvider
+        publishableKey={publishableKey}
+        signInFallbackRedirectUrl="/dashboard"
+        signUpFallbackRedirectUrl="/dashboard"
+        allowedRedirectOrigins={env.VITE_ALLOWED_REDIRECT_ORIGINS.split(",")}
+        signInUrl={env.VITE_CLERK_SIGN_IN_URL}
+        signUpUrl={env.VITE_CLERK_SIGN_UP_URL}
+      >
         <App />
-      </BrowserRouter>
-    </ClerkProvider>
-  </StrictMode>,
+      </ClerkProvider>
+    </BrowserRouter>
+  </StrictMode>
 );

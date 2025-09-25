@@ -1,5 +1,5 @@
 import { Button } from "@repo/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router";
 import { env } from "../env";
 
 export const NavbarLinks = ({ userId }: { userId: string }) => {

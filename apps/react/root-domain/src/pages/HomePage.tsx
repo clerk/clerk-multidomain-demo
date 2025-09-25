@@ -1,5 +1,5 @@
 import { env } from "../env";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { RootHomePage, type LinkComponentType } from "@repo/ui/root-homepage";
 
 export default function HomePage() {
