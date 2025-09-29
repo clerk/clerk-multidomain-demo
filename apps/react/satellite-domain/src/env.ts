@@ -6,7 +6,6 @@ export const env = createEnv({
   client: {
     VITE_CLERK_PUBLISHABLE_KEY: z.string().min(1),
     VITE_CLERK_SIGN_IN_URL: z.string().min(1),
-    VITE_CLERK_SIGN_UP_URL: z.string().min(1),
     VITE_ROOT_DOMAIN_URL: z.string().min(1),
     VITE_CLERK_DOMAIN: z.string().min(1),
     VITE_CLERK_IS_SATELLITE: z

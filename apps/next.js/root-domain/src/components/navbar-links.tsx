@@ -1,6 +1,6 @@
 "use client";
 
-import { SignInButton, SignUpButton, SignedIn, SignedOut } from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import { Button } from "@repo/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -16,11 +16,6 @@ export const NavbarLinks = () => {
             <h1 className="font-bold">Sign In</h1>
           </Button>
         </SignInButton>
-        <SignUpButton mode="modal">
-          <Button variant="link" size="sm" className="mr-4">
-            <h1 className="font-bold">Sign Up</h1>
-          </Button>
-        </SignUpButton>
       </SignedOut>
       <SignedIn>
         {path === "/" && (

@@ -17,7 +17,6 @@ createRoot(document.getElementById("root")!).render(
     <ClerkProvider
       publishableKey={publishableKey}
       signInUrl={env.VITE_CLERK_SIGN_IN_URL}
-      signUpUrl={env.VITE_CLERK_SIGN_UP_URL}
       domain={env.VITE_CLERK_DOMAIN}
       isSatellite={env.VITE_CLERK_IS_SATELLITE}
     >
@@ -25,5 +24,5 @@ createRoot(document.getElementById("root")!).render(
         <App />
       </BrowserRouter>
     </ClerkProvider>
-  </StrictMode>,
+  </StrictMode>
 );
