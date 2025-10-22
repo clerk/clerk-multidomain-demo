@@ -12,7 +12,7 @@
     "e2e": "playwright test"
   },
   "dependencies": {
-    "@clerk/clerk-react": "^5.53.3",
+    "@clerk/clerk-react": "catalog:",
     "@t3-oss/env-core": "^0.13.8",
     "@tailwindcss/vite": "^4.1.11",
     "lucide-react": "catalog:",
@@ -23,7 +23,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@clerk/testing": "^1.13.8",
+    "@clerk/testing": "catalog:",
     "@eslint/js": "^9.29.0",
     "@playwright/test": "^1.54.2",
     "@repo/eslint-config": "workspace:*",

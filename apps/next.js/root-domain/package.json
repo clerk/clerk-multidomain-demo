@@ -11,7 +11,7 @@
     "e2e": "playwright test"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.34.0",
+    "@clerk/nextjs": "catalog:",
     "jiti": "catalog:",
     "lucide-react": "catalog:",
     "next": "catalog:",
@@ -20,7 +20,7 @@
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
-    "@clerk/testing": "^1.13.8",
+    "@clerk/testing": "catalog:",
     "@playwright/test": "^1.54.2",
     "@repo/eslint-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
