@@ -12,7 +12,7 @@
     "e2e": "playwright test"
   },
   "dependencies": {
-    "@clerk/clerk-react": "catalog:",
+    "@clerk/clerk-react": "^5.53.3",
     "@t3-oss/env-core": "^0.13.8",
     "@tailwindcss/vite": "^4.1.11",
     "lucide-react": "catalog:",
@@ -23,7 +23,9 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@clerk/testing": "^1.13.8",
     "@eslint/js": "^9.29.0",
+    "@playwright/test": "^1.54.2",
     "@repo/eslint-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/ui": "workspace:*",
@@ -36,8 +38,6 @@
     "globals": "^16.2.0",
     "typescript": "catalog:",
     "typescript-eslint": "^8.34.1",
-    "vite": "^7.0.7",
-    "@playwright/test": "^1.54.2",
-    "@clerk/testing": "^1.10.12"
+    "vite": "^7.0.7"
   }
 }

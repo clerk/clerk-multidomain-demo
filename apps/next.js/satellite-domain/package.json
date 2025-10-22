@@ -10,7 +10,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@clerk/nextjs": "catalog:",
+    "@clerk/nextjs": "^6.34.0",
     "jiti": "catalog:",
     "lucide-react": "catalog:",
     "next": "catalog:",
