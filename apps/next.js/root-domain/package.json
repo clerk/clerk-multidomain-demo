@@ -20,12 +20,12 @@
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
+    "@clerk/testing": "catalog:",
+    "@playwright/test": "^1.54.2",
     "@repo/eslint-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/ui": "workspace:*",
     "eslint": "catalog:",
-    "eslint-config-next": "^15.1.8",
-    "@playwright/test": "^1.54.2",
-    "@clerk/testing": "^1.10.12"
+    "eslint-config-next": "^15.1.8"
   }
 }

@@ -16,8 +16,6 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ClerkProvider
       publishableKey={publishableKey}
-      signInFallbackRedirectUrl="/dashboard"
-      signUpFallbackRedirectUrl="/dashboard"
       allowedRedirectOrigins={env.VITE_ALLOWED_REDIRECT_ORIGINS.split(",")}
       signInUrl={env.VITE_CLERK_SIGN_IN_URL}
     >
