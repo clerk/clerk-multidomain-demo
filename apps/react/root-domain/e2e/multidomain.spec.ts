@@ -35,7 +35,7 @@ test.describe("React multi-domain behavior", () => {
         expect(url.origin).toBe(satelliteUrl);
         expect(url.pathname).toBe("/");
         await expect(
-          page.getByText(/Clerk Satellite Domain Demo/)
+          page.getByText(/Clerk Satellite Domain Demo/),
         ).toBeVisible();
       });
     });
@@ -68,7 +68,7 @@ test.describe("React multi-domain behavior", () => {
       // Should return back to the original Satellite path (/dashboard)
       await page.waitForURL(`${satelliteUrl}/dashboard`, { timeout: 3000 });
       await expect(
-        page.getByRole("heading", { name: /Clerk Satellite Domain Demo/i })
+        page.getByRole("heading", { name: /Clerk Satellite Domain Demo/i }),
       ).toBeVisible();
     });
 

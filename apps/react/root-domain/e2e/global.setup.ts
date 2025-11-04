@@ -14,7 +14,7 @@ setup("global setup", async () => {
     !process.env.E2E_CLERK_USER_PASSWORD
   ) {
     throw new Error(
-      "Please provide E2E_CLERK_USER_EMAIL and E2E_CLERK_USER_PASSWORD environment variables."
+      "Please provide E2E_CLERK_USER_EMAIL and E2E_CLERK_USER_PASSWORD environment variables.",
     );
   }
 });

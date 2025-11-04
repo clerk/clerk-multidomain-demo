@@ -39,7 +39,7 @@ export const TabDomainToggle = ({
             <CardHeader
               className={cn(
                 "pb-2",
-                !isSatelliteDomain && "bg-gray-100 border-b border-purple-100"
+                !isSatelliteDomain && "bg-gray-100 border-b border-purple-100",
               )}
             >
               <CardTitle className="text-lg flex items-center gap-2">
@@ -74,7 +74,7 @@ export const TabDomainToggle = ({
             <CardHeader
               className={cn(
                 "pb-2",
-                isSatelliteDomain && "bg-gray-100 border-b border-purple-100"
+                isSatelliteDomain && "bg-gray-100 border-b border-purple-100",
               )}
             >
               <CardTitle className="text-lg flex items-center gap-2">
