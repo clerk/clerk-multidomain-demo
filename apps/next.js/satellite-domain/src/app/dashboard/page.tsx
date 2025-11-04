@@ -39,7 +39,7 @@ export default function DashboardPage() {
                 </span>{" "}
                 JWT is refreshed every{" "}
                 <span className="font-semibold">60 seconds</span> to have the
-                authenticate state persist while there is activity on the
+                authentication state persist while there is activity on the
                 page.{" "}
               </p>
             </Card>

@@ -79,8 +79,8 @@ export function RootHomePage({
                   >
                     Satellite Domain
                   </Link>{" "}
-                  and try to access the page. Since the entire site is protected
-                  with{" "}
+                  and try to access the dashboard route. Since the route is
+                  protected with{" "}
                   {isNextJs ? (
                     <Link
                       href="https://clerk.com/docs/references/nextjs/clerk-middleware"

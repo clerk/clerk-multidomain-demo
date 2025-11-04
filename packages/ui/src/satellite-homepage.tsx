@@ -76,7 +76,7 @@ export function SatelliteHomePage({
                   >
                     Satellite Domain
                   </Link>{" "}
-                  and try to access the dashboard page. Since this is a
+                  and try to access the dashboard route. Since this is a
                   protected route defined with{" "}
                   {isNextJs ? (
                     <Link
