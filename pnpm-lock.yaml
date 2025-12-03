@@ -46,8 +46,8 @@ catalogs:
       specifier: 5.9.3
       version: 5.9.3
     zod:
-      specifier: 3.25.76
-      version: 3.25.76
+      specifier: 4.1.13
+      version: 4.1.13
 
 importers:
 
@@ -55,7 +55,7 @@ importers:
     dependencies:
       zod:
         specifier: 'catalog:'
-        version: 3.25.76
+        version: 4.1.13
     devDependencies:
       '@types/node':
         specifier: ^22.17.0
@@ -181,7 +181,7 @@ importers:
         version: 5.55.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@t3-oss/env-core':
         specifier: ^0.13.8
-        version: 0.13.8(typescript@5.9.3)(zod@3.25.76)
+        version: 0.13.8(typescript@5.9.3)(zod@4.1.13)
       '@tailwindcss/vite':
         specifier: ^4.1.11
         version: 4.1.17(vite@7.2.4(@types/node@22.19.1)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.0))
@@ -202,7 +202,7 @@ importers:
         version: 4.1.17
       zod:
         specifier: 'catalog:'
-        version: 3.25.76
+        version: 4.1.13
     devDependencies:
       '@clerk/testing':
         specifier: 'catalog:'
@@ -260,7 +260,7 @@ importers:
         version: 5.55.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@t3-oss/env-core':
         specifier: ^0.13.8
-        version: 0.13.8(typescript@5.9.3)(zod@3.25.76)
+        version: 0.13.8(typescript@5.9.3)(zod@4.1.13)
       '@tailwindcss/vite':
         specifier: ^4.1.11
         version: 4.1.17(vite@7.2.4(@types/node@22.19.1)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.0))
@@ -281,7 +281,7 @@ importers:
         version: 4.1.17
       zod:
         specifier: 'catalog:'
-        version: 3.25.76
+        version: 4.1.13
     devDependencies:
       '@eslint/js':
         specifier: ^9.29.0
@@ -2683,6 +2683,7 @@ packages:
   next@15.5.6:
     resolution: {integrity: sha512-zTxsnI3LQo3c9HSdSf91O1jMNsEzIXDShXd4wVdg9y5shwLqBXi4ZtUUJyB86KGVSJLZx0PFONvO54aheGX8QQ==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -3246,8 +3247,8 @@ packages:
     peerDependencies:
       zod: ^3.25.0 || ^4.0.0
 
-  zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+  zod@4.1.13:
+    resolution: {integrity: sha512-AvvthqfqrAhNH9dnfmrfKzX5upOdjUVJYFqNSlkmGf64gRaTzlPwz99IHYnVs28qYAybvAlBV+H7pn0saFY4Ig==}
 
 snapshots:
 
@@ -4079,10 +4080,10 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@t3-oss/env-core@0.13.8(typescript@5.9.3)(zod@3.25.76)':
+  '@t3-oss/env-core@0.13.8(typescript@5.9.3)(zod@4.1.13)':
     optionalDependencies:
       typescript: 5.9.3
-      zod: 3.25.76
+      zod: 4.1.13
 
   '@tailwindcss/cli@4.1.17':
     dependencies:
@@ -4983,8 +4984,8 @@ snapshots:
       '@babel/core': 7.28.4
       '@babel/parser': 7.28.4
       eslint: 9.39.1(jiti@2.6.1)
-      zod: 3.25.76
-      zod-validation-error: 4.0.2(zod@3.25.76)
+      zod: 4.1.13
+      zod-validation-error: 4.0.2(zod@4.1.13)
     transitivePeerDependencies:
       - supports-color
 
@@ -6202,8 +6203,8 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod-validation-error@4.0.2(zod@3.25.76):
+  zod-validation-error@4.0.2(zod@4.1.13):
     dependencies:
-      zod: 3.25.76
+      zod: 4.1.13
 
-  zod@3.25.76: {}
+  zod@4.1.13: {}
