@@ -9,6 +9,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import SignInPage from "./pages/SignInPage";
+import { env } from "./env";
 
 function App() {
   const { userId } = useAuth();
@@ -26,7 +27,9 @@ function App() {
         </Navbar>
 
         <SignedIn>
-          <UserButton />
+          <UserButton    
+          userProfileMode='navigation'
+          userProfileUrl={`${env.VITE_CLERK_USER_PROFILE_URL}/user-profile`}/>
         </SignedIn>
       </Header>
       <main className="container">
