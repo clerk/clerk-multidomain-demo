@@ -10,7 +10,7 @@ import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import SignInPage from "./pages/SignInPage";
 import { env } from "./env";
-
+import UserProfilePage from "./pages/UserProfilePage";
 function App() {
   const { userId } = useAuth();
 
@@ -44,6 +44,7 @@ function App() {
             }
           />
           <Route path="/sign-in/*" element={<SignInPage />} />
+          <Route path="/user-profile/*" element={<UserProfilePage />} />
         </Routes>
       </main>
       <Footer />
