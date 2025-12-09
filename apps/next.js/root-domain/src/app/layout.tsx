@@ -39,7 +39,7 @@ export default async function RootLayout({
             </Navbar>
 
             <SignedIn>
-              <UserButton userProfileMode="navigation" userProfileUrl={`${process.env.NEXT_CLERK_USER_PROFILE_URL}/user-profile`}/>
+              <UserButton userProfileMode="navigation" userProfileUrl="/user-profile"/>
             </SignedIn>
           </Header>
           <main className="container">{children}</main>

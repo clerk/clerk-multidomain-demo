@@ -28,8 +28,8 @@ function App() {
 
         <SignedIn>
           <UserButton    
-          userProfileMode='navigation'
-          userProfileUrl={`${env.VITE_CLERK_USER_PROFILE_URL}/user-profile`}/>
+          userProfileMode="navigation"
+          userProfileUrl="/user-profile"/>
         </SignedIn>
       </Header>
       <main className="container">
