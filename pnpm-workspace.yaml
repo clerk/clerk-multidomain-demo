@@ -4,17 +4,17 @@ packages:
   - packages/*
 
 catalog:
-  "@clerk/clerk-react": 5.55.0
-  "@clerk/nextjs": 6.35.1
-  "@clerk/testing": 1.13.15
-  "@types/react": 19.2.5
+  "@clerk/clerk-react": 5.58.0
+  "@clerk/nextjs": 6.36.0
+  "@clerk/testing": 1.13.21
+  "@types/react": 19.2.7
   "@types/react-dom": 19.2.3
   eslint: 9.39.1
   jiti: 2.6.1
   lucide-react: 0.555.0
   next: 15.5.7
-  react: 19.2.0
-  react-dom: 19.2.0
+  react: 19.2.1
+  react-dom: 19.2.1
   tailwindcss: 4.1.17
   typescript: 5.9.3
   zod: 3.25.76
