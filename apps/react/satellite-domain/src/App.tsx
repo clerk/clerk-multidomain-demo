@@ -8,6 +8,7 @@ import { NavbarLinks } from "./components/navbar-links";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
+import { env } from "./env";
 
 function App() {
   const { userId } = useAuth();
@@ -24,7 +25,7 @@ function App() {
           <NavbarLinks userId={userId!} />
         </Navbar>
         <SignedIn>
-          <UserButton />
+          <UserButton userProfileMode="navigation" userProfileUrl={`${env.VITE_ROOT_DOMAIN_URL}/user-profile`}/>
         </SignedIn>
       </Header>
       <main className="container">
