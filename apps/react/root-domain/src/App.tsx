@@ -9,7 +9,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import SignInPage from "./pages/SignInPage";
-
+import UserProfilePage from "./pages/UserProfilePage";
 function App() {
   const { userId } = useAuth();
 
@@ -26,7 +26,9 @@ function App() {
         </Navbar>
 
         <SignedIn>
-          <UserButton />
+          <UserButton    
+          userProfileMode="navigation"
+          userProfileUrl="/user-profile"/>
         </SignedIn>
       </Header>
       <main className="container">
@@ -41,6 +43,7 @@ function App() {
             }
           />
           <Route path="/sign-in/*" element={<SignInPage />} />
+          <Route path="/user-profile/*" element={<UserProfilePage />} />
         </Routes>
       </main>
       <Footer />
