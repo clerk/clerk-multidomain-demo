@@ -11,7 +11,7 @@ catalog:
   "@types/react-dom": 19.2.3
   eslint: 9.39.2
   jiti: 2.6.1
-  lucide-react: 0.555.0
+  lucide-react: 0.562.0
   next: 15.5.9
   react: 19.2.3
   react-dom: 19.2.3
