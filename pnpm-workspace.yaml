@@ -17,4 +17,4 @@ catalog:
   react-dom: 19.2.3
   tailwindcss: 4.1.18
   typescript: 5.9.3
-  zod: 3.25.76
+  zod: 4.3.6
