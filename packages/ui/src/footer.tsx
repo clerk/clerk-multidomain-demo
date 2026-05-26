@@ -60,7 +60,7 @@ function YouTubeIcon() {
 }
 
 const sites = [
-  ["X", "https://twitter.com/clerkdev", XIcon],
+  ["X", "https://x.com/clerk", XIcon],
   ["LinkedIn", "https://www.linkedin.com/company/clerkinc", LinkedInIcon],
   ["Discord", "https://clerk.com/discord", DiscordIcon],
   ["GitHub", "https://github.com/clerk", GitHubIcon],
