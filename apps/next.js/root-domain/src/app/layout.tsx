@@ -39,7 +39,7 @@ export default async function RootLayout({
             </Navbar>
 
             <SignedIn>
-              <UserButton />
+              <UserButton userProfileMode="navigation" userProfileUrl="/user-profile"/>
             </SignedIn>
           </Header>
           <main className="container">{children}</main>
