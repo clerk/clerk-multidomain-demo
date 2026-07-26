@@ -19,3 +19,6 @@ catalog:
   typescript: 5.9.3
   zod: 3.25.76
 minimumReleaseAge: 2880
+minimumReleaseAgeExclude:
+  # Renovate security update: turbo@2.9.14
+  - turbo@2.9.14
