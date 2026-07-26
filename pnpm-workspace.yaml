@@ -22,3 +22,5 @@ minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
   # Renovate security update: turbo@2.9.14
   - turbo@2.9.14
+  # Renovate security update: postcss@8.5.18
+  - postcss@8.5.18
