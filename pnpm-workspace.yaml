@@ -26,3 +26,5 @@ minimumReleaseAgeExclude:
   - postcss@8.5.18 || 8.5.23
   # Renovate security update: next@15.5.21
   - next@15.5.21
+  # Renovate security update: vite@7.3.5
+  - vite@7.3.5
