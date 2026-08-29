@@ -33,7 +33,7 @@ export default async function RootLayout({
             </Navbar>
 
             <SignedIn>
-              <UserButton />
+              <UserButton userProfileMode="navigation" userProfileUrl={`${process.env.NEXT_PUBLIC_ROOT_DOMAIN_URL}/user-profile`}/>
             </SignedIn>
           </Header>
           <main className="container">{children}</main>
