@@ -12,7 +12,7 @@ catalog:
   eslint: 9.39.2
   jiti: 2.6.1
   lucide-react: 0.562.0
-  next: 15.5.21
+  next: 15.5.24
   react: 19.2.3
   react-dom: 19.2.3
   tailwindcss: 4.1.18
@@ -24,5 +24,5 @@ minimumReleaseAgeExclude:
   - turbo@2.9.14
   # Renovate security update: postcss@8.5.18 || 8.5.23
   - postcss@8.5.18 || 8.5.23
-  # Renovate security update: next@15.5.21
-  - next@15.5.21
+  # Renovate security update: next@15.5.21 || 15.5.24
+  - next@15.5.21 || 15.5.24
