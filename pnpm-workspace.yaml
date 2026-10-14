@@ -4,9 +4,9 @@ packages:
   - packages/*
 
 catalog:
-  "@clerk/clerk-react": 5.59.6
-  "@clerk/nextjs": 6.39.3
-  "@clerk/testing": 1.13.31
+  "@clerk/react": 6.17.8
+  "@clerk/nextjs": 7.9.1
+  "@clerk/testing": 2.2.45
   "@types/react": 19.2.9
   "@types/react-dom": 19.2.3
   eslint: 9.39.2
@@ -20,6 +20,7 @@ catalog:
   zod: 3.25.76
 minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
+  - '@clerk/*'
   # Renovate security update: turbo@2.9.14
   - turbo@2.9.14
   # Renovate security update: postcss@8.5.18 || 8.5.23

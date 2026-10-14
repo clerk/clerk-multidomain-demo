@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { SignedIn, UserButton, useAuth } from "@clerk/clerk-react";
+import { Show, UserButton, useAuth } from "@clerk/react";
 import { Header, Navbar } from "@repo/ui/header";
 import { Footer } from "@repo/ui/footer";
 import { Link } from "react-router-dom";
@@ -23,9 +23,9 @@ function App() {
         <Navbar>
           <NavbarLinks userId={userId!} />
         </Navbar>
-        <SignedIn>
+        <Show when="signed-in">
           <UserButton />
-        </SignedIn>
+        </Show>
       </Header>
       <main className="container">
         <Routes>
