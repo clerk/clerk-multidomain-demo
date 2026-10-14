@@ -20,7 +20,6 @@ catalog:
   zod: 3.25.76
 minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
-  - '@clerk/*'
   # Renovate security update: turbo@2.9.14
   - turbo@2.9.14
   # Renovate security update: postcss@8.5.18 || 8.5.23
