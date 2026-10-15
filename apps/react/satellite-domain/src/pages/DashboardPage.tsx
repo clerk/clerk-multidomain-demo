@@ -25,22 +25,16 @@ export default function DashboardPage() {
                 domains!
               </h3>
               <p>
-                Take a moment to look into the cookies that are applied to this
-                site. You&apos;ll see multiple{" "}
-                <span className="font-semibold">&apos;__client_uat&apos;</span>{" "}
-                & <span className="font-semibold">&apos;__session&apos;</span>{" "}
-                JWTs stored inside of your cookies. Some of these JWTs have
-                suffixes applied to the end of them. These suffixes are used to
-                differentiate what client/session is valid on each respective
-                Satellite domain. Additionally, the specific
-                <span className="font-semibold">
-                  {" "}
-                  &apos;__session&apos;
-                </span>{" "}
-                JWT is refreshed every{" "}
-                <span className="font-semibold">60 seconds</span> to have the
-                authenticate state persist while there is activity on the
-                page.{" "}
+                Open your browser&apos;s developer tools and inspect the cookies
+                for this site. Clerk uses{" "}
+                <span className="font-semibold">__session</span> to store a
+                short-lived session JWT and{" "}
+                <span className="font-semibold">__client_uat</span> to help
+                check whether the session is still valid. The session token
+                expires after 60 seconds; while the page is active, Clerk
+                refreshes it in the background before it expires. Check each
+                cookie&apos;s Domain value to see where it is scoped. The local
+                demo uses separate localhost ports, which share a cookie host.
               </p>
             </Card>
 
