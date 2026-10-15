@@ -30,7 +30,7 @@ export default function DashboardPage() {
                   able to access this page that means you have a valid session!
                   We encourage you to sign out using our{" "}
                   <Link
-                    href="https://clerk.com/docs/components/user/user-button"
+                    href="https://clerk.com/docs/reference/components/user/user-button"
                     className="text-gray-600 font-medium hover:text-purple-600 underline"
                   >
                     UserButton

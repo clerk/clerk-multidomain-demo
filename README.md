@@ -121,7 +121,7 @@ The tests will automatically:
 - Test both public and protected routes
 
 > [!NOTE]
-> The e2e tests use the `@clerk/testing` package for reliable authentication testing and will create test user sessions as needed. [Learn more here.](https://clerk.com/docs/testing/playwright/overview)
+> The e2e tests use the `@clerk/testing` package for reliable authentication testing and will create test user sessions as needed. [Learn more here.](https://clerk.com/docs/guides/development/testing/playwright/overview)
 
 ### Troubleshooting
 

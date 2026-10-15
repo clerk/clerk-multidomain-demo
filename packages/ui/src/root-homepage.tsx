@@ -83,7 +83,7 @@ export function RootHomePage({
                   protected with{" "}
                   {isNextJs ? (
                     <Link
-                      href="https://clerk.com/docs/references/nextjs/clerk-middleware"
+                      href="https://clerk.com/docs/reference/nextjs/clerk-middleware"
                       className="text-gray-600 font-medium hover:text-purple-600 underline"
                     >
                       clerkMiddleware

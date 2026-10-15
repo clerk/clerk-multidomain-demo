@@ -90,7 +90,7 @@ export function SocialMedia() {
 const links = [
   {
     name: "Start Building",
-    href: "https://clerk.com/docs/quickstart",
+    href: "https://clerk.com/docs/nextjs/getting-started/quickstart",
   },
   {
     name: "Clerk Docs",
