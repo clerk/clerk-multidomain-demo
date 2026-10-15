@@ -43,7 +43,7 @@ export default async function RootLayout({
             </Show>
           </Header>
           <main className="container">{children}</main>
-          <Footer />
+          <Footer framework="nextjs" />
         </ClerkProvider>
       </body>
     </html>

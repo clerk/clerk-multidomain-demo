@@ -40,7 +40,7 @@ function App() {
           />
         </Routes>
       </main>
-      <Footer />
+      <Footer framework="react" />
     </div>
   );
 }

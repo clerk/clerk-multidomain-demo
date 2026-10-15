@@ -43,7 +43,7 @@ function App() {
           <Route path="/sign-in/*" element={<SignInPage />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer framework="react" />
     </div>
   );
 }

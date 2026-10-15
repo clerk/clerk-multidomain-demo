@@ -87,26 +87,26 @@ export function SocialMedia() {
   );
 }
 
-const links = [
-  {
-    name: "Start Building",
-    href: "https://clerk.com/docs/nextjs/getting-started/quickstart",
-  },
-  {
-    name: "Clerk Docs",
-    href: "https://clerk.com/docs",
-  },
-  {
-    name: "Support",
-    href: "https://clerk.com/contact/support",
-  },
-  {
-    name: "Contact",
-    href: "https://clerk.com/contact",
-  },
-];
+export function Footer({ framework }: { framework: "nextjs" | "react" }) {
+  const links = [
+    {
+      name: "Start Building",
+      href: `https://clerk.com/docs/${framework}/getting-started/quickstart`,
+    },
+    {
+      name: "Clerk Docs",
+      href: "https://clerk.com/docs",
+    },
+    {
+      name: "Support",
+      href: "https://clerk.com/contact/support",
+    },
+    {
+      name: "Contact",
+      href: "https://clerk.com/contact",
+    },
+  ];
 
-export function Footer() {
   return (
     <footer className="border-t py-6 w-full">
       <div className="container mx-auto px-4">
