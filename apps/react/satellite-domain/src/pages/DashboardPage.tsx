@@ -52,8 +52,8 @@ export default function DashboardPage() {
                   <span className="font-semibold">Note:</span> If attempting to
                   access this page without being signed in, a user will be
                   redirected to the sign-in page on the Root Domain then get
-                  redirected back because this route uses the React
-                  ProtectedRoute component.
+                  redirected back since this route uses the React ProtectedRoute
+                  component.
                 </p>
               </Card>
             </div>
