@@ -53,7 +53,7 @@ To run the example locally, you need to:
 
 1. This example uses Turborepo and pnpm. In the root of the app, run `pnpm install` to install the required dependencies for all applications.
 
-1. Ensure the `allowedRedirectOrigin` prop on the root domain's `<ClerkProvider/>` matches the port your satellite domain is running on.
+1. Set `allowedRedirectOrigins` on the root domain's `<ClerkProvider/>` to include the satellite's full origin, such as `http://localhost:3001` for Next.js or `http://localhost:3003` for React.
 
 1. Set the required Clerk environment variables as shown in the `.env.example` files:
    - **Next.js apps**: [root-domain/.env.example](/apps/next.js/root-domain/.env.example) and [satellite-domain/.env.example](/apps/next.js/satellite-domain/.env.example)
@@ -91,14 +91,13 @@ Each test suite includes:
 
 ### Running Tests
 
-You'll need a test user account and have either `username + password` or `email + password` authentication enabled in your Clerk Dashboard. This example is configured to use email and password authentication, but you can modify it to use username and password instead with minor changes to the test files.
+You'll need an existing test user account and email and password authentication enabled in your Clerk Dashboard.
 
 Before running e2e tests, ensure you have:
 
 1. **Environment variables set** for test authentication:
 
    ```bash
-   E2E_CLERK_USER_USERNAME=your-test-user-username
    E2E_CLERK_USER_EMAIL=your-test-user-email
    E2E_CLERK_USER_PASSWORD=your-test-user-password
    ```
@@ -118,10 +117,10 @@ The tests will automatically:
 - Start both root and satellite domain applications
 - Run authentication flows across domains
 - Verify proper redirection and state persistence
-- Test both public and protected routes
+- Test public routes and authentication flows; the Next.js protected-route redirect test is currently skipped
 
 > [!NOTE]
-> The e2e tests use the `@clerk/testing` package for reliable authentication testing and will create test user sessions as needed. [Learn more here.](https://clerk.com/docs/guides/development/testing/playwright/overview)
+> The e2e tests use `@clerk/testing` to sign in the existing test user and save the authenticated browser state. [Learn more here.](https://clerk.com/docs/guides/development/testing/playwright/overview)
 
 ### Troubleshooting
 

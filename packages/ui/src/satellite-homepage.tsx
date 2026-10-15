@@ -72,16 +72,15 @@ export function SatelliteHomePage({
                   Production Environment
                 </h3>
                 <p className="text-sm">
-                  To see how this works in a production environment, head over
-                  to the{" "}
+                  To see how this works in a production environment, try to
+                  access the{" "}
                   <Link
-                    href="https://clerk-multidomain-satellite.com/"
+                    href="/dashboard"
                     className="text-gray-600 font-medium hover:text-purple-600 underline"
                   >
-                    Satellite Domain
-                  </Link>{" "}
-                  and try to access the dashboard route. Since this is a
-                  protected route defined with{" "}
+                    Satellite Dashboard
+                  </Link>
+                  . Since this is a protected route defined with{" "}
                   <Link
                     href={protectionHref}
                     className="text-gray-600 font-medium hover:text-purple-600 underline"
