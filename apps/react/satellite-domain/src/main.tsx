@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { ClerkProvider } from "@clerk/clerk-react";
+import { ClerkProvider } from "@clerk/react";
 import "./index.css";
 import App from "./App.tsx";
 import { env } from "./env";
@@ -19,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
       signInUrl={env.VITE_CLERK_SIGN_IN_URL}
       domain={env.VITE_CLERK_DOMAIN}
       isSatellite={env.VITE_CLERK_IS_SATELLITE}
+      satelliteAutoSync={true}
     >
       <BrowserRouter>
         <App />

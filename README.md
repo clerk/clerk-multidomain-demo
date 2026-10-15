@@ -53,7 +53,7 @@ To run the example locally, you need to:
 
 1. This example uses Turborepo and pnpm. In the root of the app, run `pnpm install` to install the required dependencies for all applications.
 
-1. Ensure the `allowedRedirectOrigin` prop on the root domain's `<ClerkProvider/>` matches the port your satellite domain is running on.
+1. Set `allowedRedirectOrigins` on the root domain's `<ClerkProvider/>` to include the satellite's full origin, such as `http://localhost:3001` for Next.js or `http://localhost:3003` for React.
 
 1. Set the required Clerk environment variables as shown in the `.env.example` files:
    - **Next.js apps**: [root-domain/.env.example](/apps/next.js/root-domain/.env.example) and [satellite-domain/.env.example](/apps/next.js/satellite-domain/.env.example)
@@ -98,7 +98,6 @@ Before running e2e tests, ensure you have:
 1. **Environment variables set** for test authentication:
 
    ```bash
-   E2E_CLERK_USER_USERNAME=your-test-user-username
    E2E_CLERK_USER_EMAIL=your-test-user-email
    E2E_CLERK_USER_PASSWORD=your-test-user-password
    ```
@@ -118,10 +117,10 @@ The tests will automatically:
 - Start both root and satellite domain applications
 - Run authentication flows across domains
 - Verify proper redirection and state persistence
-- Test both public and protected routes
+- Test public routes and authentication flows; the Next.js protected-route redirect test is currently skipped
 
 > [!NOTE]
-> The e2e tests use the `@clerk/testing` package for reliable authentication testing and will create test user sessions as needed. [Learn more here.](https://clerk.com/docs/testing/playwright/overview)
+> The e2e tests use the `@clerk/testing` package for reliable authentication testing and will create test user sessions as needed. [Learn more here.](https://clerk.com/docs/guides/development/testing/playwright/overview)
 
 ### Troubleshooting
 
@@ -146,7 +145,7 @@ This typically happens on fresh installations or after updating Playwright versi
 
 Check out the following resources:
 
-- [Satellite domains: Authentication across different domains](https://clerk.com/docs/advanced-usage/satellite-domains#how-to-add-satellite-domains)
+- [Satellite domains: Authentication across different domains](https://clerk.com/docs/guides/dashboard/dns-domains/satellite-domains#how-to-add-satellite-domains)
 - [Clerk Documentation](https://clerk.com/docs?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Turbo Repos](https://turbo.build/repo/docs)

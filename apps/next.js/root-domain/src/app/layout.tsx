@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClerkProvider, UserButton, SignedIn } from "@clerk/nextjs";
+import { ClerkProvider, UserButton, Show } from "@clerk/nextjs";
 import "./globals.css";
 import clerkLogo from "@/assets/clerk-logo.png";
 import Image from "next/image";
@@ -19,15 +19,15 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider
-      signInFallbackRedirectUrl="/dashboard"
-      signUpFallbackRedirectUrl="/dashboard"
-      allowedRedirectOrigins={
-        process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS?.split(",") ?? []
-      }
-    >
-      <html lang="en">
-        <body className="flex flex-col items-center">
+    <html lang="en">
+      <body className="flex flex-col items-center">
+        <ClerkProvider
+          signInFallbackRedirectUrl="/dashboard"
+          signUpFallbackRedirectUrl="/dashboard"
+          allowedRedirectOrigins={
+            process.env.NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS?.split(",") ?? []
+          }
+        >
           <Header>
             <Link href="/">
               <h1>
@@ -38,14 +38,14 @@ export default async function RootLayout({
               <NavbarLinks />
             </Navbar>
 
-            <SignedIn>
+            <Show when="signed-in">
               <UserButton />
-            </SignedIn>
+            </Show>
           </Header>
           <main className="container">{children}</main>
-          <Footer />
-        </body>
-      </html>
-    </ClerkProvider>
+          <Footer framework="nextjs" />
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }

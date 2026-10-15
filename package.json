@@ -3,12 +3,13 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
+    "build:ui": "pnpm --filter @repo/ui build",
+    "dev": "pnpm build:ui && turbo dev",
     "lint": "turbo lint --continue",
     "check-types": "turbo run check-types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "dev:nextjs": "turbo dev --filter=./apps/next.js/*",
-    "dev:react": "turbo dev --filter=./apps/react/*",
+    "dev:nextjs": "pnpm build:ui && turbo dev --filter=./apps/next.js/*",
+    "dev:react": "pnpm build:ui && turbo dev --filter=./apps/react/*",
     "e2e:nextjs": "pnpm --filter nextjs-root-domain e2e",
     "e2e:react": "pnpm --filter react-root-domain e2e",
     "e2e:install:browsers": "pnpm --filter nextjs-root-domain exec playwright install --with-deps && pnpm --filter react-root-domain exec playwright install --with-deps"

@@ -22,6 +22,10 @@ export function SatelliteHomePage({
 }) {
   // create link component using the component passed
   const Link = getLink(LinkComponent);
+  const protectionHref = isNextJs
+    ? "https://clerk.com/docs/reference/nextjs/clerk-middleware"
+    : "https://github.com/clerk/clerk-multidomain-demo/blob/main/apps/react/satellite-domain/src/components/ProtectedRoute.tsx";
+  const protectionLabel = isNextJs ? "clerkMiddleware" : "ProtectedRoute";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -68,31 +72,21 @@ export function SatelliteHomePage({
                   Production Environment
                 </h3>
                 <p className="text-sm">
-                  To see how this works in a production environment, head over
-                  to the{" "}
+                  To see how this works in a production environment, try to
+                  access the{" "}
                   <Link
-                    href="https://clerk-multidomain-satellite.com/"
+                    href="/dashboard"
                     className="text-gray-600 font-medium hover:text-purple-600 underline"
                   >
-                    Satellite Domain
+                    Satellite Dashboard
+                  </Link>
+                  . Since this is a protected route defined with{" "}
+                  <Link
+                    href={protectionHref}
+                    className="text-gray-600 font-medium hover:text-purple-600 underline"
+                  >
+                    {protectionLabel}
                   </Link>{" "}
-                  and try to access the dashboard route. Since this is a
-                  protected route defined with{" "}
-                  {isNextJs ? (
-                    <Link
-                      href="https://clerk.com/docs/references/nextjs/clerk-middleware"
-                      className="text-gray-600 font-medium hover:text-purple-600 underline"
-                    >
-                      clerkMiddleware
-                    </Link>
-                  ) : (
-                    <Link
-                      href="https://github.com/clerk/clerk-multidomain-demo/blob/main/apps/react/root-domain/src/components/ProtectedRoute.tsx"
-                      className="text-gray-600 font-medium hover:text-purple-600 underline"
-                    >
-                      Clerk
-                    </Link>
-                  )}{" "}
                   you&apos;ll see that you&apos;re redirected to authenticate on
                   the{" "}
                   <Link
@@ -124,7 +118,27 @@ export function SatelliteHomePage({
                 </li>
                 <li className="flex gap-2">
                   <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
-                  <span>Protected by clerkMiddleware</span>
+                  <span>
+                    Protected by{" "}
+                    <Link
+                      href={protectionHref}
+                      className="text-gray-600 font-medium hover:text-purple-600 underline"
+                    >
+                      {protectionLabel}
+                    </Link>
+                    {!isNextJs && (
+                      <>
+                        {" "}
+                        using Clerk&apos;s{" "}
+                        <Link
+                          href="https://clerk.com/docs/react/reference/hooks/use-auth"
+                          className="text-gray-600 font-medium hover:text-purple-600 underline"
+                        >
+                          useAuth
+                        </Link>
+                      </>
+                    )}
+                  </span>
                 </li>
               </ul>
             </Card>
