@@ -112,7 +112,7 @@ export function Footer({ framework }: { framework: "nextjs" | "react" }) {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © 2026 Clerk, Inc.
+            © 2025 Clerk, Inc.
           </div>
           <div className="flex gap-6">
             {links.map((link, index) => (
