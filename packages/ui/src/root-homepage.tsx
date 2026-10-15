@@ -17,6 +17,10 @@ export function RootHomePage({
 }) {
   // create link component using the component passed
   const Link = getLink(LinkComponent);
+  const protectionHref = isNextJs
+    ? "https://clerk.com/docs/reference/nextjs/clerk-middleware"
+    : "https://github.com/clerk/clerk-multidomain-demo/blob/main/apps/react/satellite-domain/src/components/ProtectedRoute.tsx";
+  const protectionLabel = isNextJs ? "clerkMiddleware" : "ProtectedRoute";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -81,21 +85,12 @@ export function RootHomePage({
                   </Link>{" "}
                   and try to access the dashboard route. Since the route is
                   protected with{" "}
-                  {isNextJs ? (
-                    <Link
-                      href="https://clerk.com/docs/reference/nextjs/clerk-middleware"
-                      className="text-gray-600 font-medium hover:text-purple-600 underline"
-                    >
-                      clerkMiddleware
-                    </Link>
-                  ) : (
-                    <Link
-                      href="https://github.com/clerk/clerk-multidomain-demo/blob/main/apps/react/root-domain/src/components/ProtectedRoute.tsx"
-                      className="text-gray-600 font-medium hover:text-purple-600 underline"
-                    >
-                      Clerk
-                    </Link>
-                  )}{" "}
+                  <Link
+                    href={protectionHref}
+                    className="text-gray-600 font-medium hover:text-purple-600 underline"
+                  >
+                    {protectionLabel}
+                  </Link>{" "}
                   you&apos;ll see that you&apos;re redirected to authenticate on
                   the Root Domain and then redirected back to the Satellite
                   domain after successfully completing the sign-in flow.
@@ -122,7 +117,15 @@ export function RootHomePage({
                 </li>
                 <li className="flex gap-2">
                   <ArrowRight className="h-4 w-4 text-gray-600 shrink-0 mt-0.5" />
-                  <span>Protected by clerkMiddleware</span>
+                  <span>
+                    Protected by{" "}
+                    <Link
+                      href={protectionHref}
+                      className="text-gray-600 font-medium hover:text-purple-600 underline"
+                    >
+                      {protectionLabel}
+                    </Link>
+                  </span>
                 </li>
               </ul>
             </Card>
