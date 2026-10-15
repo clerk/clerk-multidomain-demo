@@ -127,6 +127,18 @@ export function SatelliteHomePage({
                     >
                       {protectionLabel}
                     </Link>
+                    {!isNextJs && (
+                      <>
+                        {" "}
+                        using Clerk&apos;s{" "}
+                        <Link
+                          href="https://clerk.com/docs/react/reference/hooks/use-auth"
+                          className="text-gray-600 font-medium hover:text-purple-600 underline"
+                        >
+                          useAuth
+                        </Link>
+                      </>
+                    )}
                   </span>
                 </li>
               </ul>
