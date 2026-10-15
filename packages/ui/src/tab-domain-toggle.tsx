@@ -130,7 +130,7 @@ export const TabDomainToggle = ({
           </ol>
           <div className="pt-4">
             <Link
-              href="https://clerk.com/docs/advanced-usage/satellite-domains"
+              href="https://clerk.com/docs/guides/dashboard/dns-domains/satellite-domains"
               target="_blank"
             >
               <Button>View Full Documentation</Button>

@@ -146,7 +146,7 @@ This typically happens on fresh installations or after updating Playwright versi
 
 Check out the following resources:
 
-- [Satellite domains: Authentication across different domains](https://clerk.com/docs/advanced-usage/satellite-domains#how-to-add-satellite-domains)
+- [Satellite domains: Authentication across different domains](https://clerk.com/docs/guides/dashboard/dns-domains/satellite-domains#how-to-add-satellite-domains)
 - [Clerk Documentation](https://clerk.com/docs?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-nextjs-app-quickstart)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Turbo Repos](https://turbo.build/repo/docs)
