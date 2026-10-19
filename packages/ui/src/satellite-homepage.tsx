@@ -23,9 +23,9 @@ export function SatelliteHomePage({
   // create link component using the component passed
   const Link = getLink(LinkComponent);
   const protectionHref = isNextJs
-    ? "https://clerk.com/docs/reference/nextjs/clerk-middleware"
+    ? "https://clerk.com/docs/reference/nextjs/app-router/auth#auth-protect"
     : "https://github.com/clerk/clerk-multidomain-demo/blob/main/apps/react/satellite-domain/src/components/ProtectedRoute.tsx";
-  const protectionLabel = isNextJs ? "clerkMiddleware" : "ProtectedRoute";
+  const protectionLabel = isNextJs ? "auth.protect()" : "ProtectedRoute";
 
   return (
     <div className="min-h-screen flex flex-col">

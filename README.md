@@ -53,11 +53,11 @@ To run the example locally, you need to:
 
 1. This example uses Turborepo and pnpm. In the root of the app, run `pnpm install` to install the required dependencies for all applications.
 
-1. Set `allowedRedirectOrigins` on the root domain's `<ClerkProvider/>` to include the satellite's full origin, such as `http://localhost:3001` for Next.js or `http://localhost:3003` for React.
-
 1. Set the required Clerk environment variables as shown in the `.env.example` files:
    - **Next.js apps**: [root-domain/.env.example](/apps/next.js/root-domain/.env.example) and [satellite-domain/.env.example](/apps/next.js/satellite-domain/.env.example)
    - **React apps**: [root-domain/.env.example](/apps/react/root-domain/.env.example) and [satellite-domain/.env.example](/apps/react/satellite-domain/.env.example)
+
+1. In the root domain app, set `NEXT_PUBLIC_ALLOWED_REDIRECT_ORIGINS` (Next.js) or `VITE_ALLOWED_REDIRECT_ORIGINS` (React) to the satellite's full origin, such as `http://localhost:3001` for Next.js or `http://localhost:3003` for React. The root domain's `<ClerkProvider />` passes it to `allowedRedirectOrigins`.
 
 1. **Running the applications**: You can run the applications using the following commands from the root directory:
    - `pnpm dev:nextjs` - Runs only the Next.js applications (ports 3000 and 3001)

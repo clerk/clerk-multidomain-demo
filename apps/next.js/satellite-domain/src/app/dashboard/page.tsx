@@ -1,7 +1,11 @@
+import { auth } from "@clerk/nextjs/server";
 import { Card, HeroCard } from "@repo/ui/card";
 import { UserDetails } from "./details";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  // Redirect signed-out users to sign-in
+  await auth.protect();
+
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 container mx-auto px-4 py-12">
@@ -52,8 +56,7 @@ export default function DashboardPage() {
                   <span className="font-semibold">Note:</span> If attempting to
                   access this page without being signed in, a user will be
                   redirected to the sign-in page on the Root Domain then get
-                  redirected back since this route is protected by
-                  clerkMiddleware().
+                  redirected back since this page calls auth.protect().
                 </p>
               </Card>
             </div>
