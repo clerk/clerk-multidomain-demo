@@ -1,7 +1,7 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
 
 // Protected pages check auth themselves with auth.protect()
-export default clerkMiddleware();
+export default clerkMiddleware({ satelliteAutoSync: true });
 
 export const config = {
   matcher: [

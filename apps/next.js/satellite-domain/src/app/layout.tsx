@@ -21,7 +21,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col items-center">
-        <ClerkProvider>
+        <ClerkProvider satelliteAutoSync={true}>
           <Header>
             <Link href="/">
               <h1>
