@@ -1,7 +1,11 @@
+import { auth } from "@clerk/nextjs/server";
 import { Card, HeroCard } from "@repo/ui/card";
 import { UserDetails } from "./details";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  // Redirect signed-out users to sign-in
+  await auth.protect();
+
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 container mx-auto px-4 py-12">
@@ -25,22 +29,16 @@ export default function DashboardPage() {
                 domains!
               </h3>
               <p>
-                Take a moment to look into the cookies that are applied to this
-                site. You&apos;ll see multiple{" "}
-                <span className="font-semibold">&apos;__client_uat&apos;</span>{" "}
-                & <span className="font-semibold">&apos;__session&apos;</span>{" "}
-                JWTs stored inside of your cookies. Some of these JWTs have
-                suffixes applied to the end of them. These suffixes are used to
-                differentiate what client/session is valid on each respective
-                Satellite domain. Additionally, the specific
-                <span className="font-semibold">
-                  {" "}
-                  &apos;__session&apos;
-                </span>{" "}
-                JWT is refreshed every{" "}
-                <span className="font-semibold">60 seconds</span> to have the
-                authentication state persist while there is activity on the
-                page.{" "}
+                Open your browser&apos;s developer tools and inspect the cookies
+                for this site. Clerk uses{" "}
+                <span className="font-semibold">__session</span> to store a
+                short-lived session JWT and{" "}
+                <span className="font-semibold">__client_uat</span> to help
+                check whether the session is still valid. The session token
+                expires after 60 seconds; while the page is active, Clerk
+                refreshes it in the background before it expires. Check each
+                cookie&apos;s Domain value to see where it is scoped. The local
+                demo uses separate localhost ports, which share a cookie host.
               </p>
             </Card>
 
@@ -58,8 +56,7 @@ export default function DashboardPage() {
                   <span className="font-semibold">Note:</span> If attempting to
                   access this page without being signed in, a user will be
                   redirected to the sign-in page on the Root Domain then get
-                  redirected back since this route is protected by
-                  ClerkMiddleware!
+                  redirected back since this page calls auth.protect().
                 </p>
               </Card>
             </div>

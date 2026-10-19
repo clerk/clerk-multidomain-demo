@@ -1,4 +1,4 @@
-import { useSession, useUser } from "@clerk/clerk-react";
+import { useSession, useUser } from "@clerk/react";
 import { UserDetails as UserDetailsComponent } from "@repo/ui/user-details";
 
 export function UserDetails() {

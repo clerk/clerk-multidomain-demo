@@ -114,14 +114,14 @@ export const TabDomainToggle = ({
           </h3>
           <ol className="space-y-3 list-decimal list-inside text-sm text-muted-foreground ">
             <li>
-              Ensure you have the{" "}
+              Satellite domains require a{" "}
               <Link
-                href="https://clerk.com/docs/pricing"
+                href="https://clerk.com/pricing"
                 className="text-gray-600 font-medium hover:text-purple-600 underline"
               >
-                Enhanced Authentication Add-on
+                paid plan
               </Link>{" "}
-              to incorporate Satellite domains into your production instance.
+              in production.
             </li>
             <li>
               Follow our instructions in the documentation link below on how to
@@ -130,7 +130,7 @@ export const TabDomainToggle = ({
           </ol>
           <div className="pt-4">
             <Link
-              href="https://clerk.com/docs/advanced-usage/satellite-domains"
+              href="https://clerk.com/docs/guides/dashboard/dns-domains/satellite-domains"
               target="_blank"
             >
               <Button>View Full Documentation</Button>

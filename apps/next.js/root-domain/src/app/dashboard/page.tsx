@@ -1,8 +1,12 @@
 import Link from "next/link";
+import { auth } from "@clerk/nextjs/server";
 import { Card, HeroCard } from "@repo/ui/card";
 import { UserDetails } from "./details";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  // Redirect signed-out users to sign-in
+  await auth.protect();
+
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 container mx-auto px-4 py-12">
@@ -30,7 +34,7 @@ export default function DashboardPage() {
                   able to access this page that means you have a valid session!
                   We encourage you to sign out using our{" "}
                   <Link
-                    href="https://clerk.com/docs/components/user/user-button"
+                    href="https://clerk.com/docs/reference/components/user/user-button"
                     className="text-gray-600 font-medium hover:text-purple-600 underline"
                   >
                     UserButton

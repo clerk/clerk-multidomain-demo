@@ -13,7 +13,6 @@ export const NavbarLinks = ({ userId }: { userId: string }) => {
     const redirectUrl = `${protocol}${env.VITE_CLERK_DOMAIN}`;
 
     signInOrUpUrl.searchParams.set("redirect_url", redirectUrl);
-    signInOrUpUrl.searchParams.set("redirect_url", redirectUrl);
 
     navbarLinks.push({
       name: "Sign In",
