@@ -4,7 +4,7 @@ import { Suspense } from "react";
 export default function Page() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
-      <Suspense fallback={null}>
+      <Suspense>
         <SignIn />
       </Suspense>
     </div>

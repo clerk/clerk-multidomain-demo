@@ -36,12 +36,12 @@ export default async function RootLayout({
               </h1>
             </Link>
             <Navbar>
-              <Suspense fallback={null}>
+              <Suspense>
                 <NavbarLinks />
               </Suspense>
             </Navbar>
 
-            <Suspense fallback={null}>
+            <Suspense>
               <Show when="signed-in">
                 <UserButton />
               </Show>
