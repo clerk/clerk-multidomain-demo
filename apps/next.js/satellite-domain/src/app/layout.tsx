@@ -7,6 +7,7 @@ import { Header, Navbar } from "@repo/ui/header";
 import { Footer } from "@repo/ui/footer";
 import Link from "next/link";
 import { NavbarLinks } from "@/components/navbar-links";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Clerk Multi Domain Satellite Domain",
@@ -29,12 +30,16 @@ export default async function RootLayout({
               </h1>
             </Link>
             <Navbar>
-              <NavbarLinks />
+              <Suspense fallback={null}>
+                <NavbarLinks />
+              </Suspense>
             </Navbar>
 
-            <Show when="signed-in">
-              <UserButton />
-            </Show>
+            <Suspense fallback={null}>
+              <Show when="signed-in">
+                <UserButton />
+              </Show>
+            </Suspense>
           </Header>
           <main className="container">{children}</main>
           <Footer framework="nextjs" />
