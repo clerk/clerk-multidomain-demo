@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ClerkProvider, UserButton, Show } from "@clerk/nextjs";
+import { Suspense } from "react";
 import "./globals.css";
 import clerkLogo from "@/assets/clerk-logo.png";
 import Image from "next/image";
@@ -34,13 +35,15 @@ export default async function RootLayout({
                 <Image src={clerkLogo} alt="Clerk" height={30} />
               </h1>
             </Link>
-            <Navbar>
-              <NavbarLinks />
-            </Navbar>
+            <Suspense>
+              <Navbar>
+                <NavbarLinks />
+              </Navbar>
 
-            <Show when="signed-in">
-              <UserButton />
-            </Show>
+              <Show when="signed-in">
+                <UserButton />
+              </Show>
+            </Suspense>
           </Header>
           <main className="container">{children}</main>
           <Footer framework="nextjs" />
