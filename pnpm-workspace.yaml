@@ -10,17 +10,13 @@ catalog:
   "@types/react": 19.2.9
   "@types/react-dom": 19.2.3
   eslint: 9.39.2
+  eslint-config-next: 16.4.2
   jiti: 2.6.1
   lucide-react: 0.562.0
-  next: 16.4.1
-  react: 19.2.3
-  react-dom: 19.2.3
+  next: 16.4.2
+  react: 19.3.1
+  react-dom: 19.3.1
   tailwindcss: 4.1.18
   typescript: 5.9.3
   zod: 3.25.76
 minimumReleaseAge: 2880
-minimumReleaseAgeExclude:
-  # Renovate security update: turbo@2.9.14
-  - turbo@2.9.14
-  # Renovate security update: postcss@8.5.18 || 8.5.23
-  - postcss@8.5.18 || 8.5.23

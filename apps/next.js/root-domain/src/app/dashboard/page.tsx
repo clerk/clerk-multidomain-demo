@@ -3,9 +3,6 @@ import { auth } from "@clerk/nextjs/server";
 import { Card, HeroCard } from "@repo/ui/card";
 import { UserDetails } from "./details";
 
-// Return the auth redirect before streaming this protected page.
-export const instant = false;
-
 export default async function DashboardPage() {
   // Redirect signed-out users to sign-in
   await auth.protect();

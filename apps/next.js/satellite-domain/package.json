@@ -23,6 +23,6 @@
     "@repo/tailwind-config": "workspace:*",
     "@repo/ui": "workspace:*",
     "eslint": "catalog:",
-    "eslint-config-next": "16.4.1"
+    "eslint-config-next": "catalog:"
   }
 }
